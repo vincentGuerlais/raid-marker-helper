@@ -2,7 +2,7 @@
     "name": "Boss Helper",
     "short_name": "Boss Helper",
 
-    "start_url": "/boss-helper/",
+    "start_url": "/raid-marker-helper/",
 
     "display": "standalone",
 
