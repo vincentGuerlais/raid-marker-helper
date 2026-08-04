@@ -249,24 +249,97 @@ function displayLoot(index) {
 
 function displayPlayer() {
 
-
     const container =
         document.getElementById("loot");
 
 
-    let html = "<h2>Par joueur</h2>";
+    let html = `
+
+        <h2>Joueur</h2>
+
+        <select id="playerSelect"></select>
+
+        <div id="playerLoot"></div>
+
+    `;
 
 
-    const items = getAllLoot();
+    container.innerHTML = html;
 
+
+    const select =
+        document.getElementById("playerSelect");
 
 
     characters
     .filter(character => character.active)
-    .forEach(character => {
+    .forEach((character, index) => {
 
 
-        html += `
+        const option =
+            document.createElement("option");
+
+
+        option.value = character.id;
+
+        option.textContent =
+            `${character.name} - ${character.class}`;
+
+
+        select.appendChild(option);
+
+
+    });
+
+
+
+    select.addEventListener(
+        "change",
+        () => {
+
+            displayPlayerLoot(
+                select.value
+            );
+
+        }
+    );
+
+
+    // Affichage initial
+
+    if (select.options.length > 0) {
+
+        displayPlayerLoot(
+            select.value
+        );
+
+    }
+
+}
+
+function displayPlayerLoot(characterId) {
+
+
+    const container =
+        document.getElementById("playerLoot");
+
+
+    const character =
+        characters.find(
+            c => c.id === characterId
+        );
+
+
+    if (!character) {
+        return;
+    }
+
+
+    const items =
+        getAllLoot();
+
+
+    let html = `
 
         <div class="item">
 
@@ -275,59 +348,63 @@ function displayPlayer() {
                 - ${character.class}
             </h3>
 
+    `;
+
+
+    const possible =
+        items.filter(item =>
+            item.classes.includes(character.class)
+        );
+
+
+
+    if (possible.length === 0) {
+
+        html += `
+            Aucun objet trouvé
         `;
 
-
-        const possible =
-            items.filter(item =>
-                item.classes.includes(character.class)
-            );
+    }
 
 
-        if (possible.length === 0) {
 
-            html += `
-                Aucun objet trouvé
-            `;
-
-        }
+    possible.forEach(item => {
 
 
-        possible.forEach(item => {
+        html += `
 
+            <div>
 
-            html += `
-
-                <div>
-
-                    ❌ ${item.name}
-
-                    <br>
-
-                    <small>
-                        📍 ${item.source}
-                        ${item.boss ? " - " + item.boss : ""}
-                    </small>
-
-                </div>
+                ❌ ${item.name}
 
                 <br>
 
-            `;
+                <small>
+                    📍 ${item.source}
 
+                    ${
+                        item.boss
+                        ? " - " + item.boss
+                        : ""
+                    }
 
-        });
+                </small>
 
+            </div>
 
+            <br>
 
-        html += "</div>";
+        `;
 
 
     });
 
 
-    container.innerHTML = html;
 
+    html += "</div>";
+
+
+    container.innerHTML = html;
 
 }
 
