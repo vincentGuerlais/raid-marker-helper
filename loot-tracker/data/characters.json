@@ -1,0 +1,25 @@
+{
+    "characters": [
+        {
+            "id": "vincent_monk",
+            "name": "Vincent",
+            "class": "Monk",
+            "spec": "Windwalker",
+            "active": true
+        },
+        {
+            "id": "paul_hunter",
+            "name": "Paul",
+            "class": "Hunter",
+            "spec": "Beast Mastery",
+            "active": true
+        },
+        {
+            "id": "marie_mage",
+            "name": "Marie",
+            "class": "Mage",
+            "spec": "Frost",
+            "active": false
+        }
+    ]
+}
