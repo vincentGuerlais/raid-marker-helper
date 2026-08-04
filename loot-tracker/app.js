@@ -31,7 +31,6 @@ async function loadData() {
         allLoot = getAllLoot();
 
 
-        displayCharacters();
         displayTracking();
 
 
