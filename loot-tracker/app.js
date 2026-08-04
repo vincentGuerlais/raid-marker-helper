@@ -1,4 +1,6 @@
-let currentMode = "content";
+let currentPage = "tracking";
+let trackingMode = "content";
+
 let characters = [];
 let contents = [];
 
@@ -19,8 +21,8 @@ async function loadData() {
 
 
     displayCharacters();
-
-    displayContent();
+    
+    displayTracking();
 
 }
 
@@ -329,6 +331,49 @@ function displayPlayer() {
 
 }
 
+function displayTracking() {
+
+    document
+    .getElementById("trackingMode")
+    .style.display = "flex";
+
+
+    if (trackingMode === "content") {
+
+        displayContent();
+
+    }
+
+
+    if (trackingMode === "player") {
+
+        displayPlayer();
+
+    }
+
+}
+
+function displayStats() {
+
+    document
+    .getElementById("trackingMode")
+    .style.display = "none";
+
+
+    document
+    .getElementById("loot")
+    .innerHTML = `
+
+        <h2>Stats</h2>
+
+        <p>
+            Statistiques bientôt disponibles
+        </p>
+
+    `;
+
+}
+
 function getAllLoot() {
 
     let items = [];
@@ -388,17 +433,48 @@ function getAllLoot() {
 }
 
 document
+.getElementById("trackingPage")
+.addEventListener(
+    "click",
+    () => {
+
+        currentPage = "tracking";
+
+        displayTracking();
+
+    }
+);
+
+
+
+document
+.getElementById("statsPage")
+.addEventListener(
+    "click",
+    () => {
+
+        currentPage = "stats";
+
+        displayStats();
+
+    }
+);
+
+
+
+document
 .getElementById("contentMode")
 .addEventListener(
     "click",
     () => {
 
-        currentMode = "content";
+        trackingMode = "content";
 
-        displayContent();
+        displayTracking();
 
     }
 );
+
 
 
 document
@@ -407,9 +483,9 @@ document
     "click",
     () => {
 
-        currentMode = "player";
+        trackingMode = "player";
 
-        displayPlayer();
+        displayTracking();
 
     }
 );
