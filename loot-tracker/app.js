@@ -8,35 +8,41 @@ let allLoot = [];
 
 async function loadData() {
 
-    const charactersResponse =
-        await fetch("data/characters.json");
+    try {
 
-    const charactersData =
-        await charactersResponse.json();
+        const charactersResponse =
+            await fetch("data/characters.json");
 
-    characters =
-        charactersData.characters;
-
-
-    const contentsResponse =
-        await fetch("data/contents.json");
-
-    const contentsData =
-        await contentsResponse.json();
-
-    contents =
-        contentsData.contents;
-    
-    allLoot = getAllLoot();
-    console.log("ALL LOOT:", allLoot);
-
-    console.log("Characters loaded:", characters);
-    console.log("Contents loaded:", contents);
+        const charactersData =
+            await charactersResponse.json();
 
 
-    displayCharacters();
+        const contentsResponse =
+            await fetch("data/contents.json");
 
-    displayTracking();
+        const contentsData =
+            await contentsResponse.json();
+
+
+        characters = charactersData.characters;
+        contents = contentsData.contents;
+
+
+        allLoot = getAllLoot();
+
+
+        displayCharacters();
+        displayTracking();
+
+
+    } catch(error) {
+
+        console.error(
+            "Erreur chargement données:",
+            error
+        );
+
+    }
 
 }
 
