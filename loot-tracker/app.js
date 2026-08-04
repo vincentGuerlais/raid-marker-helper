@@ -3,7 +3,7 @@ let trackingMode = "content";
 
 let characters = [];
 let contents = [];
-
+let allLoot = [];
 
 
 async function loadData() {
@@ -26,7 +26,8 @@ async function loadData() {
 
     contents =
         contentsData.contents;
-
+    
+    allLoot = getAllLoot();
 
     console.log("Characters loaded:", characters);
     console.log("Contents loaded:", contents);
@@ -364,8 +365,7 @@ function displayPlayerLoot(characterId) {
     }
 
 
-    const items =
-        getAllLoot();
+    const items = allLoot;
 
     console.log("Character:", character);
     console.log("Items:", items);
