@@ -8,23 +8,32 @@ let contents = [];
 
 async function loadData() {
 
+    const charactersResponse =
+        await fetch("data/characters.json");
+
+    const charactersData =
+        await charactersResponse.json();
+
+    characters =
+        charactersData.characters;
+
+
+    const contentsResponse =
+        await fetch("data/contents.json");
+
+    const contentsData =
+        await contentsResponse.json();
+
+    contents =
+        contentsData.contents;
+
+
     console.log("Characters loaded:", characters);
     console.log("Contents loaded:", contents);
-    
-    const charactersResponse = await fetch("data/characters.json");
-    const charactersData = await charactersResponse.json();
-
-    characters = charactersData.characters;
-
-
-    const contentsResponse = await fetch("data/contents.json");
-    const contentsData = await contentsResponse.json();
-
-    contents = contentsData.contents;
 
 
     displayCharacters();
-    
+
     displayTracking();
 
 }
@@ -92,10 +101,14 @@ function displayCharacters() {
                     event.target.checked;
 
 
-                if (currentMode === "content") {
-                    displayLoot(0);
+                if (
+                    currentPage === "tracking" &&
+                    trackingMode === "content"
+                ) {
+                
+                    displayContent();
+                
                 }
-
 
             }
         );
@@ -336,9 +349,6 @@ function displayPlayer() {
 
 function displayPlayerLoot(characterId) {
 
-    console.log("Character:", character);
-    console.log("Items:", items);
-
     const container =
         document.getElementById("playerLoot");
 
@@ -357,6 +367,8 @@ function displayPlayerLoot(characterId) {
     const items =
         getAllLoot();
 
+    console.log("Character:", character);
+    console.log("Items:", items);
 
     let html = `
 
@@ -472,25 +484,39 @@ function displayStats() {
 
 function getAllLoot() {
 
-    let items = [];
+    const items = [];
 
 
     contents.forEach(content => {
 
 
+        // Donjons : loot directement attaché au contenu
+
         if (content.type === "dungeon") {
+
 
             content.loot.forEach(item => {
 
+
                 items.push({
+
                     ...item,
-                    source: content.name
+
+                    source: content.name,
+
+                    boss: null
+
                 });
+
 
             });
 
+
         }
 
+
+
+        // Raids : loot attaché aux boss
 
         if (content.type === "raid") {
 
@@ -522,6 +548,11 @@ function getAllLoot() {
 
 
     });
+
+
+    return items;
+
+}
 
 
     return items;
