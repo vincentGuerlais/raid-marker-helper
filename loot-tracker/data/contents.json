@@ -10,16 +10,21 @@
 
                 {
                     "name": "Anneau des Ombres",
+                    "source": "Donjon Exemple",
+                    "boss": "Boss final",
                     "classes": [
                         "Monk",
                         "Hunter"
                     ]
-                },
+                }
 
                 {
-                    "name": "Baguette Mystique",
+                    "name": "Baguette mystique",
+                    "source": "Donjon Exemple",
+                    "boss": "Boss final",
                     "classes": [
-                        "Mage"
+                        "Mage",
+                        "Hunter"
                     ]
                 }
 
