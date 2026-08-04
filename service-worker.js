@@ -1,4 +1,4 @@
-const CACHE_NAME = "boss-helper-v1";
+const CACHE_NAME = "raid-helper-v1";
 
 
 const FILES = [
@@ -9,9 +9,30 @@ const FILES = [
 
     "./style.css",
 
-    "./app.js",
-
     "./manifest.json",
+
+    "./service-worker.js",
+
+
+    // Raid Marker
+
+    "./marker/index.html",
+
+    "./marker/style.css",
+
+    "./marker/app.js",
+
+
+    // Loot Tracker (placeholder pour l'instant)
+
+    "./loot/index.html",
+
+
+    // Assets communs
+
+    "./assets/icon-192.png",
+
+    "./assets/icon-512.png",
 
     "./assets/square_blue.png",
 

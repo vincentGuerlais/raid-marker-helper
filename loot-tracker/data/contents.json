@@ -1,0 +1,56 @@
+{
+    "contents": [
+
+        {
+            "id": "example_dungeon",
+            "name": "Donjon Exemple",
+            "type": "dungeon",
+
+            "loot": [
+
+                {
+                    "name": "Anneau des Ombres",
+                    "classes": [
+                        "Monk",
+                        "Hunter"
+                    ]
+                },
+
+                {
+                    "name": "Baguette Mystique",
+                    "classes": [
+                        "Mage"
+                    ]
+                }
+
+            ]
+        },
+
+
+        {
+            "id": "example_raid",
+            "name": "Raid Exemple",
+            "type": "raid",
+
+            "bosses": [
+
+                {
+                    "name": "Boss 1",
+
+                    "loot": [
+
+                        {
+                            "name": "Cape Lunaire",
+                            "classes": [
+                                "Mage"
+                            ]
+                        }
+
+                    ]
+                }
+
+            ]
+        }
+
+    ]
+}
