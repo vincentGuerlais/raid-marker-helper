@@ -453,7 +453,12 @@ function displayTracking() {
 
     document
     .getElementById("trackingMode")
-    .style.display = "flex";
+    .style.display = "block";
+
+
+    document
+    .getElementById("stats")
+    .style.display = "none";
 
 
     if (trackingMode === "content") {
@@ -480,16 +485,13 @@ function displayStats() {
 
 
     const container =
-        document.getElementById("loot");
+        document.getElementById("stats");
 
 
-    const activeCharacters =
-        characters.filter(
-            character => character.active
-        );
+    container.style.display = "block";
 
 
-    let html = `
+    container.innerHTML = `
     
         <h2>📊 Statistiques</h2>
     
