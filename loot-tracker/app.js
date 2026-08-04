@@ -473,22 +473,119 @@ function displayTracking() {
 
 function displayStats() {
 
+
     document
     .getElementById("trackingMode")
     .style.display = "none";
 
 
-    document
-    .getElementById("loot")
-    .innerHTML = `
+    const container =
+        document.getElementById("loot");
 
-        <h2>Stats</h2>
 
-        <p>
-            Statistiques bientôt disponibles
-        </p>
+    const activeCharacters =
+        characters.filter(
+            character => character.active
+        );
+
+
+    let html = `
+
+        <h2>📊 Statistiques</h2>
+
+
+        <table class="stats-table">
+
+            <thead>
+
+                <tr>
+
+                    <th>Contenu</th>
 
     `;
+
+
+    activeCharacters.forEach(character => {
+
+        html += `
+
+            <th>
+                ${character.name}
+            </th>
+
+        `;
+
+    });
+
+
+    html += `
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+    `;
+
+
+    contents.forEach(content => {
+
+
+        html += `
+
+            <tr>
+
+                <td>
+                    ${content.name}
+                </td>
+
+        `;
+
+
+        activeCharacters.forEach(character => {
+
+
+            const count =
+                getLootForContentAndCharacter(
+                    content,
+                    character
+                );
+
+
+            html += `
+
+                <td>
+                    ${count}
+                </td>
+
+            `;
+
+
+        });
+
+
+        html += `
+
+            </tr>
+
+        `;
+
+
+    });
+
+
+    html += `
+
+            </tbody>
+
+        </table>
+
+    `;
+
+
+    container.innerHTML = html;
+
 
 }
 
@@ -561,6 +658,44 @@ function getAllLoot() {
 
 
     return items;
+
+}
+
+function getLootForContentAndCharacter(
+    content,
+    character
+) {
+
+
+    let items = [];
+
+
+    if (content.type === "dungeon") {
+
+        items = content.loot;
+
+    }
+
+
+    if (content.type === "raid") {
+
+        content.bosses.forEach(boss => {
+
+            items.push(
+                ...boss.loot
+            );
+
+        });
+
+    }
+
+
+    return items.filter(item =>
+        item.classes.includes(
+            character.class
+        )
+    ).length;
+
 
 }
 
