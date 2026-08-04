@@ -255,34 +255,135 @@ function displayPlayer() {
     let html = "<h2>Par joueur</h2>";
 
 
+    const items = getAllLoot();
+
+
+
     characters
-    .filter(c => c.active)
+    .filter(character => character.active)
     .forEach(character => {
 
 
         html += `
 
-            <div class="item">
+        <div class="item">
 
-                <strong>
-                    ${character.name}
-                    - ${character.class}
-                </strong>
-
-                <p>
-                    Objets manquants :
-                    (bientôt)
-                </p>
-
-            </div>
+            <h3>
+                ${character.name}
+                - ${character.class}
+            </h3>
 
         `;
+
+
+        const possible =
+            items.filter(item =>
+                item.classes.includes(character.class)
+            );
+
+
+        if (possible.length === 0) {
+
+            html += `
+                Aucun objet trouvé
+            `;
+
+        }
+
+
+        possible.forEach(item => {
+
+
+            html += `
+
+                <div>
+
+                    ❌ ${item.name}
+
+                    <br>
+
+                    <small>
+                        📍 ${item.source}
+                        ${item.boss ? " - " + item.boss : ""}
+                    </small>
+
+                </div>
+
+                <br>
+
+            `;
+
+
+        });
+
+
+
+        html += "</div>";
 
 
     });
 
 
     container.innerHTML = html;
+
+
+}
+
+function getAllLoot() {
+
+    let items = [];
+
+
+    contents.forEach(content => {
+
+
+        if (content.type === "dungeon") {
+
+            content.loot.forEach(item => {
+
+                items.push({
+                    ...item,
+                    source: content.name
+                });
+
+            });
+
+        }
+
+
+        if (content.type === "raid") {
+
+
+            content.bosses.forEach(boss => {
+
+
+                boss.loot.forEach(item => {
+
+
+                    items.push({
+
+                        ...item,
+
+                        source: content.name,
+
+                        boss: boss.name
+
+                    });
+
+
+                });
+
+
+            });
+
+
+        }
+
+
+    });
+
+
+    return items;
 
 }
 
