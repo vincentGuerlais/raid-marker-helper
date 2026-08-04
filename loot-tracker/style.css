@@ -41,6 +41,28 @@ body {
 }
 
 
+.stats-container {
+
+    width:100%;
+
+    overflow-x:auto;
+
+}
+
+
+.stats-table {
+
+    border-collapse:collapse;
+
+    width:100%;
+
+    min-width:900px;
+
+    table-layout:fixed;
+
+}
+
+
 .stats-table th,
 .stats-table td {
 
@@ -53,10 +75,24 @@ body {
 }
 
 
+/* colonne contenu */
+
 .stats-table th:first-child,
 .stats-table td:first-child {
 
+    width:250px;
+
     text-align:left;
+
+}
+
+
+/* toutes les colonnes joueurs */
+
+.stats-table th:not(:first-child),
+.stats-table td:not(:first-child) {
+
+    width:120px;
 
 }
 
