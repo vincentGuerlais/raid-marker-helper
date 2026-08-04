@@ -529,7 +529,106 @@ function displayStats() {
     `;
 
 
-    contents.forEach(content => {
+// DONJONS
+
+html += `
+
+    <tr class="section">
+
+        <td colspan="${activeCharacters.length + 1}">
+            Donjons
+        </td>
+
+    </tr>
+
+`;
+
+
+contents
+.filter(content => content.type === "dungeon")
+.forEach(content => {
+
+
+    html += `
+
+        <tr>
+
+            <td>
+                ${content.name}
+            </td>
+
+    `;
+
+
+    activeCharacters.forEach(character => {
+
+
+        const count =
+            getLootForContentAndCharacter(
+                content,
+                character
+            );
+
+
+        html += `
+
+            <td>
+                ${count}
+            </td>
+
+        `;
+
+
+    });
+
+
+    html += `
+
+        </tr>
+
+    `;
+
+
+});
+
+
+
+// RAIDS
+
+html += `
+
+    <tr class="section">
+
+        <td colspan="${activeCharacters.length + 1}">
+            Raids
+        </td>
+
+    </tr>
+
+`;
+
+
+
+contents
+.filter(content => content.type === "raid")
+.forEach(raid => {
+
+
+    html += `
+
+        <tr class="raid-title">
+
+            <td colspan="${activeCharacters.length + 1}">
+                ${raid.name}
+            </td>
+
+        </tr>
+
+    `;
+
+
+
+    raid.bosses.forEach(boss => {
 
 
         html += `
@@ -537,20 +636,23 @@ function displayStats() {
             <tr>
 
                 <td>
-                    ${content.name}
+                    ${boss.name}
                 </td>
 
         `;
+
 
 
         activeCharacters.forEach(character => {
 
 
             const count =
-                getLootForContentAndCharacter(
-                    content,
-                    character
-                );
+                boss.loot.filter(item =>
+                    item.classes.includes(
+                        character.class
+                    )
+                ).length;
+
 
 
             html += `
@@ -565,6 +667,7 @@ function displayStats() {
         });
 
 
+
         html += `
 
             </tr>
@@ -573,6 +676,9 @@ function displayStats() {
 
 
     });
+
+
+});
 
 
     html += `
