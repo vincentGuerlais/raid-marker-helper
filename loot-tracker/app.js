@@ -8,6 +8,9 @@ let contents = [];
 
 async function loadData() {
 
+    console.log("Characters loaded:", characters);
+    console.log("Contents loaded:", contents);
+    
     const charactersResponse = await fetch("data/characters.json");
     const charactersData = await charactersResponse.json();
 
@@ -147,8 +150,22 @@ function displayContent() {
 
 function displayLoot(index) {
 
+    console.log("displayLoot index:", index);
+    console.log("content:", contents[index]);
+    
     const content = contents[index];
 
+    if (!content) {
+
+        console.error(
+            "No content found for index",
+            index
+        );
+
+        return;
+
+    }
+    
     const container = document.getElementById("loot");
 
 
@@ -319,6 +336,8 @@ function displayPlayer() {
 
 function displayPlayerLoot(characterId) {
 
+    console.log("Character:", character);
+    console.log("Items:", items);
 
     const container =
         document.getElementById("playerLoot");
