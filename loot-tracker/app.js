@@ -554,11 +554,6 @@ function getAllLoot() {
 
 }
 
-
-    return items;
-
-}
-
 document
 .getElementById("trackingPage")
 .addEventListener(
