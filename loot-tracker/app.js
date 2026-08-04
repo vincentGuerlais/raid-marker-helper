@@ -490,11 +490,13 @@ function displayStats() {
 
 
     let html = `
-
+    
         <h2>📊 Statistiques</h2>
-
-
-        <table class="stats-table">
+    
+    
+        <div class="stats-container">
+    
+            <table class="stats-table">
 
             <thead>
 
@@ -683,9 +685,11 @@ contents
 
     html += `
 
-            </tbody>
+                </tbody>
 
-        </table>
+            </table>
+
+        </div>
 
     `;
 
