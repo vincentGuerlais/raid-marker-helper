@@ -1,3 +1,4 @@
+let currentMode = "content";
 let characters = [];
 let contents = [];
 
@@ -29,24 +30,71 @@ function displayCharacters() {
 
     const container = document.getElementById("characters");
 
-    container.innerHTML = "<h2>Personnages actifs</h2>";
+    container.innerHTML = "<h2>Personnages suivis</h2>";
 
 
-    characters
-    .filter(character => character.active)
-    .forEach(character => {
+    characters.forEach(character => {
+
 
         const div = document.createElement("div");
 
+
         div.className = "character";
 
-        div.innerHTML =
-            `✓ ${character.name}
-             - ${character.class}
-             (${character.spec})`;
+
+        div.innerHTML = `
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    ${character.active ? "checked" : ""}
+                    data-id="${character.id}"
+                >
+
+                ${character.name}
+                -
+                ${character.class}
+
+            </label>
+
+        `;
 
 
         container.appendChild(div);
+
+
+    });
+
+
+    document
+    .querySelectorAll("#characters input")
+    .forEach(input => {
+
+
+        input.addEventListener(
+            "change",
+            event => {
+
+
+                const character =
+                    characters.find(
+                        c => c.id === event.target.dataset.id
+                    );
+
+
+                character.active =
+                    event.target.checked;
+
+
+                if (currentMode === "content") {
+                    displayLoot(0);
+                }
+
+
+            }
+        );
+
 
     });
 
@@ -197,6 +245,72 @@ function displayLoot(index) {
 
 }
 
+function displayPlayer() {
 
+
+    const container =
+        document.getElementById("loot");
+
+
+    let html = "<h2>Par joueur</h2>";
+
+
+    characters
+    .filter(c => c.active)
+    .forEach(character => {
+
+
+        html += `
+
+            <div class="item">
+
+                <strong>
+                    ${character.name}
+                    - ${character.class}
+                </strong>
+
+                <p>
+                    Objets manquants :
+                    (bientôt)
+                </p>
+
+            </div>
+
+        `;
+
+
+    });
+
+
+    container.innerHTML = html;
+
+}
+
+document
+.getElementById("contentMode")
+.addEventListener(
+    "click",
+    () => {
+
+        currentMode = "content";
+
+        displayContent();
+
+    }
+);
+
+
+document
+.getElementById("playerMode")
+.addEventListener(
+    "click",
+    () => {
+
+        currentMode = "player";
+
+        displayPlayer();
+
+    }
+);
 
 loadData();
