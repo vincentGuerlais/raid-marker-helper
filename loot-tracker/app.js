@@ -28,6 +28,7 @@ async function loadData() {
         contentsData.contents;
     
     allLoot = getAllLoot();
+    console.log("ALL LOOT:", allLoot);
 
     console.log("Characters loaded:", characters);
     console.log("Contents loaded:", contents);
@@ -387,7 +388,11 @@ function displayPlayerLoot(characterId) {
             item.classes.includes(character.class)
         );
 
-
+    console.log(
+        "Possible loot for",
+        character.class,
+        possible
+    );
 
     if (possible.length === 0) {
 
