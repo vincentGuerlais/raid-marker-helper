@@ -453,12 +453,17 @@ function displayTracking() {
 
     document
     .getElementById("trackingMode")
+    .style.display = "flex";
+
+
+    document
+    .getElementById("contents")
     .style.display = "block";
 
 
     document
-    .getElementById("stats")
-    .style.display = "none";
+    .getElementById("loot")
+    .style.display = "block";
 
 
     if (trackingMode === "content") {
@@ -478,33 +483,44 @@ function displayTracking() {
 
 function displayStats() {
 
-
     document
     .getElementById("trackingMode")
     .style.display = "none";
 
 
+    document
+    .getElementById("contents")
+    .style.display = "none";
+
+
+    document
+    .getElementById("loot")
+    .style.display = "block";
+
+
     const container =
-        document.getElementById("stats");
+        document.getElementById("loot");
 
 
-    container.style.display = "block";
+    const activeCharacters =
+        characters.filter(
+            character => character.active
+        );
 
 
-    container.innerHTML = `
-    
+    let html = `
+
         <h2>📊 Statistiques</h2>
-    
-    
+
         <div class="stats-container">
-    
+
             <table class="stats-table">
 
-            <thead>
+                <thead>
 
-                <tr>
+                    <tr>
 
-                    <th>Contenu</th>
+                        <th>Contenu</th>
 
     `;
 
@@ -513,9 +529,9 @@ function displayStats() {
 
         html += `
 
-            <th>
-                ${character.name}
-            </th>
+                        <th>
+                            ${character.name}
+                        </th>
 
         `;
 
@@ -524,106 +540,25 @@ function displayStats() {
 
     html += `
 
-                </tr>
+                    </tr>
 
-            </thead>
+                </thead>
 
-            <tbody>
-
-    `;
-
-
-// DONJONS
-
-html += `
-
-    <tr class="section">
-
-        <td colspan="${activeCharacters.length + 1}">
-            Donjons
-        </td>
-
-    </tr>
-
-`;
-
-
-contents
-.filter(content => content.type === "dungeon")
-.forEach(content => {
-
-
-    html += `
-
-        <tr>
-
-            <td>
-                ${content.name}
-            </td>
+                <tbody>
 
     `;
 
 
-    activeCharacters.forEach(character => {
-
-
-        const count =
-            getLootForContentAndCharacter(
-                content,
-                character
-            );
-
-
-        html += `
-
-            <td>
-                ${count}
-            </td>
-
-        `;
-
-
-    });
-
+    // =========================
+    // DONJONS
+    // =========================
 
     html += `
 
-        </tr>
-
-    `;
-
-
-});
-
-
-
-// RAIDS
-
-html += `
-
-    <tr class="section">
-
-        <td colspan="${activeCharacters.length + 1}">
-            Raids
-        </td>
-
-    </tr>
-
-`;
-
-
-
-contents
-.filter(content => content.type === "raid")
-.forEach(raid => {
-
-
-    html += `
-
-        <tr class="raid-title">
+        <tr class="section">
 
             <td colspan="${activeCharacters.length + 1}">
-                ${raid.name}
+                Donjons
             </td>
 
         </tr>
@@ -631,58 +566,123 @@ contents
     `;
 
 
-
-    raid.bosses.forEach(boss => {
-
-
-        html += `
-
-            <tr>
-
-                <td>
-                    ${boss.name}
-                </td>
-
-        `;
-
-
-
-        activeCharacters.forEach(character => {
-
-
-            const count =
-                boss.loot.filter(item =>
-                    item.classes.includes(
-                        character.class
-                    )
-                ).length;
-
-
+    contents
+        .filter(content => content.type === "dungeon")
+        .forEach(content => {
 
             html += `
 
-                <td>
-                    ${count}
-                </td>
+                <tr>
+
+                    <td>
+                        ${content.name}
+                    </td>
 
             `;
 
 
+            activeCharacters.forEach(character => {
+
+                const count =
+                    getLootForContentAndCharacter(
+                        content,
+                        character
+                    );
+
+                html += `
+
+                    <td>
+                        ${count}
+                    </td>
+
+                `;
+
+            });
+
+
+            html += `
+
+                </tr>
+
+            `;
+
         });
 
 
+    // =========================
+    // RAIDS
+    // =========================
 
-        html += `
+    html += `
 
-            </tr>
+        <tr class="section">
 
-        `;
+            <td colspan="${activeCharacters.length + 1}">
+                Raids
+            </td>
+
+        </tr>
+
+    `;
 
 
-    });
+    contents
+        .filter(content => content.type === "raid")
+        .forEach(raid => {
+
+            html += `
+
+                <tr class="raid-title">
+
+                    <td colspan="${activeCharacters.length + 1}">
+                        ${raid.name}
+                    </td>
+
+                </tr>
+
+            `;
 
 
-});
+            raid.bosses.forEach(boss => {
+
+                html += `
+
+                    <tr>
+
+                        <td>
+                            ${boss.name}
+                        </td>
+
+                `;
+
+
+                activeCharacters.forEach(character => {
+
+                    const count =
+                        boss.loot.filter(item =>
+                            item.classes.includes(character.class)
+                        ).length;
+
+                    html += `
+
+                        <td>
+                            ${count}
+                        </td>
+
+                    `;
+
+                });
+
+
+                html += `
+
+                    </tr>
+
+                `;
+
+            });
+
+        });
 
 
     html += `
@@ -697,7 +697,6 @@ contents
 
 
     container.innerHTML = html;
-
 
 }
 
