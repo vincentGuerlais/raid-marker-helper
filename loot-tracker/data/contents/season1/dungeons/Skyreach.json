@@ -1,0 +1,22 @@
+{
+    "id": "skyreach",
+    "name": "Orée-du-Ciel",
+    "type": "dungeon",
+
+    "loot": [
+        {
+            "name": "Arcanique du grand sage",
+            "slot": "Arme 1H",
+            "classes": [
+                "Monk MW"
+            ]
+        },
+        {
+            "name": "Grande cape en écailles rigides",
+            "slot": "Cape",
+            "classes": [
+                "Mage fr"
+            ]
+        }
+    ]
+}

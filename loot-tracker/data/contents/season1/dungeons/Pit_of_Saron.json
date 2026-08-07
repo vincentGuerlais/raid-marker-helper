@@ -1,0 +1,22 @@
+{
+    "id": "pit_of_saron",
+    "name": "Fosse de Saron",
+    "type": "dungeon",
+
+    "loot": [
+        {
+            "name": "Sautoir ymirheim barbelé",
+            "slot": "Cou",
+            "classes": [
+                "Monk MW"
+            ]
+        },
+        {
+            "name": "Garde-poignets en cuir mâchonné",
+            "slot": "Poignets",
+            "classes": [
+                "Monk MW"
+            ]
+        }
+    ]
+}

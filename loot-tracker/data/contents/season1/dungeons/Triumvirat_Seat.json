@@ -1,0 +1,15 @@
+{
+    "id": "triumvirat_seat",
+    "name": "Siège du triumvirat",
+    "type": "dungeon",
+
+    "loot": [
+        {
+            "name": "Espauliers du chasseur du Vide",
+            "slot": "Epaules",
+            "classes": [
+                "Hunter BM"
+            ]
+        }
+    ]
+}

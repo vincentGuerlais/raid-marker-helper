@@ -1,0 +1,15 @@
+{
+    "id": "windrunner_spire",
+    "name": "Flèche de Coursevent",
+    "type": "dungeon",
+
+    "loot": [
+        {
+            "name": "Mantelet de sombre dévotion",
+            "slot": "Epaules",
+            "classes": [
+                "Mage fr"
+            ]
+        }
+    ]
+}

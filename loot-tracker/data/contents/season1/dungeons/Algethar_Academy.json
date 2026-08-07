@@ -1,0 +1,16 @@
+{
+    "id": "algethar_academy",
+    "name": "Académie d’Algeth’ar",
+    "type": "dungeon",
+
+    "loot": [
+        {
+            "name": "Boîte à secret d’Algeth’ar",
+            "slot": "Bijou",
+            "classes": [
+                "Hunter BM",
+                "Druid Gu"
+            ]
+        }
+    ]
+}
