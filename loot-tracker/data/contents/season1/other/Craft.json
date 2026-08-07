@@ -1,1 +1,52 @@
+{
+    "id": "craft",
+    "name": "Craft",
+    "type": "other",
 
+    "bosses": [
+        {
+            "name": "Couture",
+
+            "loot": [
+                {
+                    "name": "Voile d’adhésion en soie",
+                    "slot": "Dos",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Manchettes de martyre",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Corde en tisse-arcane",
+                    "slot": "Taille",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }              
+            ]
+        },
+        {
+            "name": "Travail du cuir",
+
+            "loot": [
+                {
+                    "name": "Brassards cuirassés de pérégrin",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
+            ]
+        }        
+    ]
+}
