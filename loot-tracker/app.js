@@ -30,10 +30,10 @@ async function loadData() {
         contents = [];
         
         
-        for (const file of contentsIndex.contents) {
+        for (const entry of contentsIndex.contents) {
         
             const response =
-                await fetch("data/" + file);
+                await fetch("data/" + entry.file);
         
         
             const content =
