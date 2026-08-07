@@ -30,9 +30,6 @@
             "type": "dungeon",
             "file": "contents/season1/dungeons/Windrunner_Spire.json"
         },
-
-
-        
         {
             "id": "voidspire",
             "type": "raid",
