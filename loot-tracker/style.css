@@ -104,7 +104,20 @@ body {
 
 }
 
+#characters {
 
+    margin:10px 0;
+
+}
+
+
+.character {
+
+    display:inline-block;
+
+    margin-right:15px;
+
+}
 
 .home-button {
 
