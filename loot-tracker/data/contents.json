@@ -1,10 +1,38 @@
 {
     "contents": [
         {
-            "id": "donjon_exemple",
+            "id": "algethar_academy",
             "type": "dungeon",
-            "file": "contents/dungeons/donjon_exemple.json"
+            "file": "contents/season1/dungeons/Algethar_Academy.json"
         },
+        {
+            "id": "maisara_caverns",
+            "type": "dungeon",
+            "file": "contents/season1/dungeons/Maisara_Caverns.json"
+        },
+        {
+            "id": "pit_of_saron",
+            "type": "dungeon",
+            "file": "contents/season1/dungeons/Pit_of_Saron.json"
+        },
+        {
+            "id": "skyreach",
+            "type": "dungeon",
+            "file": "contents/season1/dungeons/Skyreach.json"
+        },
+        {
+            "id": "triumvirat_seat",
+            "type": "dungeon",
+            "file": "contents/season1/dungeons/Triumvirat_Seat.json"
+        },
+        {
+            "id": "windrunner_spire",
+            "type": "dungeon",
+            "file": "contents/season1/dungeons/Windrunner_Spire.json"
+        },
+
+
+        
         {
             "id": "raid_exemple",
             "type": "raid",
