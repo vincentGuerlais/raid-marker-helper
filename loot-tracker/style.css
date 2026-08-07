@@ -124,7 +124,22 @@ body {
     margin-right:15px;
 
 }
+.slot {
 
+    font-size: 0.85rem;
+    color: #8ecaff;
+    margin-top: 2px;
+
+}
+
+.note {
+
+    font-size: 0.8rem;
+    color: #f0d66d;
+    font-style: italic;
+    margin: 4px 0;
+
+}
 .home-button {
 
     color:white;
