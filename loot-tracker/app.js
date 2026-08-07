@@ -296,41 +296,36 @@ function displayPlayer() {
 
     let html = `
 
-        <h2>Joueur</h2>
-
-        <select id="playerSelect"></select>
-
-        <div id="playerLoot"></div>
+        <h2>Joueurs</h2>
 
     `;
 
 
-    container.innerHTML = html;
+    const activeCharacters =
+        characters.filter(
+            character => character.active
+        );
 
 
-    const select =
-        document.getElementById("playerSelect");
+    if (activeCharacters.length === 0) {
+
+        html += `
+            Aucun joueur sélectionné
+        `;
+
+    }
 
 
-    characters
-    .filter(character => character.active)
-    .forEach((character, index) => {
+    activeCharacters.forEach(character => {
 
-
-        const option =
-            document.createElement("option");
-
-
-        option.value = character.id;
-
-        option.textContent =
-            `${character.name} - ${character.class}`;
-
-
-        select.appendChild(option);
-
+        html += displayPlayerLoot(character);
 
     });
+
+
+    container.innerHTML = html;
+
+}
 
 
 
@@ -358,31 +353,12 @@ function displayPlayer() {
 
 }
 
-function displayPlayerLoot(characterId) {
+function displayPlayerLoot(character) {
 
-    const container =
-        document.getElementById("playerLoot");
-
-
-    const character =
-        characters.find(
-            c => c.id === characterId
-        );
-
-
-    if (!character) {
-        return;
-    }
-
-
-    const items = allLoot;
-
-    console.log("Character:", character);
-    console.log("Items:", items);
 
     let html = `
 
-        <div class="item">
+        <div class="player-card">
 
             <h3>
                 ${character.name}
@@ -393,15 +369,10 @@ function displayPlayerLoot(characterId) {
 
 
     const possible =
-        items.filter(item =>
+        allLoot.filter(item =>
             item.classes.includes(character.class)
         );
 
-    console.log(
-        "Possible loot for",
-        character.class,
-        possible
-    );
 
     if (possible.length === 0) {
 
@@ -412,19 +383,19 @@ function displayPlayerLoot(characterId) {
     }
 
 
-
     possible.forEach(item => {
 
 
         html += `
 
-            <div>
+            <div class="item">
 
                 ❌ ${item.name}
 
                 <br>
 
                 <small>
+
                     📍 ${item.source}
 
                     ${
@@ -437,19 +408,20 @@ function displayPlayerLoot(characterId) {
 
             </div>
 
-            <br>
-
         `;
 
 
     });
 
 
+    html += `
 
-    html += "</div>";
+        </div>
+
+    `;
 
 
-    container.innerHTML = html;
+    return html;
 
 }
 
