@@ -6,6 +6,7 @@
     "loot": [
         {
             "name": "Anneau des Ombres",
+            "slot": "Anneau",
             "classes": [
                 "Monk MW",
                 "Hunter BM"
@@ -13,6 +14,7 @@
         },
         {
             "name": "Baguette mystique",
+            "slot": "Arme 1H",
             "classes": [
                 "Mage Fr",
                 "Hunter BM"
