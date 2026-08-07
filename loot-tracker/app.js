@@ -935,21 +935,6 @@ document
 );
 
 document
-.getElementById("resetLoot")
-.addEventListener(
-    "click",
-    () => {
-
-        hiddenItems = {};
-
-        saveHiddenItems();
-
-        displayTracking();
-
-    }
-);
-
-document
 .getElementById("playerMode")
 .addEventListener(
     "click",
