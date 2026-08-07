@@ -17,15 +17,32 @@ async function loadData() {
             await charactersResponse.json();
 
 
-        const contentsResponse =
-            await fetch("data/contents.json");
-
-        const contentsData =
-            await contentsResponse.json();
-
-
         characters = charactersData.characters;
-        contents = contentsData.contents;
+        
+        
+        const contentsIndexResponse =
+            await fetch("data/contents.json");
+        
+        const contentsIndex =
+            await contentsIndexResponse.json();
+        
+        
+        contents = [];
+        
+        
+        for (const file of contentsIndex.contents) {
+        
+            const response =
+                await fetch("data/" + file);
+        
+        
+            const content =
+                await response.json();
+        
+        
+            contents.push(content);
+        
+        }
 
 
         allLoot = getAllLoot();
@@ -44,6 +61,10 @@ async function loadData() {
         
         displayTracking();
 
+        console.log(
+        "Loaded contents:",
+        contents.map(c => c.name)
+        );
 
     } catch(error) {
 
