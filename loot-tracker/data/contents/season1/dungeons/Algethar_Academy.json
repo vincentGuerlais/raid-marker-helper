@@ -7,6 +7,7 @@
         {
             "name": "Boîte à secret d’Algeth’ar",
             "slot": "Bijou",
+            "note" : "",
             "classes": [
                 "Hunter BM",
                 "Druid Gu"
