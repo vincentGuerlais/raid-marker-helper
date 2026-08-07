@@ -380,16 +380,19 @@ function displayLoot(index) {
     }
 
 
-    if (content.type === "raid") {
-
+    if (
+        content.type === "raid" ||
+        content.type === "other"
+    ) {
+    
         content.bosses.forEach(boss => {
-
+    
             html += `<h3>${boss.name}</h3>`;
-
+    
             items.push(...boss.loot);
-
+    
         });
-
+    
     }
 
 
@@ -1032,11 +1035,13 @@ function getAllLoot() {
 
 
 
-        // Raids : loot attaché aux boss
+        // Raids : loot attaché aux boss et crafts
 
-        if (content.type === "raid") {
-
-
+        if (
+            content.type === "raid" ||
+            content.type === "other"
+        ) {
+        
             content.bosses.forEach(boss => {
 
 
@@ -1086,8 +1091,11 @@ function getLootForContentAndCharacter(
     }
 
 
-    if (content.type === "raid") {
-
+    if (
+        content.type === "raid" ||
+        content.type === "other"
+    ) {
+    
         content.bosses.forEach(boss => {
 
             items.push(
