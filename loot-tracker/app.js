@@ -191,40 +191,120 @@ function displayCharacters() {
 
 function displayContent() {
 
-    const container = document.getElementById("contents");
+    const container =
+        document.getElementById("contents");
+
 
     container.innerHTML = `
 
         <h2>Contenu</h2>
+
+        <select id="contentTypeSelect">
+
+            <option value="dungeon">
+                Donjons
+            </option>
+
+            <option value="raid">
+                Raids
+            </option>
+
+            <option value="other">
+                Autres
+            </option>
+
+        </select>
+
 
         <select id="contentSelect"></select>
 
     `;
 
 
-    const select = document.getElementById("contentSelect");
+    const typeSelect =
+        document.getElementById(
+            "contentTypeSelect"
+        );
 
 
-    contents.forEach((content, index) => {
-
-        const option = document.createElement("option");
-
-        option.value = index;
-
-        option.textContent = content.name;
-
-        select.appendChild(option);
-
-    });
+    const contentSelect =
+        document.getElementById(
+            "contentSelect"
+        );
 
 
-    select.addEventListener(
+    function updateContents() {
+
+
+        contentSelect.innerHTML = "";
+
+
+        const filtered =
+            contents.filter(content =>
+                content.type === typeSelect.value
+            );
+
+
+        filtered.forEach(content => {
+
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                contents.indexOf(content);
+
+
+            option.textContent =
+                content.name;
+
+
+            contentSelect.appendChild(
+                option
+            );
+
+
+        });
+
+
+        if (filtered.length > 0) {
+
+            displayLoot(
+                contentSelect.value
+            );
+
+        }
+        else {
+
+            document
+            .getElementById("loot")
+            .innerHTML =
+                "Aucun contenu disponible";
+
+        }
+
+    }
+
+
+    typeSelect.addEventListener(
         "change",
-        () => displayLoot(select.value)
+        updateContents
     );
 
 
-    displayLoot(0);
+    contentSelect.addEventListener(
+        "change",
+        () =>
+            displayLoot(
+                contentSelect.value
+            )
+    );
+
+
+    updateContents();
 
 }
 
