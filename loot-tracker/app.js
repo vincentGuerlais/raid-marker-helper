@@ -12,6 +12,8 @@ async function loadData() {
 
     try {
 
+        console.log("Chargement characters.json");
+
         const charactersResponse =
             await fetch("data/characters.json");
 
@@ -20,53 +22,87 @@ async function loadData() {
 
 
         characters = charactersData.characters;
-        
-        
+
+
+        console.log("Chargement contents.json");
+
         const contentsIndexResponse =
             await fetch("data/contents.json");
-        
+
         const contentsIndex =
             await contentsIndexResponse.json();
-        
-        
+
+
+        console.log(
+            "Index contenu:",
+            contentsIndex
+        );
+
+
         contents = [];
-        
-        
+
+
         for (const entry of contentsIndex.contents) {
-        
+
+            console.log(
+                "Chargement:",
+                entry.file
+            );
+
+
             const response =
                 await fetch("data/" + entry.file);
-        
-        
-            const content =
-                await response.json();
-        
-        
+
+
+            let content;
+
+            try {
+
+                content =
+                    await response.json();
+
+            }
+            catch(error) {
+
+                console.error(
+                    "JSON invalide dans :",
+                    entry.file
+                );
+
+                throw error;
+
+            }
+
+
             contents.push(content);
-        
+
         }
 
 
         allLoot = getAllLoot();
 
+
         const savedHidden =
             localStorage.getItem("hiddenItems");
-        
-        
+
+
         if (savedHidden) {
-        
+
             hiddenItems = JSON.parse(savedHidden);
-        
+
         }
-        
+
+
         displayCharacters();
-        
+
         displayTracking();
 
+
         console.log(
-        "Loaded contents:",
-        contents.map(c => c.name)
+            "Loaded contents:",
+            contents.map(c => c.name)
         );
+
 
     } catch(error) {
 
