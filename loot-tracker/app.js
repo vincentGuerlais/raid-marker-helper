@@ -327,32 +327,6 @@ function displayPlayer() {
 
 }
 
-
-
-    select.addEventListener(
-        "change",
-        () => {
-
-            displayPlayerLoot(
-                select.value
-            );
-
-        }
-    );
-
-
-    // Affichage initial
-
-    if (select.options.length > 0) {
-
-        displayPlayerLoot(
-            select.value
-        );
-
-    }
-
-}
-
 function displayPlayerLoot(character) {
 
 
