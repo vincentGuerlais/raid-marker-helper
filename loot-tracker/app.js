@@ -300,13 +300,23 @@ function displayLoot(index) {
 
 
         html += `
-
-            <div class="item">
-
-                <strong>${item.name}</strong>
-
-                <div>
-
+        
+        <div class="item">
+        
+            <strong>${item.name}</strong>
+        
+            <div class="slot">
+                🛡 ${item.slot}
+            </div>
+        
+            ${
+                item.note
+                    ? `<div class="note">💡 ${item.note}</div>`
+                    : ""
+            }
+        
+            <div>
+        
         `;
 
 
@@ -574,9 +584,19 @@ function displayPlayerLoot(character) {
                 ${item.name}
                 
                 </label>
-
+                <div class="slot">
+                    🛡 ${item.slot}
+                </div>
                 <br>
-
+                ${
+                    item.note
+                        ? `
+                            <div class="note">
+                                💡 ${item.note}
+                            </div>
+                        `
+                        : ""
+                }
                 <small>
 
                     📍 ${item.source}
