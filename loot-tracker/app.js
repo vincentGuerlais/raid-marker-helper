@@ -4,7 +4,7 @@ let trackingMode = "content";
 let characters = [];
 let contents = [];
 let allLoot = [];
-
+let hiddenItems = {};
 
 async function loadData() {
 
@@ -29,6 +29,16 @@ async function loadData() {
 
 
         allLoot = getAllLoot();
+
+        const savedHidden =
+            localStorage.getItem("hiddenItems");
+        
+        
+        if (savedHidden) {
+        
+            hiddenItems = JSON.parse(savedHidden);
+        
+        }
         
         displayCharacters();
         
@@ -46,7 +56,14 @@ async function loadData() {
 
 }
 
+function saveHiddenItems() {
 
+    localStorage.setItem(
+        "hiddenItems",
+        JSON.stringify(hiddenItems)
+    );
+
+}
 
 function displayCharacters() {
 
@@ -325,6 +342,48 @@ function displayPlayer() {
 
     container.innerHTML = html;
 
+
+    document
+    .querySelectorAll(".loot-check")
+    .forEach(check => {
+
+
+        check.addEventListener(
+            "change",
+            event => {
+
+
+                const characterId =
+                    event.target.dataset.character;
+
+
+                const itemName =
+                    event.target.dataset.item;
+
+
+
+                if (!hiddenItems[characterId]) {
+
+                    hiddenItems[characterId] = [];
+
+                }
+
+
+                hiddenItems[characterId].push(itemName);
+
+
+                saveHiddenItems();
+
+
+                displayPlayer();
+
+
+            }
+        );
+
+
+    });
+
 }
 
 function displayPlayerLoot(character) {
@@ -358,13 +417,34 @@ function displayPlayerLoot(character) {
 
 
     possible.forEach(item => {
-
+    
+    
+        const hidden =
+            hiddenItems[character.id]?.includes(item.name);
+    
+    
+        if (hidden) {
+    
+            return;
+    
+        }
 
         html += `
 
             <div class="item">
 
-                ❌ ${item.name}
+                <label>
+
+                <input
+                    type="checkbox"
+                    class="loot-check"
+                    data-character="${character.id}"
+                    data-item="${item.name}"
+                >
+                
+                ${item.name}
+                
+                </label>
 
                 <br>
 
@@ -806,7 +886,20 @@ document
     }
 );
 
+document
+.getElementById("resetLoot")
+.addEventListener(
+    "click",
+    () => {
 
+        hiddenItems = {};
+
+        saveHiddenItems();
+
+        displayTracking();
+
+    }
+);
 
 document
 .getElementById("playerMode")
