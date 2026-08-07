@@ -77,6 +77,12 @@ function saveHiddenItems() {
 
 }
 
+function isLootHidden(character, item) {
+
+    return hiddenItems[character.id]?.includes(item.name);
+
+}
+
 function displayCharacters() {
 
     const container = document.getElementById("characters");
@@ -281,20 +287,33 @@ function displayLoot(index) {
         `;
 
 
-        characters
-        .filter(character =>
-            character.active &&
-            item.classes.includes(character.class)
-        )
-        .forEach(character => {
+            characters
+            .filter(character =>
+                character.active &&
+                item.classes.includes(character.class) &&
+                !isLootHidden(character, item)
+            )
+            .forEach(character => {
 
 
             html += `
 
-                <div>
-                    ${character.name} :
-                    ❌
-                </div>
+            <div>
+            
+            <label>
+            
+            <input
+                type="checkbox"
+                class="loot-check"
+                data-character="${character.id}"
+                data-item="${item.name}"
+            >
+            
+            ${character.name}
+            
+            </label>
+            
+            </div>
 
             `;
 
@@ -314,7 +333,46 @@ function displayLoot(index) {
 
 
     container.innerHTML = html;
-
+    
+    
+    document
+    .querySelectorAll(".loot-check")
+    .forEach(check => {
+    
+        check.addEventListener(
+            "change",
+            event => {
+    
+    
+                const characterId =
+                    event.currentTarget.dataset.character;
+    
+    
+                const itemName =
+                    event.currentTarget.dataset.item;
+    
+    
+    
+                if (!hiddenItems[characterId]) {
+    
+                    hiddenItems[characterId] = [];
+    
+                }
+    
+    
+                hiddenItems[characterId].push(itemName);
+    
+    
+                saveHiddenItems();
+    
+    
+                displayLoot(index);
+    
+    
+            }
+        );
+    
+    });
 }
 
 function displayPlayer() {
@@ -883,9 +941,9 @@ function getLootForContentAndCharacter(
 
 
     return items.filter(item =>
-        item.classes.includes(
-            character.class
-        )
+        item.classes.includes(character.class)
+        &&
+        !isLootHidden(character, item)
     ).length;
 
 
