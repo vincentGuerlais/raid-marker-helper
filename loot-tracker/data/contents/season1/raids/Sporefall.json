@@ -1,0 +1,85 @@
+{
+    "id": "sporefall",
+    "name": "Chute-des-Spores",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Embourbe-pourri",
+
+            "loot": [
+                {
+                    "name": "Sporocœur d’Embourbe-pourri",
+                    "slot": "Cou",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM",
+                        "Druid Gu",
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Croquenots diable-rancœur",
+                    "slot": "Bottes",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Jonc fleuri de mande-spores",
+                    "slot": "Anneau",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM",
+                        "Monk MW",
+                        "Druid Gu",
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Couronne suppure-fleur",
+                    "slot": "Tête",
+                    "note" : "Monk MW: à catalyser vers [Visage redoutable de l’élite de Ra Den]",
+                    "classes": [
+                        "Monk MW",
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Écharpe du géant putride",
+                    "slot": "Taille",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW",
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Robe putride de mycomancie",
+                    "slot": "Torse",
+                    "note" : "à catalyser vers [Robe de brisevide]",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Trotteterreaux de luxe",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Flancarts de folie fongicienne",
+                    "slot": "Jambes",
+                    "note" : "à catalyser vers [Garde-jambes de surveillance primordiale]",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,38 @@
+{
+    "id": "march_on_queldanas.json",
+    "name": "Marche sur Quel'Danas",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Belo'ren",
+
+            "loot": [
+                {
+                    "name": "Bague d’espoir sin’dorei",
+                    "slot": "Anneau",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Glas de minuit",
+
+            "loot": [
+                {
+                    "name": "Œil de minuit",
+                    "slot": "Anneau",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM",
+                        "Monk MW",
+                        "Druid Gu"
+                    ]
+                }
+            ]
+        }        
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "id": "dreamrift",
+    "name": "La faille du Rêve",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Chimaerus",
+
+            "loot": [
+                {
+                    "name": "Regard de prophète d’Aln",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr",
+                        "Druid Gu",
+                        "Monk MW",
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Flèche rejetée d’Aln",
+                    "slot": "Arme 2H",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,92 @@
+{
+    "id": "voidspire",
+    "name": "La flèche du Vide",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Vorasius",
+
+            "loot": [
+                {
+                    "name": "Grimoire de la Lumière éternelle",
+                    "slot": "Main Gauche",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Brassards dépecés par le Vide",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Avant-garde lumaveuglée",
+
+            "loot": [
+                {
+                    "name": "Spallières en lumécorce fleurie",
+                    "slot": "Epaules",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Litanie de courroux lumaveuglé",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+                
+            ]
+        },
+        {
+            "name": "Vaelgor et Ezzorak",
+
+            "loot": [
+                {
+                    "name": "Cape du Néant draconique",
+                    "slot": "Dos",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Ultime regard de Vaelgor",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }                
+            ]
+        },
+        {
+            "name": "Empereur Averzian",
+
+            "loot": [
+                {
+                    "name": "Frappe-tibias réclamés par le Vide",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                }
+                
+            ]
+        }
+        
+
+    ]
+}

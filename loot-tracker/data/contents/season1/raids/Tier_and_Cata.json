@@ -1,0 +1,150 @@
+{
+    "id": "tier_and_cata",
+    "name": "Tier Set and Catalyst",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Tous/Catalyst",
+
+            "loot": [
+                {
+                    "name": "Voile de brisevide",
+                    "slot": "Tête",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Gants de brisevide",
+                    "slot": "Mains",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Braies de brisevide",
+                    "slot": "Jambes",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+
+
+                {
+                    "name": "Cosses de graines de la floraison lumineuse",
+                    "slot": "Epaules",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Tronc de la floraison lumineuse",
+                    "slot": "Torse",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Soigne-arbres de la floraison lumineuse",
+                    "slot": "Mains",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Jambards en phloème de la floraison lumineuse",
+                    "slot": "Jambes",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+
+
+
+                {
+                    "name": "Houppevent de l’élite de Ra Den",
+                    "slot": "Cape",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Atours de bataille de l’élite de Ra Den",
+                    "slot": "Torse",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Poings de tonnerre de l’élite de Ra Den",
+                    "slot": "Mains",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Preste-jambes de l’élite de Ra Den",
+                    "slot": "Jambes",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Écrase-tempêtes de l’élite de Ra Den",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+
+
+
+                {
+                    "name": "Gueule de surveillance primordiale",
+                    "slot": "Tête",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Harnois d’écailles de surveillance primordiale",
+                    "slot": "Torse",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Garde-serres de surveillance primordiale",
+                    "slot": "Torse",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Cordelière de surveillance primordiale",
+                    "slot": "Taille",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
+            ]
+        }
+    ]
+}
