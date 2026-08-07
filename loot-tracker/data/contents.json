@@ -13,8 +13,8 @@
                     "source": "Donjon Exemple",
                     "boss": "Boss final",
                     "classes": [
-                        "Monk",
-                        "Hunter"
+                        "Monk MW",
+                        "Hunter BM"
                     ]
                 },
 
@@ -23,8 +23,8 @@
                     "source": "Donjon Exemple",
                     "boss": "Boss final",
                     "classes": [
-                        "Mage",
-                        "Hunter"
+                        "Mage Fr",
+                        "Hunter BM"
                     ]
                 }
 
@@ -47,7 +47,7 @@
                         {
                             "name": "Cape Lunaire",
                             "classes": [
-                                "Mage"
+                                "Mage Fr"
                             ]
                         }
 
