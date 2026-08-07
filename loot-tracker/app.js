@@ -29,8 +29,9 @@ async function loadData() {
 
 
         allLoot = getAllLoot();
-
-
+        
+        displayCharacters();
+        
         displayTracking();
 
 
@@ -108,12 +109,15 @@ function displayCharacters() {
                     event.target.checked;
 
 
-                if (
-                    currentPage === "tracking" &&
-                    trackingMode === "content"
-                ) {
+                if (currentPage === "tracking") {
                 
-                    displayContent();
+                    displayTracking();
+                
+                }
+                
+                if (currentPage === "stats") {
+                
+                    displayStats();
                 
                 }
 
