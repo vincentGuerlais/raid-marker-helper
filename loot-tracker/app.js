@@ -808,6 +808,13 @@ function displayStats() {
             character => character.active
         );
 
+    const totals = {};
+
+        activeCharacters.forEach(character => {
+
+        totals[character.id] = 0;
+
+    });
 
     let html = `
 
@@ -890,12 +897,13 @@ function displayStats() {
                         character
                     );
 
+                totals[character.id] += count;
+                
+                
                 html += `
-
-                    <td>
-                        ${count}
-                    </td>
-
+                <td>
+                    ${count}
+                </td>
                 `;
 
             });
@@ -964,12 +972,13 @@ function displayStats() {
                             item.classes.includes(character.class)
                         ).length;
 
+                    totals[character.id] += count;
+                    
+                    
                     html += `
-
-                        <td>
-                            ${count}
-                        </td>
-
+                    <td>
+                        ${count}
+                    </td>
                     `;
 
                 });
@@ -985,7 +994,34 @@ function displayStats() {
 
         });
 
+html += `
 
+<tr class="total">
+
+    <td>
+        TOTAL
+    </td>
+
+`;
+
+activeCharacters.forEach(character => {
+
+    html += `
+
+    <td>
+        ${totals[character.id]}
+    </td>
+
+    `;
+
+});
+
+
+html += `
+
+</tr>
+
+`;
     html += `
 
                 </tbody>
