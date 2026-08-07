@@ -92,7 +92,13 @@ body {
 .stats-table th:not(:first-child),
 .stats-table td:not(:first-child) {
 
-    width:120px;
+    width:60px;
+
+    max-width:60px;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
 
 }
 
