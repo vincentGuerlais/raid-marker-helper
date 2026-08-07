@@ -1,24 +1,31 @@
 {
     "characters": [
         {
-            "id": "vincent_monk",
-            "name": "Vincent",
+            "id": "syinx_monk",
+            "name": "Syinx",
             "class": "Monk",
             "spec": "Windwalker",
             "active": true
         },
         {
-            "id": "paul_hunter",
-            "name": "Paul",
+            "id": "hyrozia_bm",
+            "name": "Hyrozia",
             "class": "Hunter",
             "spec": "Beast Mastery",
             "active": true
         },
         {
-            "id": "marie_mage",
-            "name": "Marie",
+            "id": "alex_mage",
+            "name": "Alex",
             "class": "Mage",
             "spec": "Frost",
+            "active": false
+        },
+        {
+            "id": "chryor_druid",
+            "name": "Chryor",
+            "class": "Druid",
+            "spec": "Guardian",
             "active": false
         }
     ]
