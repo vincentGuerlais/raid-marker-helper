@@ -30,10 +30,6 @@
             "type": "dungeon",
             "file": "contents/season1/dungeons/Windrunner_Spire.json"
         },
-
-
-
-        
         {
             "id": "voidspire",
             "type": "raid",
@@ -59,9 +55,6 @@
             "type": "raid",
             "file": "contents/season1/raids/Tier_and_Cata.json"
         },
-
-
-
         {
             "id": "craft",
             "type": "other",
