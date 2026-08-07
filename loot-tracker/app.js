@@ -1,3 +1,5 @@
+console.log("APP VERSION 2026-08-07");
+
 let currentPage = "tracking";
 let trackingMode = "content";
 
