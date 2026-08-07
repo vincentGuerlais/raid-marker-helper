@@ -7,6 +7,7 @@
         {
             "name": "Espauliers du chasseur du Vide",
             "slot": "Epaules",
+            "note" : "",
             "classes": [
                 "Hunter BM"
             ]
