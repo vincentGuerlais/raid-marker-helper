@@ -1,61 +1,6 @@
 {
     "contents": [
-
-        {
-            "id": "example_dungeon",
-            "name": "Donjon Exemple",
-            "type": "dungeon",
-
-            "loot": [
-
-                {
-                    "name": "Anneau des Ombres",
-                    "source": "Donjon Exemple",
-                    "boss": "Boss final",
-                    "classes": [
-                        "Monk MW",
-                        "Hunter BM"
-                    ]
-                },
-
-                {
-                    "name": "Baguette mystique",
-                    "source": "Donjon Exemple",
-                    "boss": "Boss final",
-                    "classes": [
-                        "Mage Fr",
-                        "Hunter BM"
-                    ]
-                }
-
-            ]
-        },
-
-
-        {
-            "id": "example_raid",
-            "name": "Raid Exemple",
-            "type": "raid",
-
-            "bosses": [
-
-                {
-                    "name": "Boss 1",
-
-                    "loot": [
-
-                        {
-                            "name": "Cape Lunaire",
-                            "classes": [
-                                "Mage Fr"
-                            ]
-                        }
-
-                    ]
-                }
-
-            ]
-        }
-
+        "contents/dungeons/donjon_example.json",
+        "contents/raids/raid_example.json"
     ]
 }
