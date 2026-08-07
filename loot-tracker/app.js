@@ -407,16 +407,17 @@ function displayTracking() {
 
 
     document
-    .getElementById("contents")
-    .style.display = "block";
-
-
-    document
     .getElementById("loot")
     .style.display = "block";
 
 
+    const contentsContainer =
+        document.getElementById("contents");
+
+
     if (trackingMode === "content") {
+
+        contentsContainer.style.display = "block";
 
         displayContent();
 
@@ -424,6 +425,8 @@ function displayTracking() {
 
 
     if (trackingMode === "player") {
+
+        contentsContainer.style.display = "none";
 
         displayPlayer();
 
