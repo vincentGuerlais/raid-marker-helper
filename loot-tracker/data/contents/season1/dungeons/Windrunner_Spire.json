@@ -7,6 +7,7 @@
         {
             "name": "Mantelet de sombre dévotion",
             "slot": "Epaules",
+            "note" : "",
             "classes": [
                 "Mage fr"
             ]
