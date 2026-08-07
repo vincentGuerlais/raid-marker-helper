@@ -34,9 +34,29 @@
 
         
         {
-            "id": "raid_exemple",
+            "id": "voidspire",
             "type": "raid",
-            "file": "contents/raids/raid_exemple.json"
+            "file": "contents/season1/raids/Voidspire.json"
+        },
+        {
+            "id": "march_on_queldanas",
+            "type": "raid",
+            "file": "contents/season1/raids/March_on_QuelDanas.json"
+        },
+        {
+            "id": "dreamrift",
+            "type": "raid",
+            "file": "contents/season1/raids/Dreamrift.json"
+        },
+        {
+            "id": "sporefall",
+            "type": "raid",
+            "file": "contents/season1/raids/Sporefall.json"
+        },
+        {
+            "id": "tier_and_cata",
+            "type": "raid",
+            "file": "contents/season1/raids/Tier_and_Cata.json"
         }
     ]
 }
