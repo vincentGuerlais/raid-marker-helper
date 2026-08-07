@@ -3,29 +3,25 @@
         {
             "id": "syinx_monk",
             "name": "Syinx",
-            "class": "Monk",
-            "spec": "Windwalker",
+            "class": "Monk MW",
             "active": true
         },
         {
             "id": "hyrozia_bm",
             "name": "Hyrozia",
-            "class": "Hunter",
-            "spec": "Beast Mastery",
+            "class": "Hunter BM",
             "active": true
         },
         {
             "id": "alex_mage",
             "name": "Alex",
-            "class": "Mage",
-            "spec": "Frost",
+            "class": "Mage Fr",
             "active": false
         },
         {
             "id": "chryor_druid",
             "name": "Chryor",
-            "class": "Druid",
-            "spec": "Guardian",
+            "class": "Druid Gu",
             "active": false
         }
     ]
