@@ -58,6 +58,18 @@ async function loadData() {
 
 function saveHiddenItems() {
 
+    Object.keys(hiddenItems)
+    .forEach(id => {
+
+        if (hiddenItems[id].length === 0) {
+
+            delete hiddenItems[id];
+
+        }
+
+    });
+
+
     localStorage.setItem(
         "hiddenItems",
         JSON.stringify(hiddenItems)
@@ -384,6 +396,35 @@ function displayPlayer() {
 
     });
 
+    document
+.querySelectorAll(".reset-player-loot")
+.forEach(button => {
+
+
+    button.addEventListener(
+        "click",
+        event => {
+
+
+            const characterId =
+                event.target.dataset.character;
+
+
+            hiddenItems[characterId] = [];
+
+
+            saveHiddenItems();
+
+
+            displayPlayer();
+
+
+        }
+    );
+
+
+});
+    
 }
 
 function displayPlayerLoot(character) {
@@ -397,7 +438,14 @@ function displayPlayerLoot(character) {
                 ${character.name}
                 - ${character.class}
             </h3>
-
+            
+        <button
+            class="reset-player-loot"
+            data-character="${character.id}"
+        >
+            ↺ Réinitialiser
+        </button>
+        
     `;
 
 
