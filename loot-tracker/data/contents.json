@@ -1,6 +1,14 @@
 {
     "contents": [
-        "contents/dungeons/donjon_example.json",
-        "contents/raids/raid_example.json"
+        {
+            "id": "donjon_exemple",
+            "type": "dungeon",
+            "file": "contents/dungeons/donjon_exemple.json"
+        },
+        {
+            "id": "raid_exemple",
+            "type": "raid",
+            "file": "contents/raids/raid_exemple.json"
+        }
     ]
 }
