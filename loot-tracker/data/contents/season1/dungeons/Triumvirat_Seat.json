@@ -3,13 +3,19 @@
     "name": "Siège du triumvirat",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Espauliers du chasseur du Vide",
-            "slot": "Epaules",
-            "note" : "",
-            "classes": [
-                "Hunter BM"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Espauliers du chasseur du Vide",
+                    "slot": "Epaules",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         }
     ]
