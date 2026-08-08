@@ -3,14 +3,20 @@
     "name": "Académie d’Algeth’ar",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Boîte à secret d’Algeth’ar",
-            "slot": "Bijou",
-            "note" : "",
-            "classes": [
-                "Hunter BM",
-                "Druid Gu"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Boîte à secret d’Algeth’ar",
+                    "slot": "Bijou",
+                    "note": "",
+                    "classes": [
+                        "Hunter BM",
+                        "Druid Gu"
+                    ]
+                }
             ]
         }
     ]
