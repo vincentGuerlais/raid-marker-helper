@@ -3,21 +3,27 @@
     "name": "Orée-du-Ciel",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Arcanique du grand sage",
-            "slot": "Arme 1H",
-            "note" : "",
-            "classes": [
-                "Monk MW"
-            ]
-        },
-        {
-            "name": "Grande cape en écailles rigides",
-            "slot": "Cape",
-            "note" : "",
-            "classes": [
-                "Mage fr"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Arcanique du grand sage",
+                    "slot": "Arme 1H",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Grande cape en écailles rigides",
+                    "slot": "Cape",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }
             ]
         }
     ]
