@@ -3,21 +3,27 @@
     "name": "Fosse de Saron",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Sautoir ymirheim barbelé",
-            "slot": "Cou",
-            "note" : "",
-            "classes": [
-                "Monk MW"
-            ]
-        },
-        {
-            "name": "Garde-poignets en cuir mâchonné",
-            "slot": "Poignets",
-            "note" : "",
-            "classes": [
-                "Monk MW"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Sautoir ymirheim barbelé",
+                    "slot": "Cou",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Garde-poignets en cuir mâchonné",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
             ]
         }
     ]
