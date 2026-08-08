@@ -3,13 +3,19 @@
     "name": "Cavernes de Maisara",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Arc-putride de tromperie",
-            "slot": "Arme 2H",
-            "note" : "",
-            "classes": [
-                "Hunter BM"
+            "name": "Cavernes de Maisara",
+
+            "loot": [
+                {
+                    "name": "Arc-putride de tromperie",
+                    "slot": "Arme 2H",
+                    "note": "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         }
     ]
