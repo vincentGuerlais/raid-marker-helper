@@ -3,13 +3,19 @@
     "name": "Flèche de Coursevent",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Mantelet de sombre dévotion",
-            "slot": "Epaules",
-            "note" : "",
-            "classes": [
-                "Mage fr"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Mantelet de sombre dévotion",
+                    "slot": "Epaules",
+                    "note" : "",
+                    "classes": [
+                        "Mage fr"
+                    ]
+                }
             ]
         }
     ]
