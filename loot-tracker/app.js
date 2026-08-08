@@ -785,18 +785,18 @@ function displayTracking() {
 function displayStats() {
 
     document
-    .getElementById("trackingMode")
-    .style.display = "none";
+        .getElementById("trackingMode")
+        .style.display = "none";
 
 
     document
-    .getElementById("contents")
-    .style.display = "none";
+        .getElementById("contents")
+        .style.display = "none";
 
 
     document
-    .getElementById("loot")
-    .style.display = "block";
+        .getElementById("loot")
+        .style.display = "block";
 
 
     const container =
@@ -808,13 +808,16 @@ function displayStats() {
             character => character.active
         );
 
+
     const totals = {};
 
-        activeCharacters.forEach(character => {
+
+    activeCharacters.forEach(character => {
 
         totals[character.id] = 0;
 
     });
+
 
     let html = `
 
@@ -846,7 +849,13 @@ function displayStats() {
     });
 
 
+    // Colonne total
+
     html += `
+
+                        <th>
+                            Total
+                        </th>
 
                     </tr>
 
@@ -865,7 +874,7 @@ function displayStats() {
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 1}">
+            <td colspan="${activeCharacters.length + 2}">
                 Donjons
             </td>
 
@@ -877,6 +886,9 @@ function displayStats() {
     contents
         .filter(content => content.type === "dungeon")
         .forEach(content => {
+
+            let rowTotal = 0;
+
 
             html += `
 
@@ -897,19 +909,28 @@ function displayStats() {
                         character
                     );
 
+
                 totals[character.id] += count;
-                
-                
+
+                rowTotal += count;
+
+
                 html += `
-                <td>
-                    ${count}
-                </td>
+
+                    <td>
+                        ${count}
+                    </td>
+
                 `;
 
             });
 
 
             html += `
+
+                    <td class="row-total">
+                        ${rowTotal}
+                    </td>
 
                 </tr>
 
@@ -926,7 +947,7 @@ function displayStats() {
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 1}">
+            <td colspan="${activeCharacters.length + 2}">
                 Raids
             </td>
 
@@ -943,7 +964,7 @@ function displayStats() {
 
                 <tr class="raid-title">
 
-                    <td colspan="${activeCharacters.length + 1}">
+                    <td colspan="${activeCharacters.length + 2}">
                         ${raid.name}
                     </td>
 
@@ -953,6 +974,9 @@ function displayStats() {
 
 
             raid.bosses.forEach(boss => {
+
+                let rowTotal = 0;
+
 
                 html += `
 
@@ -969,22 +993,33 @@ function displayStats() {
 
                     const count =
                         boss.loot.filter(item =>
-                            item.classes.includes(character.class)
+                            item.classes.includes(
+                                character.class
+                            )
                         ).length;
 
+
                     totals[character.id] += count;
-                    
-                    
+
+                    rowTotal += count;
+
+
                     html += `
-                    <td>
-                        ${count}
-                    </td>
+
+                        <td>
+                            ${count}
+                        </td>
+
                     `;
 
                 });
 
 
                 html += `
+
+                        <td class="row-total">
+                            ${rowTotal}
+                        </td>
 
                     </tr>
 
@@ -994,34 +1029,55 @@ function displayStats() {
 
         });
 
-html += `
 
-<tr class="total">
+    // =========================
+    // TOTAL GENERAL
+    // =========================
 
-    <td>
-        TOTAL
-    </td>
+    let grandTotal = 0;
 
-`;
+    Object.values(totals).forEach(total => {
 
-activeCharacters.forEach(character => {
+        grandTotal += total;
+
+    });
+
 
     html += `
 
-    <td>
-        ${totals[character.id]}
-    </td>
+        <tr class="total">
+
+            <td>
+                TOTAL
+            </td>
 
     `;
 
-});
+
+    activeCharacters.forEach(character => {
+
+        html += `
+
+            <td>
+                ${totals[character.id]}
+            </td>
+
+        `;
+
+    });
 
 
-html += `
+    html += `
 
-</tr>
+            <td class="row-total">
+                ${grandTotal}
+            </td>
 
-`;
+        </tr>
+
+    `;
+
+
     html += `
 
                 </tbody>
