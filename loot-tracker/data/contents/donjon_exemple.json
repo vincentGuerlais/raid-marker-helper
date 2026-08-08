@@ -1,25 +1,31 @@
 {
-    "id": "example_dungeon",
-    "name": "Donjon Exemple",
+    "id": "algethar_academy",
+    "name": "Académie d’Algeth’ar",
     "type": "dungeon",
 
-    "loot": [
+    "bosses": [
         {
-            "name": "Anneau des Ombres",
-            "slot": "Anneau",
-            "note" : "",
-            "classes": [
-                "Monk MW",
-                "Hunter BM"
-            ]
-        },
-        {
-            "name": "Baguette mystique",
-            "slot": "Arme 1H",
-            "note" : "",
-            "classes": [
-                "Mage Fr",
-                "Hunter BM"
+            "name": "Académie d’Algeth’ar",
+
+            "loot": [
+                {
+                    "name": "Boîte à secret d’Algeth’ar",
+                    "slot": "Bijou",
+                    "note": "",
+                    "classes": [
+                        "Hunter BM",
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "autre",
+                    "slot": "Bijou",
+                    "note": "",
+                    "classes": [
+                        "Hunter BM",
+                        "Druid Gu"
+                    ]
+                }                
             ]
         }
     ]
