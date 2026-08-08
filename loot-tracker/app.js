@@ -350,7 +350,7 @@ function displayLoot(index) {
 
     console.log("displayLoot index:", index);
     console.log("content:", contents[index]);
-    
+
     const content = contents[index];
 
     if (!content) {
@@ -363,38 +363,9 @@ function displayLoot(index) {
         return;
 
     }
-    
-    const container = document.getElementById("loot");
 
-
-    let html = "<h2>Loot</h2>";
-
-
-    let items = [];
-
-
-    if (content.type === "dungeon") {
-
-        items = content.loot;
-
-    }
-
-
-    if (
-        content.type === "raid" ||
-        content.type === "other"
-    ) {
-    
-        content.bosses.forEach(boss => {
-    
-            html += `<h3>${boss.name}</h3>`;
-    
-            items.push(...boss.loot);
-    
-        });
-    
-    }
-
+    const container =
+        document.getElementById("loot");
 
 
     const activeClasses =
@@ -403,40 +374,51 @@ function displayLoot(index) {
         .map(c => c.class);
 
 
-
-    items.forEach(item => {
-
-
-        const interested =
-            item.classes.some(
-                c => activeClasses.includes(c)
-            );
+    let html = "<h2>Loot</h2>";
 
 
-        if (!interested) {
-            return;
-        }
+    content.bosses.forEach(boss => {
+
+        html += `<h3>${boss.name}</h3>`;
 
 
-        html += `
-        
-        <div class="item">
-        
-            <strong>${item.name}</strong>
-        
-            <div class="slot">
-                🛡 ${item.slot}
-            </div>
-        
-            ${
-                item.note
-                    ? `<div class="note">💡 ${item.note}</div>`
-                    : ""
+        boss.loot.forEach(item => {
+
+
+            const interested =
+                item.classes.some(
+                    c => activeClasses.includes(c)
+                );
+
+
+            if (!interested) {
+                return;
             }
-        
-            <div>
-        
-        `;
+
+
+            html += `
+
+                <div class="item">
+
+                    <strong>
+                        ${item.name}
+                    </strong>
+
+                    <div class="slot">
+                        🛡 ${item.slot}
+                    </div>
+
+                    ${
+                        item.note
+                            ? `<div class="note">
+                                💡 ${item.note}
+                               </div>`
+                            : ""
+                    }
+
+                    <div>
+
+            `;
 
 
             characters
@@ -447,84 +429,82 @@ function displayLoot(index) {
             )
             .forEach(character => {
 
+                html += `
+
+                    <div>
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                class="loot-check"
+                                data-character="${character.id}"
+                                data-item="${item.name}"
+                            >
+
+                            ${character.name}
+
+                        </label>
+
+                    </div>
+
+                `;
+
+            });
+
 
             html += `
 
-            <div>
-            
-            <label>
-            
-            <input
-                type="checkbox"
-                class="loot-check"
-                data-character="${character.id}"
-                data-item="${item.name}"
-            >
-            
-            ${character.name}
-            
-            </label>
-            
-            </div>
+                    </div>
+
+                </div>
 
             `;
 
         });
 
-
-        html += `
-
-                </div>
-
-            </div>
-
-        `;
-
-
     });
 
 
     container.innerHTML = html;
-    
-    
+
+
     document
     .querySelectorAll(".loot-check")
     .forEach(check => {
-    
+
         check.addEventListener(
             "change",
             event => {
-    
-    
+
                 const characterId =
                     event.currentTarget.dataset.character;
-    
-    
+
+
                 const itemName =
                     event.currentTarget.dataset.item;
-    
-    
-    
+
+
                 if (!hiddenItems[characterId]) {
-    
+
                     hiddenItems[characterId] = [];
-    
+
                 }
-    
-    
+
+
                 hiddenItems[characterId].push(itemName);
-    
-    
+
+
                 saveHiddenItems();
-    
-    
+
+
                 displayLoot(index);
-    
-    
+
             }
         );
-    
+
     });
+
 }
 
 function displayPlayer() {
@@ -1097,17 +1077,11 @@ function getAllLoot() {
 
     const items = [];
 
-
     contents.forEach(content => {
 
+        content.bosses.forEach(boss => {
 
-        // Donjons : loot directement attaché au contenu
-
-        if (content.type === "dungeon") {
-
-
-            content.loot.forEach(item => {
-
+            boss.loot.forEach(item => {
 
                 items.push({
 
@@ -1115,53 +1089,15 @@ function getAllLoot() {
 
                     source: content.name,
 
-                    boss: null
+                    boss: boss.name
 
                 });
 
-
             });
 
-
-        }
-
-
-
-        // Raids : loot attaché aux boss et crafts
-
-        if (
-            content.type === "raid" ||
-            content.type === "other"
-        ) {
-        
-            content.bosses.forEach(boss => {
-
-
-                boss.loot.forEach(item => {
-
-
-                    items.push({
-
-                        ...item,
-
-                        source: content.name,
-
-                        boss: boss.name
-
-                    });
-
-
-                });
-
-
-            });
-
-
-        }
-
+        });
 
     });
-
 
     return items;
 
@@ -1172,31 +1108,16 @@ function getLootForContentAndCharacter(
     character
 ) {
 
-
     let items = [];
 
 
-    if (content.type === "dungeon") {
+    content.bosses.forEach(boss => {
 
-        items = content.loot;
+        items.push(
+            ...boss.loot
+        );
 
-    }
-
-
-    if (
-        content.type === "raid" ||
-        content.type === "other"
-    ) {
-    
-        content.bosses.forEach(boss => {
-
-            items.push(
-                ...boss.loot
-            );
-
-        });
-
-    }
+    });
 
 
     return items.filter(item =>
@@ -1205,6 +1126,18 @@ function getLootForContentAndCharacter(
         !isLootHidden(character, item)
     ).length;
 
+}function getLootForContentAndCharacter(
+    content,
+    character
+) {
+
+    return content.bosses
+        .flatMap(boss => boss.loot)
+        .filter(item =>
+            item.classes.includes(character.class) &&
+            !isLootHidden(character, item)
+        )
+        .length;
 
 }
 
