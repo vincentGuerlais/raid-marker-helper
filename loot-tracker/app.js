@@ -799,6 +799,10 @@ function displayStats() {
     });
 
 
+    // Total général tous joueurs
+    let grandTotal = 0;
+
+
     let html = `
 
         <h2>📊 Statistiques</h2>
@@ -829,7 +833,13 @@ function displayStats() {
     });
 
 
+    // Colonne Total
+
     html += `
+
+                        <th>
+                            Total
+                        </th>
 
                     </tr>
 
@@ -848,7 +858,7 @@ function displayStats() {
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 1}">
+            <td colspan="${activeCharacters.length + 2}">
                 Donjons
             </td>
 
@@ -860,6 +870,9 @@ function displayStats() {
     contents
         .filter(content => content.type === "dungeon")
         .forEach(content => {
+
+            let contentTotal = 0;
+
 
             html += `
 
@@ -883,6 +896,8 @@ function displayStats() {
 
                 totals[character.id] += count;
 
+                contentTotal += count;
+
 
                 html += `
 
@@ -895,7 +910,14 @@ function displayStats() {
             });
 
 
+            grandTotal += contentTotal;
+
+
             html += `
+
+                    <td>
+                        ${contentTotal}
+                    </td>
 
                 </tr>
 
@@ -912,7 +934,7 @@ function displayStats() {
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 1}">
+            <td colspan="${activeCharacters.length + 2}">
                 Raids
             </td>
 
@@ -925,13 +947,11 @@ function displayStats() {
         .filter(content => content.type === "raid")
         .forEach(raid => {
 
-            // Nom du raid
-
             html += `
 
                 <tr class="raid-title">
 
-                    <td colspan="${activeCharacters.length + 1}">
+                    <td colspan="${activeCharacters.length + 2}">
                         ${raid.name}
                     </td>
 
@@ -940,9 +960,10 @@ function displayStats() {
             `;
 
 
-            // Boss
-
             raid.bosses.forEach(boss => {
+
+                let bossTotal = 0;
+
 
                 html += `
 
@@ -966,6 +987,8 @@ function displayStats() {
 
                     totals[character.id] += count;
 
+                    bossTotal += count;
+
 
                     html += `
 
@@ -978,7 +1001,14 @@ function displayStats() {
                 });
 
 
+                grandTotal += bossTotal;
+
+
                 html += `
+
+                        <td>
+                            ${bossTotal}
+                        </td>
 
                     </tr>
 
@@ -997,7 +1027,7 @@ function displayStats() {
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 1}">
+            <td colspan="${activeCharacters.length + 2}">
                 Autres
             </td>
 
@@ -1010,13 +1040,11 @@ function displayStats() {
         .filter(content => content.type === "other")
         .forEach(content => {
 
-            // Nom du contenu "other"
-
             html += `
 
                 <tr class="raid-title">
 
-                    <td colspan="${activeCharacters.length + 1}">
+                    <td colspan="${activeCharacters.length + 2}">
                         ${content.name}
                     </td>
 
@@ -1025,9 +1053,10 @@ function displayStats() {
             `;
 
 
-            // Boss / catégories
-
             content.bosses.forEach(boss => {
+
+                let bossTotal = 0;
+
 
                 html += `
 
@@ -1051,6 +1080,8 @@ function displayStats() {
 
                     totals[character.id] += count;
 
+                    bossTotal += count;
+
 
                     html += `
 
@@ -1063,7 +1094,14 @@ function displayStats() {
                 });
 
 
+                grandTotal += bossTotal;
+
+
                 html += `
+
+                        <td>
+                            ${bossTotal}
+                        </td>
 
                     </tr>
 
@@ -1075,7 +1113,7 @@ function displayStats() {
 
 
     // ==================================================
-    // TOTAL
+    // TOTAL FINAL
     // ==================================================
 
     html += `
@@ -1103,6 +1141,10 @@ function displayStats() {
 
 
     html += `
+
+            <td>
+                ${grandTotal}
+            </td>
 
         </tr>
 
