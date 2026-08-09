@@ -789,8 +789,8 @@ function displayStats() {
         );
 
 
+    // Total général par joueur
     const totals = {};
-
 
     activeCharacters.forEach(character => {
 
@@ -829,13 +829,7 @@ function displayStats() {
     });
 
 
-    // Colonne total
-
     html += `
-
-                        <th>
-                            Total
-                        </th>
 
                     </tr>
 
@@ -846,15 +840,15 @@ function displayStats() {
     `;
 
 
-    // =========================
+    // ==================================================
     // DONJONS
-    // =========================
+    // ==================================================
 
     html += `
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 2}">
+            <td colspan="${activeCharacters.length + 1}">
                 Donjons
             </td>
 
@@ -866,9 +860,6 @@ function displayStats() {
     contents
         .filter(content => content.type === "dungeon")
         .forEach(content => {
-
-            let rowTotal = 0;
-
 
             html += `
 
@@ -892,8 +883,6 @@ function displayStats() {
 
                 totals[character.id] += count;
 
-                rowTotal += count;
-
 
                 html += `
 
@@ -908,10 +897,6 @@ function displayStats() {
 
             html += `
 
-                    <td class="row-total">
-                        ${rowTotal}
-                    </td>
-
                 </tr>
 
             `;
@@ -919,15 +904,15 @@ function displayStats() {
         });
 
 
-    // =========================
+    // ==================================================
     // RAIDS
-    // =========================
+    // ==================================================
 
     html += `
 
         <tr class="section">
 
-            <td colspan="${activeCharacters.length + 2}">
+            <td colspan="${activeCharacters.length + 1}">
                 Raids
             </td>
 
@@ -940,11 +925,13 @@ function displayStats() {
         .filter(content => content.type === "raid")
         .forEach(raid => {
 
+            // Nom du raid
+
             html += `
 
                 <tr class="raid-title">
 
-                    <td colspan="${activeCharacters.length + 2}">
+                    <td colspan="${activeCharacters.length + 1}">
                         ${raid.name}
                     </td>
 
@@ -953,10 +940,9 @@ function displayStats() {
             `;
 
 
+            // Boss
+
             raid.bosses.forEach(boss => {
-
-                let rowTotal = 0;
-
 
                 html += `
 
@@ -973,15 +959,12 @@ function displayStats() {
 
                     const count =
                         boss.loot.filter(item =>
-                            item.classes.includes(
-                                character.class
-                            )
+                            item.classes.includes(character.class) &&
+                            !isLootHidden(character, item)
                         ).length;
 
 
                     totals[character.id] += count;
-
-                    rowTotal += count;
 
 
                     html += `
@@ -997,9 +980,90 @@ function displayStats() {
 
                 html += `
 
-                        <td class="row-total">
-                            ${rowTotal}
+                    </tr>
+
+                `;
+
+            });
+
+        });
+
+
+    // ==================================================
+    // AUTRES
+    // ==================================================
+
+    html += `
+
+        <tr class="section">
+
+            <td colspan="${activeCharacters.length + 1}">
+                Autres
+            </td>
+
+        </tr>
+
+    `;
+
+
+    contents
+        .filter(content => content.type === "other")
+        .forEach(content => {
+
+            // Nom du contenu "other"
+
+            html += `
+
+                <tr class="raid-title">
+
+                    <td colspan="${activeCharacters.length + 1}">
+                        ${content.name}
+                    </td>
+
+                </tr>
+
+            `;
+
+
+            // Boss / catégories
+
+            content.bosses.forEach(boss => {
+
+                html += `
+
+                    <tr>
+
+                        <td>
+                            ${boss.name}
                         </td>
+
+                `;
+
+
+                activeCharacters.forEach(character => {
+
+                    const count =
+                        boss.loot.filter(item =>
+                            item.classes.includes(character.class) &&
+                            !isLootHidden(character, item)
+                        ).length;
+
+
+                    totals[character.id] += count;
+
+
+                    html += `
+
+                        <td>
+                            ${count}
+                        </td>
+
+                    `;
+
+                });
+
+
+                html += `
 
                     </tr>
 
@@ -1010,18 +1074,9 @@ function displayStats() {
         });
 
 
-    // =========================
-    // TOTAL GENERAL
-    // =========================
-
-    let grandTotal = 0;
-
-    Object.values(totals).forEach(total => {
-
-        grandTotal += total;
-
-    });
-
+    // ==================================================
+    // TOTAL
+    // ==================================================
 
     html += `
 
@@ -1048,10 +1103,6 @@ function displayStats() {
 
 
     html += `
-
-            <td class="row-total">
-                ${grandTotal}
-            </td>
 
         </tr>
 
