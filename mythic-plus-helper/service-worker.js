@@ -8,7 +8,6 @@ const FILES = [
     "./index.html",
     "./app.js",
     "./style.css",
-    "./contents.json",
     "./service-worker.js"
 
 ];
