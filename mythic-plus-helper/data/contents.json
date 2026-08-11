@@ -4,6 +4,11 @@
             "id": "nalorak_den",
             "name": "Antre de Nalorak",
             "file": "contents/season1/Nalorak_Den.json"
+        },
+        {
+            "id": "altar_of_fangs",
+            "name": "Autel des Crocs",
+            "file": "contents/season1/Altar_of_Fangs.json"
         }
     ]
 }
