@@ -1,8 +1,8 @@
 console.log("MYTHIC+ HELPER");
 
-
 let contents = [];
 let currentDungeon = null;
+let currentPage = 0;
 
 
 
@@ -72,7 +72,6 @@ function displayDungeonSelector() {
     contents.forEach(
         (content, index) => {
 
-
             const option =
                 document.createElement(
                     "option"
@@ -126,23 +125,366 @@ function displayDungeon(index) {
     }
 
 
+    currentPage = 0;
+
+
+    displayCurrentPage();
+
+}
+
+
+
+function getDungeonPages() {
+
+    if (!currentDungeon) {
+
+        return [];
+
+    }
+
+
+    return [
+
+        {
+            type: "lore",
+            name: currentDungeon.name,
+            lore: currentDungeon.lore || "Lore ... Lore"
+        },
+
+        ...(currentDungeon.sections || [])
+
+    ];
+
+}
+
+
+
+function displayCurrentPage() {
+
     const container =
         document.getElementById(
             "dungeon"
         );
 
 
-    container.innerHTML = `
+    const pages =
+        getDungeonPages();
 
-        <h2>
-            ${currentDungeon.name}
-        </h2>
 
-        <p>
-            Donjon chargé.
-        </p>
+    if (
+        !pages.length ||
+        currentPage < 0 ||
+        currentPage >= pages.length
+    ) {
+
+        return;
+
+    }
+
+
+    const page =
+        pages[currentPage];
+
+
+    let html = `
+
+        <div class="dungeon-page">
+
+            <div class="page-header">
+
+                <h2>
+                    ${currentDungeon.name}
+                </h2>
+
+                <div class="page-counter">
+                    ${currentPage + 1} / ${pages.length}
+                </div>
+
+            </div>
 
     `;
+
+
+    // =========================
+    // LORE
+    // =========================
+
+    if (page.type === "lore") {
+
+        html += `
+
+            <div class="lore">
+
+                <h3>
+                    📖 ${page.name}
+                </h3>
+
+                <p>
+                    ${page.lore}
+                </p>
+
+            </div>
+
+        `;
+
+    }
+
+
+    // =========================
+    // SECTION
+    // =========================
+
+    else {
+
+        html += `
+
+            <div class="section">
+
+                <h3>
+                    ${page.name}
+                </h3>
+
+        `;
+
+
+        if (page.info) {
+
+            html += `
+
+                <div class="section-info">
+                    ${page.info}
+                </div>
+
+            `;
+
+        }
+
+
+        if (page.note) {
+
+            html += `
+
+                <div class="section-note">
+                    ${page.note}
+                </div>
+
+            `;
+
+        }
+
+
+        // Affichage temporaire des mobs
+
+        if (page.mobs) {
+
+            page.mobs.forEach(
+                mob => {
+
+                    html += `
+
+                        <div class="mob">
+
+                            <h4>
+                                ${mob.priority ? "/!\\ " : ""}
+                                ${mob.name}
+                            </h4>
+
+                    `;
+
+
+                    if (mob.info) {
+
+                        html += `
+
+                            <div class="mob-info">
+                                ${mob.info}
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    if (mob.abilities) {
+
+                        html += `
+
+                            <ul>
+
+                        `;
+
+
+                        mob.abilities.forEach(
+                            ability => {
+
+                                html += `
+
+                                    <li>
+
+                                        <strong>
+                                            ${ability.name}
+                                        </strong>
+
+                                        ${
+                                            ability.action
+                                            ? ` → ${ability.action}`
+                                            : ""
+                                        }
+
+                                        ${
+                                            ability.info
+                                            ? `<br>
+                                               <small>
+                                                   ${ability.info}
+                                               </small>`
+                                            : ""
+                                        }
+
+                                    </li>
+
+                                `;
+
+                            }
+                        );
+
+
+                        html += `
+
+                            </ul>
+
+                        `;
+
+                    }
+
+
+                    html += `
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+        }
+
+
+        html += `
+
+            </div>
+
+        `;
+
+    }
+
+
+    // =========================
+    // NAVIGATION
+    // =========================
+
+    html += `
+
+        <div class="page-navigation">
+
+    `;
+
+
+    if (currentPage > 0) {
+
+        html += `
+
+            <button
+                id="previousPage"
+            >
+                ← Précédent
+            </button>
+
+        `;
+
+    }
+
+
+    if (currentPage < pages.length - 1) {
+
+        html += `
+
+            <button
+                id="nextPage"
+            >
+                Suivant →
+            </button>
+
+        `;
+
+    }
+
+
+    html += `
+
+        </div>
+
+    `;
+
+
+    container.innerHTML = html;
+
+
+    // =========================
+    // EVENTS
+    // =========================
+
+    const previousButton =
+        document.getElementById(
+            "previousPage"
+        );
+
+
+    if (previousButton) {
+
+        previousButton.addEventListener(
+            "click",
+            () => {
+
+                currentPage--;
+
+                displayCurrentPage();
+
+                window.scrollTo(
+                    0,
+                    0
+                );
+
+            }
+        );
+
+    }
+
+
+    const nextButton =
+        document.getElementById(
+            "nextPage"
+        );
+
+
+    if (nextButton) {
+
+        nextButton.addEventListener(
+            "click",
+            () => {
+
+                currentPage++;
+
+                displayCurrentPage();
+
+                window.scrollTo(
+                    0,
+                    0
+                );
+
+            }
+        );
+
+    }
 
 }
 
