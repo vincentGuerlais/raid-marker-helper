@@ -1,1 +1,92 @@
+* {
+    box-sizing: border-box;
+}
 
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background: #111;
+
+    color: #eee;
+
+}
+
+
+.app {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 12px;
+
+}
+
+
+.header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 1.5rem;
+
+}
+
+
+.home-button {
+
+    text-decoration: none;
+
+    font-size: 1.4rem;
+
+}
+
+
+#contentSelector {
+
+    margin-bottom: 20px;
+
+}
+
+
+#contentSelector h2 {
+
+    margin-bottom: 8px;
+
+}
+
+
+#dungeonSelect {
+
+    width: 100%;
+
+    padding: 10px;
+
+    font-size: 1rem;
+
+}
+
+
+#dungeon h2 {
+
+    margin-bottom: 8px;
+
+}
