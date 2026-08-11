@@ -1,14 +1,9 @@
 {
     "dungeons": [
         {
-            "id": "algethar_academy",
-            "name": "Académie d’Algeth’ar",
-            "file": "contents/season1/Algethar_Academy.json"
-        },
-        {
-            "id": "maisara_caverns",
-            "name": "Cavernes de Maisara",
-            "file": "contents/season1/Maisara_Caverns.json"
+            "id": "nalorak_den",
+            "name": "Antre de Nalorak",
+            "file": "contents/season1/Nalorak_den.json"
         }
     ]
 }
