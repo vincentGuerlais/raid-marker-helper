@@ -11,7 +11,7 @@ async function loadData() {
     try {
 
         const response =
-            await fetch("contents.json");
+            await fetch("data/contents.json");
 
         const contentsIndex =
             await response.json();
