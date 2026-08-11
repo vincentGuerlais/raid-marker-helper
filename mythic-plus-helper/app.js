@@ -12,25 +12,21 @@ async function loadData() {
 
         const response =
             await fetch("data/contents.json");
-
+        
         const contentsIndex =
             await response.json();
-
-
+        
         contents = [];
-
-
+        
         for (const entry of contentsIndex.contents) {
-
+        
             const response =
-                await fetch(entry.file);
-
+                await fetch("data/" + entry.file);
+        
             const content =
                 await response.json();
-
-
+        
             contents.push(content);
-
         }
 
 
