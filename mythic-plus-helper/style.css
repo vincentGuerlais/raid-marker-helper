@@ -285,7 +285,34 @@ body {
     border-color: #8e44ad;
     color: #8e44ad;
 }
-    
+
+/* =========================
+   BADGE ACTION
+   ========================= */
+
+.ability-action {
+    margin-top: 4px;
+}
+
+.ability-action-badge {
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    border-radius: 4px;
+
+    font-size: 0.72em;
+    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.ability-action-badge.priority {
+    border-color: #e74c3c;
+    background: rgba(231, 76, 60, 0.15);
+}
+
 .section-note {
     margin: 14px 0;
     padding: 10px 12px;
