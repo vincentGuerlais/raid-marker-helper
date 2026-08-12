@@ -90,3 +90,33 @@ body {
     margin-bottom: 8px;
 
 }
+
+.section-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    flex: 1;
+}
+
+.section-counter {
+    font-size: 0.9em;
+    font-style: italic;
+    opacity: 0.7;
+}
+
+.section-name {
+    font-size: 1.35em;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.next-page-top {
+    flex-shrink: 0;
+    font-size: 1.3em;
+    padding: 6px 12px;
+}
