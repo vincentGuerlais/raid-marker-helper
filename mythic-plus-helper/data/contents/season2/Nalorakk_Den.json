@@ -92,7 +92,7 @@
                             "name": "Fournitures gâtées",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Lance des champignons. Renforcé : plus de champignons.",
+                            "info": "Renforcé : plus de champignons.",
                             "icon": "fournitures_gatees"
                         },
 
@@ -108,7 +108,7 @@
                             "name": "Rugissement dévorant",
                             "type": "DEGATS",
                             "action": "CD DEF / CD HEAL",
-                            "info": "Dégâts. Renforcé : ajoute un bump.",
+                            "info": "Renforcé : ajoute un bump.",
                             "icon": "rugissement_devorant"
                         }
 
@@ -275,8 +275,8 @@
 
                 {
                     "name": "Matriarche territoriale",
-
-                    "info": "AOE à dodge"
+					"type": "AOE",
+					"action": "EVITER"
 				
                 },
 				
@@ -340,7 +340,7 @@
                             "name": "Mutilation des échos",
                             "type": "AOE",
                             "action": "MOVE, STACK",
-							"info": "Spawn un fantôme à poser au loin groupées",
+							"info": "Spawn un fantôme. Poser au loin, groupés",
 							"icon": "mutilation_des_echos"
                         },
 
@@ -366,7 +366,8 @@
                             "type": "SOAK",
                             "action": "SOAK",
                             "info": "Tank uniquement",
-							"icon": "heurt_vigoureux"
+							"icon": "heurt_vigoureux",
+							"priority": true
                         }
 
                     ]
