@@ -224,27 +224,23 @@ function displayCurrentPage() {
                 </h2>
 
                 <div class="section-navigation">
-
-                    <div>
-
+                
+                    <div class="section-title">
+                
                         <div class="section-counter">
-
                             ${currentPage + 1}
                             / ${pages.length}
                             -
                             ${page.label}
-
                         </div>
-
+                
                         <div class="section-name">
-
                             ${page.name}
-
                         </div>
-
+                
                     </div>
-
-
+                
+                
                     ${
                         currentPage < pages.length - 1
                         ? `
@@ -257,9 +253,8 @@ function displayCurrentPage() {
                         `
                         : ""
                     }
-
+                
                 </div>
-
             </div>
 
     `;
