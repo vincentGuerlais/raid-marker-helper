@@ -1,1 +1,380 @@
-{}
+{
+    "id": "altar_of_fangs",
+    "name": "Autel des Crocs",
+    "lore": "Upon the Altar of Fangs, the ancient Amani sealed the Vaults of Atal'Utek with the Fang of Ula'tek. Only that cursed dagger has the power to unseal the prison of the great weapon of the Amani. Aid Orweyna and Liadrin in their pursuit of Zul'jan, who has entered this accursed place in a misbegotten attempt to bring lost glory back to the Amani.",
+
+    "sections": [
+
+        {
+            "type": "trash",
+            "name": "La fouille",
+            "info": "Récolter les offrandes. Kick Hurleur œil-de-lynx s'il mange.",
+
+            "mobs": [
+
+                {
+                    "name": "Soigneur Murmeterre",
+
+                    "abilities": [
+                        {
+                            "name": "Marée guérisseuse",
+                            "type": "HEAL",
+                            "action": "KICK"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Récolteur",
+
+                    "abilities": [
+                        {
+                            "name": "Retrait d'armure",
+                            "type": "DEBUFF",
+                            "action": "KITE / STUN",
+                            "info": "Cumulable. 2 secondes."
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Matriarche territoriale",
+                    "abilities": [
+                        {
+                            "name": "Retrait d'armure",
+                            "type": "ENRAGE",
+                            "action": "FOCUS,STUN",
+                            "info": "S'enrage à la mort des oursons"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Avatar de famine",
+                    "priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Totem Effigie de famine",
+                            "type": "DEBUFF",
+                            "action": "FOCUS",
+                            "info": "Réduit les points de vie.",
+							"priority": true
+                        },
+                        {
+                            "name": "Festin de détresse",
+                            "type": "AOE",
+                            "action": "CD DEF",
+                            "info": "Dégâts + vampirisme.",
+							"priority": true
+
+                        }
+                    ]
+                }
+
+            ]
+        },
+
+
+        {
+            "type": "boss",
+            "name": "Le Thésauriseur",
+            "info": "Se renforce avec les autels.",
+
+            "mobs": [
+
+                {
+                    "name": "Le Thésauriseur",
+
+                    "abilities": [
+
+                        {
+                            "name": "Fournitures gâtées",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "Renforcé : plus de champignons.",
+                            "icon": "fournitures_gatees"
+                        },
+
+                        {
+                            "name": "Heurt de brise-terre",
+                            "type": "CONE",
+                            "action": "ÉVITER",
+                            "info": "Renforcé : ajoute des pointes dans la zone.",
+                            "icon": "heurt_de_brise-terre"
+                        },
+
+                        {
+                            "name": "Rugissement dévorant",
+                            "type": "DEGATS",
+                            "action": "CD DEF / CD HEAL",
+                            "info": "Renforcé : ajoute un bump.",
+                            "icon": "rugissement_devorant"
+                        }
+
+                    ]
+                }
+
+            ]
+        },
+
+
+        {
+            "type": "trash",
+            "name": "L'hiver rigoureux",
+            "info": "Penser à se cacher dans les patchs marron pendant les blizzards.",
+
+            "mobs": [
+
+                {
+                    "name": "Ours marteleur algide",
+
+                    "abilities": [
+                        {
+                            "name": "Courroux glacial",
+                            "type": "DEBUFF",
+                            "action": "KICK",
+                            "info": "Perte de hâte et de vitesse de déplacement."
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Avatar de détermination",
+                    "priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "???",
+                            "type": "AOE",
+                            "action": "SPREAD / CD DEF",
+                            "info": "AOE ciblée + root/stun."
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Grondeur de Terra",
+                    "priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "???",
+                            "type": "AOE",
+                            "action": "FOCUS",
+                            "info": "Pulse de dégâts lorsqu'il possède son bouclier.",
+							"priority": true
+
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Revenant glaciaire",
+
+                    "abilities": [
+                        {
+                            "name": "???",
+                            "type": "AOE",
+                            "action": "SPREAD"
+                        }
+                    ]
+                }
+
+            ],
+
+            "note": "Entrer dans la bulle pour continuer. /!\\ Dégâts importants → CD DEF / CD HEAL."
+        },
+
+
+        {
+            "type": "boss",
+            "name": "Sentinelle de l'hiver",
+            "info": "En patinant !",
+
+            "mobs": [
+
+                {
+                    "name": "Sentinelle de l'hiver",
+
+                    "abilities": [
+
+                        {
+                            "name": "Tourment glacial",
+                            "type": "DOT",
+                            "action": "DÉBUFF / HEAL",
+                            "icon": "tourment_glacial"
+                        },
+
+                        {
+                            "name": "Ouragans déchaînés",
+                            "type": "AOE",
+                            "action": "DODGE",
+                            "icon": "ouragan_dechaine"
+                        },
+
+                        {
+                            "name": "Pointe de givre fracassante",
+                            "type": "ADDS",
+                            "action": "FOCUS / KICK",
+                            "info": "Les adds laissent une flaque de neige à leur mort.",
+                            "icon": "pointe_de_givre_fracassante"
+                        },
+
+                        {
+                            "name": "Tempête gelée",
+                            "type": "AOE",
+                            "action": "CD MOBILITÉ",
+                            "info": "Grosse AOE + push. Rester dans les flaques de neige.",
+                            "icon": "tempete_gelee"
+                        }
+
+                    ]
+                }
+
+            ]
+        },
+		        {
+            "type": "trash",
+            "name": "Le coeur de rage",
+            "info": "",
+
+            "mobs": [
+
+                {
+                    "name": "Mande-totem impitoyable",
+
+                    "abilities": [
+                        {
+                            "name": "Totem de magma",
+                            "type": "ADDS",
+                            "action": "FOCUS",
+							"info": "Invoque un totem de magma"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Mystique liée à la tempête",
+
+                    "abilities": [
+                        {
+                            "name": "Eaux revitalisantes",
+                            "type": "HEAL",
+                            "action": "KICK",
+                            "info": "Attention une de ces abilities n'est plus présente. Laquelle ?"
+                        },
+						{
+                            "name": "Arc Lightning",
+                            "type": "DEGATS",
+                            "action": "KICK",
+                            "info": "Rebondit sur 3 joueurs. Attention une de ces abilities n'est plus présente. Laquelle ?"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Matriarche territoriale",
+					"type": "AOE",
+					"action": "EVITER"
+				
+                },
+				
+				{
+                    "name": "Dompteur de bêtes lié",
+
+                    "abilities": [
+                        {
+                            "name": "Courroux bestial",
+                            "type": "ENRAGE",
+                            "action": "SOOTH, KITE, RUN",
+                            "info": "ATTENTION. Enrage + FIXATE des LYNX"
+                        }
+
+                    ]
+                }
+
+            ]
+        },
+		
+		{
+            "type": "boss",
+            "name": "Nalorakk",
+			"info": "Avec Zul'Jarra",
+
+            "mobs": [
+
+                {
+                    "name": "Loa Speaker Nanae",
+
+                    "abilities": [
+
+                        {
+                            "name": "Earthquake",
+                            "type": "AOE",
+                            "action": "MOVE",
+							"info": "Zones à poser au loin"
+                        },
+
+                        {
+                            "name": "Lightning bolt",
+                            "type": "DEGATS",
+                            "action": "KICK"
+                        },
+
+                        {
+                            "name": "volatile totem",
+                            "type": "ADDS",
+                            "action": "FOCUS",
+                            "info": "Totems à détruire rapidement"
+                        }
+
+                    ]
+                },
+				{
+                    "name": "Nalorakk",
+
+                    "abilities": [
+
+                        {
+                            "name": "Mutilation des échos",
+                            "type": "AOE",
+                            "action": "MOVE, STACK",
+							"info": "Spawn un fantôme. Poser au loin, groupés",
+							"icon": "mutilation_des_echos"
+                        },
+
+                        {
+                            "name": "Fureur du dieu de la guerre",
+                            "type": "SOAK",
+                            "action": "SOAK",
+							"info": "Fantômes rouges qui foncent vers Zul'Jarra",
+							"icon": "fureur_du_dieu_de_la_guerre"
+							
+                        },
+
+                        {
+                            "name": "Offensive accablante",
+                            "type": "DEGATS",
+                            "action": "COVER",
+                            "info": "Courir dans la zone de Zul'Jarra. Bump suivi d'un SOAK Tank",
+							"icon": "offensive_accablante"
+                        },
+						
+						{
+                            "name": "Heurt vigoureux",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "Tank uniquement",
+							"icon": "heurt_vigoureux",
+							"priority": true
+                        }
+
+                    ]
+                }
+				
+
+            ]
+        }
+    ]
+}
