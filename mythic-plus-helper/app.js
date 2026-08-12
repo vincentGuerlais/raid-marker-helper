@@ -363,133 +363,102 @@ function displayCurrentPage() {
                         `;
 
 
-                        mob.abilities.forEach(
-                            ability => {
-
-                                html += `
-
-                                    <div
-                                        class="ability"
-                                    >
-
-                                `;
-
-
-                                // Icône
-
-                                let iconHtml = "";
-                                
-                                if (ability.icon) {
-                                
-                                    iconHtml = `
-                                        <div class="ability-icon">
-                                            <img
-                                                src="assets/abilities/${ability.icon}.png"
-                                                alt=""
+            mob.abilities.forEach(
+                ability => {
+            
+                    // =========================
+                    // Icône
+                    // =========================
+            
+                    let iconHtml = "";
+            
+                    if (ability.icon) {
+            
+                        iconHtml = `
+                            <div class="ability-icon">
+            
+                                <img
+                                    src="assets/abilities/${ability.icon}.png"
+                                    alt=""
+                                >
+            
+                            </div>
+                        `;
+            
+                    }
+            
+            
+                    // =========================
+                    // Compétence
+                    // =========================
+            
+                    html += `
+            
+                        <div class="ability">
+            
+                            ${iconHtml}
+            
+                            <div class="ability-content">
+            
+                                <div class="ability-name">
+            
+                                    ${
+                                        ability.type
+                                        ? `
+                                            <span
+                                                class="ability-type type-${ability.type.toLowerCase()}"
                                             >
-                                        </div>
-                                    `;
-                                
-                                }
-
-
-                                html += `
-
-                                        <div class="ability-content">
-
-                                            <div class="ability-name">
-
-                                                ${
-                                                    ability.type
-                                                    ? `
-                                                        <span
-                                                            class="ability-type type-${ability.type.toLowerCase()}"
-                                                        >
-                                                            ${ability.type}
-                                                        </span>
-                                                    `
-                                                    : ""
-                                                }
-
-                                                <strong>
-                                                    ${ability.name}
-                                                </strong>
-
-                                            </div>
-
-                                `;
-
-
-                                // Action
-
-                                if (ability.action) {
-                                
-                                    html += `
-                                
+                                                ${ability.type}
+                                            </span>
+                                        `
+                                        : ""
+                                    }
+            
+                                    <strong>
+                                        ${ability.name}
+                                    </strong>
+            
+                                </div>
+            
+            
+                                ${
+                                    ability.action
+                                    ? `
                                         <div class="ability-action">
-                                
+            
                                             <span
                                                 class="ability-action-badge ${ability.priority ? "priority" : ""}"
                                             >
                                                 ${ability.priority ? "⚠ " : "→ "}
                                                 ${ability.action}
                                             </span>
-                                
+            
                                         </div>
-                                
-                                    `;
-                                
+                                    `
+                                    : ""
                                 }
-
-
-                                // Info
-
-                                if (ability.info) {
-
-                                    html += `
-
-                                            <div class="ability-info">
-
-                                                ${ability.info}
-
-                                            </div>
-
-                                    `;
-
-                                }
-
-
-                                html += `
-
+            
+            
+                                ${
+                                    ability.info
+                                    ? `
+                                        <div class="ability-info">
+            
+                                            ${ability.info}
+            
                                         </div>
-
-                                    </div>
-
-                                `;
-
-                            }
-                        );
-
-
-                        html += `
-
+                                    `
+                                    : ""
+                                }
+            
                             </div>
-
-                        `;
-
-                    }
-
-
-                    html += `
-
+            
                         </div>
-
+            
                     `;
-
+            
                 }
             );
-
-        }
 
 
         // -------------------------
