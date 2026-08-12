@@ -220,13 +220,51 @@ body {
 
 .ability-type {
     display: inline-block;
+
     width: 70px;
     flex-shrink: 0;
 
-    text-align: left;
+    box-sizing: border-box;
 
-    font-size: 0.75em;
+    padding: 2px 5px;
+
+    text-align: center;
+
+    font-size: 0.7em;
     font-weight: bold;
+
+    border: 1px solid;
+    border-radius: 4px;
+}
+
+.type-aoe {
+    border-color: #e74c3c;
+    color: #e74c3c;
+}
+
+.type-dot {
+    border-color: #9b59b6;
+    color: #9b59b6;
+}
+
+.type-heal {
+    border-color: #2ecc71;
+    color: #2ecc71;
+}
+
+.type-debuff {
+    border-color: #f39c12;
+    color: #f39c12;
+}
+
+.type-adds {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.type-cone {
+    border-color: #e67e22;
+    color: #e67e22;
 }
 .section-note {
     margin: 14px 0;
