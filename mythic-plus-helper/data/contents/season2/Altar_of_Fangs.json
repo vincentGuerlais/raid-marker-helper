@@ -375,7 +375,8 @@
                             "name": "Bloodletting",
                             "type": "AOE",
                             "action": "EVITER",
-							"info": "Posé à la perte du DoT"
+							"info": "Posé à la perte du DoT",
+							"icon": "bloodletting"
 							
                         },
 
