@@ -106,7 +106,7 @@
 
                         {
                             "name": "Rugissement dévorant",
-                            "type": "AOE",
+                            "type": "DEGATS",
                             "action": "CD DEF / CD HEAL",
                             "info": "Dégâts. Renforcé : ajoute un bump.",
                             "icon": "rugissement_devorant"
