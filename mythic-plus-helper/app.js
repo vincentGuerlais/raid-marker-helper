@@ -189,9 +189,7 @@ function getDungeonPages() {
 function displayCurrentPage() {
 
     const container =
-        document.getElementById(
-            "dungeon"
-        );
+        document.getElementById("dungeon");
 
 
     const pages =
@@ -220,23 +218,23 @@ function displayCurrentPage() {
             <div class="page-header">
 
                 <div class="section-navigation">
-                
+
                     <div class="section-title">
-                
+
                         <div class="section-counter">
                             ${currentPage + 1}
                             / ${pages.length}
                             -
                             ${page.label}
                         </div>
-                
+
                         <div class="section-name">
                             ${page.name}
                         </div>
-                
+
                     </div>
-                
-                
+
+
                     ${
                         currentPage < pages.length - 1
                         ? `
@@ -249,8 +247,9 @@ function displayCurrentPage() {
                         `
                         : ""
                     }
-                
+
                 </div>
+
             </div>
 
     `;
@@ -311,26 +310,36 @@ function displayCurrentPage() {
             page.mobs.forEach(
                 mob => {
 
+                    // =========================
+                    // Carte du mob
+                    // =========================
+
                     html += `
 
                         <div class="mob-card">
 
-                        <h4 class="${mob.priority ? "mob-priority" : ""}">
-                        
-                            ${
+                            <h4 class="${
                                 mob.priority
-                                ? '<span class="priority-warning">⚠</span>'
+                                ? "mob-priority"
                                 : ""
-                            }
-                        
-                            ${mob.name}
-                        
-                        </h4>
+                            }">
+
+                                ${
+                                    mob.priority
+                                    ? '<span class="priority-warning">⚠</span>'
+                                    : ""
+                                }
+
+                                ${mob.name}
+
+                            </h4>
 
                     `;
 
 
+                    // -------------------------
                     // Info du mob
+                    // -------------------------
 
                     if (mob.info) {
 
@@ -347,158 +356,180 @@ function displayCurrentPage() {
                     }
 
 
-// -------------------------
-// Capacités
-// -------------------------
+                    // -------------------------
+                    // Capacités
+                    // -------------------------
 
-if (
-    mob.abilities &&
-    mob.abilities.length > 0
-) {
+                    if (
+                        mob.abilities &&
+                        mob.abilities.length > 0
+                    ) {
 
-    html += `
+                        html += `
 
-        <div class="abilities">
+                            <div class="abilities">
 
-    `;
-
-
-    mob.abilities.forEach(
-        ability => {
-
-            // =========================
-            // Icône
-            // =========================
-
-            let iconHtml = "";
-
-            if (ability.icon) {
-
-                iconHtml = `
-                    <div class="ability-icon">
-
-                        <img
-                            src="assets/abilities/${ability.icon}.png"
-                            alt=""
-                        >
-
-                    </div>
-                `;
-
-            }
+                        `;
 
 
-            // =========================
-            // Compétence
-            // =========================
+                        mob.abilities.forEach(
+                            ability => {
 
-            html += `
+                                // =========================
+                                // Icône
+                                // =========================
 
-                <div class="ability">
+                                let iconHtml = "";
 
-                    ${iconHtml}
 
-                    <div class="ability-content">
+                                if (ability.icon) {
 
-                        <div class="ability-name">
+                                    iconHtml = `
 
-                            ${
-                                ability.type
-                                ? `
-                                    <span
-                                        class="ability-type type-${ability.type.toLowerCase()}"
-                                    >
-                                        ${ability.type}
-                                    </span>
-                                `
-                                : ""
+                                        <div class="ability-icon">
+
+                                            <img
+                                                src="assets/abilities/${ability.icon}.png"
+                                                alt=""
+                                            >
+
+                                        </div>
+
+                                    `;
+
+                                }
+
+
+                                // =========================
+                                // Compétence
+                                // =========================
+
+                                html += `
+
+                                    <div class="ability">
+
+                                        ${iconHtml}
+
+                                        <div class="ability-content">
+
+                                            <div class="ability-name">
+
+                                                ${
+                                                    ability.type
+                                                    ? `
+                                                        <span
+                                                            class="ability-type type-${ability.type.toLowerCase()}"
+                                                        >
+                                                            ${ability.type}
+                                                        </span>
+                                                    `
+                                                    : ""
+                                                }
+
+                                                <strong>
+                                                    ${ability.name}
+                                                </strong>
+
+                                            </div>
+
+
+                                            ${
+                                                ability.action
+                                                ? `
+                                                    <div class="ability-action">
+
+                                                        <span
+                                                            class="ability-action-badge ${
+                                                                ability.priority
+                                                                ? "priority"
+                                                                : ""
+                                                            }"
+                                                        >
+
+                                                            ${
+                                                                ability.priority
+                                                                ? "⚠ "
+                                                                : "→ "
+                                                            }
+
+                                                            ${ability.action}
+
+                                                        </span>
+
+                                                    </div>
+                                                `
+                                                : ""
+                                            }
+
+
+                                            ${
+                                                ability.info
+                                                ? `
+                                                    <div class="ability-info">
+
+                                                        ${ability.info}
+
+                                                    </div>
+                                                `
+                                                : ""
+                                            }
+
+                                        </div>
+
+                                    </div>
+
+                                `;
+
                             }
+                        );
 
-                            <strong>
-                                ${ability.name}
-                            </strong>
+
+                        // Fermeture de .abilities
+
+                        html += `
+
+                            </div>
+
+                        `;
+
+                    }
+
+
+                    // =========================
+                    // Fermeture carte du mob
+                    // =========================
+
+                    html += `
 
                         </div>
 
+                    `;
 
-                        ${
-                            ability.action
-                            ? `
-                                <div class="ability-action">
+                }
+            );
 
-                                    <span
-                                        class="ability-action-badge ${
-                                            ability.priority
-                                            ? "priority"
-                                            : ""
-                                        }"
-                                    >
-                                        ${
-                                            ability.priority
-                                            ? "⚠ "
-                                            : "→ "
-                                        }
-
-                                        ${ability.action}
-
-                                    </span>
-
-                                </div>
-                            `
-                            : ""
-                        }
+        }
 
 
-                        ${
-                            ability.info
-                            ? `
-                                <div class="ability-info">
+        // -------------------------
+        // Note de fin de section
+        // -------------------------
 
-                                    ${ability.info}
+        if (page.note) {
 
-                                </div>
-                            `
-                            : ""
-                        }
+            html += `
 
-                    </div>
+                <div class="section-note">
+
+                    ${page.note}
 
                 </div>
 
             `;
 
         }
-    );
 
-
-    // Fermeture de .abilities
-
-    html += `
-
-        </div>
-
-    `;
-
-}
-
-
-// -------------------------
-// Note de fin de section
-// -------------------------
-
-if (page.note) {
-
-    html += `
-
-        <div class="section-note">
-
-            ${page.note}
-
-        </div>
-
-    `;
-
-}
+    }
 
 
     // =========================
