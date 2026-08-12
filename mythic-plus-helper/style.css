@@ -237,35 +237,50 @@ body {
     border-radius: 4px;
 }
 
+/* =========================
+   TYPES DE COMPÉTENCES
+   ========================= */
+
 .type-aoe {
-    border-color: #e74c3c;
-    color: #e74c3c;
-}
-
-.type-dot {
-    border-color: #9b59b6;
-    color: #9b59b6;
-}
-
-.type-heal {
-    border-color: #2ecc71;
-    color: #2ecc71;
-}
-
-.type-debuff {
-    border-color: #f39c12;
-    color: #f39c12;
-}
-
-.type-adds {
-    border-color: #3498db;
-    color: #3498db;
+    border-color: #d35400;
+    color: #d35400;
 }
 
 .type-cone {
     border-color: #e67e22;
     color: #e67e22;
 }
+
+.type-degats {
+    border-color: #f1c40f;
+    color: #f1c40f;
+}
+
+.type-heal {
+    border-color: #27ae60;
+    color: #27ae60;
+}
+
+.type-dot {
+    border-color: #8e44ad;
+    color: #8e44ad;
+}
+
+.type-soak {
+    border-color: #2980b9;
+    color: #2980b9;
+}
+
+.type-enrage {
+    border-color: #c0392b;
+    color: #c0392b;
+}
+
+.type-adds {
+    border-color: #fafafa;
+    color: #fafafa;
+}
+
 .section-note {
     margin: 14px 0;
     padding: 10px 12px;
