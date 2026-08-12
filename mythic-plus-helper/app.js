@@ -133,24 +133,55 @@ function displayDungeon(index) {
 function getDungeonPages() {
 
     if (!currentDungeon) {
-
         return [];
-
     }
 
+    let trashNumber = 0;
+    let bossNumber = 0;
 
-    return [
-
+    const pages = [
         {
             type: "lore",
+            label: "LORE",
             name: currentDungeon.name,
             lore: currentDungeon.lore || "Lore ... Lore"
-        },
-
-        ...(currentDungeon.sections || [])
-
+        }
     ];
 
+    (currentDungeon.sections || []).forEach(section => {
+
+        let label = "";
+
+        if (section.type === "trash") {
+
+            trashNumber++;
+
+            label = `TRASH ${trashNumber}`;
+
+        }
+
+        else if (section.type === "boss") {
+
+            bossNumber++;
+
+            label = `BOSS ${bossNumber}`;
+
+        }
+
+        else {
+
+            label = section.type.toUpperCase();
+
+        }
+
+        pages.push({
+            ...section,
+            label: label
+        });
+
+    });
+
+    return pages;
 }
 
 
@@ -192,8 +223,41 @@ function displayCurrentPage() {
                     ${currentDungeon.name}
                 </h2>
 
-                <div class="page-counter">
-                    ${currentPage + 1} / ${pages.length}
+                <div class="section-navigation">
+
+                    <div>
+
+                        <div class="section-counter">
+
+                            ${currentPage + 1}
+                            / ${pages.length}
+                            -
+                            ${page.label}
+
+                        </div>
+
+                        <div class="section-name">
+
+                            ${page.name}
+
+                        </div>
+
+                    </div>
+
+
+                    ${
+                        currentPage < pages.length - 1
+                        ? `
+                            <button
+                                id="nextPageTop"
+                                class="next-page-top"
+                            >
+                                →
+                            </button>
+                        `
+                        : ""
+                    }
+
                 </div>
 
             </div>
@@ -210,10 +274,6 @@ function displayCurrentPage() {
         html += `
 
             <div class="lore">
-
-                <h3>
-                    📖 ${page.name}
-                </h3>
 
                 <p>
                     ${page.lore}
@@ -232,23 +292,18 @@ function displayCurrentPage() {
 
     else {
 
-        html += `
-
-            <div class="section">
-
-                <h3>
-                    ${page.name}
-                </h3>
-
-        `;
-
+        // -------------------------
+        // Information de la section
+        // -------------------------
 
         if (page.info) {
 
             html += `
 
                 <div class="section-info">
+
                     ${page.info}
+
                 </div>
 
             `;
@@ -256,20 +311,9 @@ function displayCurrentPage() {
         }
 
 
-        if (page.note) {
-
-            html += `
-
-                <div class="section-note">
-                    ${page.note}
-                </div>
-
-            `;
-
-        }
-
-
-        // Affichage temporaire des mobs
+        // -------------------------
+        // Mobs
+        // -------------------------
 
         if (page.mobs) {
 
@@ -278,22 +322,33 @@ function displayCurrentPage() {
 
                     html += `
 
-                        <div class="mob">
+                        <div class="mob-card">
 
                             <h4>
-                                ${mob.priority ? "/!\\ " : ""}
+
+                                ${
+                                    mob.priority
+                                    ? "/!\\ "
+                                    : ""
+                                }
+
                                 ${mob.name}
+
                             </h4>
 
                     `;
 
+
+                    // Info du mob
 
                     if (mob.info) {
 
                         html += `
 
                             <div class="mob-info">
+
                                 ${mob.info}
+
                             </div>
 
                         `;
@@ -301,11 +356,18 @@ function displayCurrentPage() {
                     }
 
 
-                    if (mob.abilities) {
+                    // -------------------------
+                    // Capacités
+                    // -------------------------
+
+                    if (
+                        mob.abilities &&
+                        mob.abilities.length > 0
+                    ) {
 
                         html += `
 
-                            <ul>
+                            <div class="abilities">
 
                         `;
 
@@ -315,28 +377,99 @@ function displayCurrentPage() {
 
                                 html += `
 
-                                    <li>
+                                    <div
+                                        class="ability"
+                                    >
 
-                                        <strong>
-                                            ${ability.name}
-                                        </strong>
+                                `;
 
-                                        ${
-                                            ability.action
-                                            ? ` → ${ability.action}`
-                                            : ""
-                                        }
 
-                                        ${
-                                            ability.info
-                                            ? `<br>
-                                               <small>
-                                                   ${ability.info}
-                                               </small>`
-                                            : ""
-                                        }
+                                // Icône
 
-                                    </li>
+                                if (ability.icon) {
+
+                                    html += `
+
+                                        <div class="ability-icon">
+
+                                            <img
+                                                src="assets/spells/${ability.icon}.jpg"
+                                                alt=""
+                                            >
+
+                                        </div>
+
+                                    `;
+
+                                }
+
+
+                                html += `
+
+                                        <div class="ability-content">
+
+                                            <div class="ability-name">
+
+                                                ${
+                                                    ability.type
+                                                    ? `
+                                                        <span
+                                                            class="ability-type type-${ability.type.toLowerCase()}"
+                                                        >
+                                                            ${ability.type}
+                                                        </span>
+                                                    `
+                                                    : ""
+                                                }
+
+                                                <strong>
+                                                    ${ability.name}
+                                                </strong>
+
+                                            </div>
+
+                                `;
+
+
+                                // Action
+
+                                if (ability.action) {
+
+                                    html += `
+
+                                            <div class="ability-action">
+
+                                                → ${ability.action}
+
+                                            </div>
+
+                                    `;
+
+                                }
+
+
+                                // Info
+
+                                if (ability.info) {
+
+                                    html += `
+
+                                            <div class="ability-info">
+
+                                                ${ability.info}
+
+                                            </div>
+
+                                    `;
+
+                                }
+
+
+                                html += `
+
+                                        </div>
+
+                                    </div>
 
                                 `;
 
@@ -346,7 +479,7 @@ function displayCurrentPage() {
 
                         html += `
 
-                            </ul>
+                            </div>
 
                         `;
 
@@ -365,17 +498,29 @@ function displayCurrentPage() {
         }
 
 
-        html += `
+        // -------------------------
+        // Note de fin de section
+        // -------------------------
 
-            </div>
+        if (page.note) {
 
-        `;
+            html += `
+
+                <div class="section-note">
+
+                    ${page.note}
+
+                </div>
+
+            `;
+
+        }
 
     }
 
 
     // =========================
-    // NAVIGATION
+    // NAVIGATION BAS
     // =========================
 
     html += `
@@ -400,7 +545,10 @@ function displayCurrentPage() {
     }
 
 
-    if (currentPage < pages.length - 1) {
+    if (
+        currentPage <
+        pages.length - 1
+    ) {
 
         html += `
 
@@ -419,14 +567,17 @@ function displayCurrentPage() {
 
         </div>
 
+    </div>
+
     `;
 
 
-    container.innerHTML = html;
+    container.innerHTML =
+        html;
 
 
     // =========================
-    // EVENTS
+    // BOUTON PRECEDENT
     // =========================
 
     const previousButton =
@@ -456,6 +607,10 @@ function displayCurrentPage() {
     }
 
 
+    // =========================
+    // BOUTON SUIVANT
+    // =========================
+
     const nextButton =
         document.getElementById(
             "nextPage"
@@ -465,6 +620,37 @@ function displayCurrentPage() {
     if (nextButton) {
 
         nextButton.addEventListener(
+            "click",
+            () => {
+
+                currentPage++;
+
+                displayCurrentPage();
+
+                window.scrollTo(
+                    0,
+                    0
+                );
+
+            }
+        );
+
+    }
+
+
+    // =========================
+    // BOUTON SUIVANT EN HAUT
+    // =========================
+
+    const nextTopButton =
+        document.getElementById(
+            "nextPageTop"
+        );
+
+
+    if (nextTopButton) {
+
+        nextTopButton.addEventListener(
             "click",
             () => {
 
