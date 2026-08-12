@@ -250,8 +250,8 @@ body {
    ========================= */
 
 .type-aoe {
-    border-color: #d35400;
-    color: #d35400;
+    border-color: #e67e22;
+    color: #e67e22;
 }
 
 .type-cone {
@@ -270,8 +270,8 @@ body {
 }
 
 .type-dot {
-    border-color: #441645;
-    color: #441645;
+    border-color: #8e44ad;
+    color: #8e44ad;
 }
 
 .type-soak {
@@ -290,8 +290,8 @@ body {
 }
 
 .type-debuff{
-    border-color: #8e44ad;
-    color: #8e44ad;
+    border-color: #de33ab;
+    color: #de33ab;
 }
 
 /* =========================
