@@ -171,6 +171,14 @@ body {
     opacity: 0.8;
 }
 
+.mob-priority {
+    color: #e74c3c;
+}
+
+.priority-warning {
+    margin-right: 5px;
+}
+
 .abilities {
     margin-left: 12px;
 }
