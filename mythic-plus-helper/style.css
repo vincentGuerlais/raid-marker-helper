@@ -218,6 +218,16 @@ body {
     object-fit: cover;
 }
 
+.ability-type {
+    display: inline-block;
+    width: 70px;
+    flex-shrink: 0;
+
+    text-align: left;
+
+    font-size: 0.75em;
+    font-weight: bold;
+}
 .section-note {
     margin: 14px 0;
     padding: 10px 12px;
