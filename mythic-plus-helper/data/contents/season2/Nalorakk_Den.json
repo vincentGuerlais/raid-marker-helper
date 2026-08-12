@@ -13,8 +13,7 @@
             "mobs": [
 
                 {
-                    "name": "Soigneur Murmeterre",
-					"priority": true,
+                    "name": "Soigneur Murmeterre"
 
                     "abilities": [
                         {
@@ -40,8 +39,14 @@
 
                 {
                     "name": "Matriarche territoriale",
-
-                    "info": "S'enrage lorsque des Jeunes ours sont tués à proximité."
+                    "abilities": [
+                        {
+                            "name": "Retrait d'armure",
+                            "type": "ENRAGE",
+                            "action": "FOCUS,STUN",
+                            "info": "S'enrage à la mort des oursons"
+                        }
+                    ]
                 },
 
                 {
@@ -96,7 +101,7 @@
                             "type": "CONE",
                             "action": "ÉVITER",
                             "info": "Renforcé : ajoute des pointes dans la zone.",
-                            "icon": "heurt_brise_terre"
+                            "icon": "heurt_de_brise-terre"
                         },
 
                         {
@@ -104,7 +109,7 @@
                             "type": "AOE",
                             "action": "CD DEF / CD HEAL",
                             "info": "Dégâts. Renforcé : ajoute un bump.",
-                            "icon": "rugissement_devoreur"
+                            "icon": "rugissement_devorant"
                         }
 
                     ]
