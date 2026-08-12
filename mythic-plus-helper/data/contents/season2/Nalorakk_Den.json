@@ -289,7 +289,7 @@
 		{
             "type": "boss",
             "name": "Nalorakk",
-			"info": "Avec Zul'Jarra"
+			"info": "Avec Zul'Jarra",
 
             "mobs": [
 
@@ -302,21 +302,21 @@
                             "name": "Earthquake",
                             "type": "AOE",
                             "action": "MOVE",
-							"info": "Zones à poser au loin"
+							"info": "Zones à poser au loin",
                             "icon": "tourment_glacial"
                         },
 
                         {
                             "name": "Lightning bolt",
                             "type": "DEGATS",
-                            "action": "KICK",
+                            "action": "KICK"
                         },
 
                         {
                             "name": "volatile totem",
                             "type": "ADDS",
                             "action": "FOCUS",
-                            "info": "Totems à détruire rapidement",
+                            "info": "Totems à détruire rapidement"
                         }
 
                     ]
@@ -344,14 +344,14 @@
                             "name": "Offensive accablante",
                             "type": "DEGATS",
                             "action": "COVER",
-                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank",
+                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank"
                         },
 						
 						{
                             "name": "Heurt vigoureux",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Tank uniquement",
+                            "info": "Tank uniquement"
                         }
 
                     ]
