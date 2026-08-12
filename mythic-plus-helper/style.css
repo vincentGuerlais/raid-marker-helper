@@ -262,8 +262,8 @@ body {
 }
 
 .type-dot {
-    border-color: #8e44ad;
-    color: #8e44ad;
+    border-color: #441645;
+    color: #441645;
 }
 
 .type-soak {
@@ -281,6 +281,11 @@ body {
     color: #fafafa;
 }
 
+.type-debuff{
+    border-color: #8e44ad;
+    color: #8e44ad;
+}
+    
 .section-note {
     margin: 14px 0;
     padding: 10px 12px;
