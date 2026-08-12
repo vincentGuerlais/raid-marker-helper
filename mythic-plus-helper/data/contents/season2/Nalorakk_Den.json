@@ -1,6 +1,6 @@
 {
-    "id": "nalorakk_den",
-    "name": "Antre de Nalorakk",
+    "id": "nalorakkas_den",
+    "name": "Antre de Nalorak",
     "lore": "La trahison a infligé une blessure profonde, et Nalorakk s'est détourné des Amani. Il repose désormais dans son antre, pansant ses plaies dans le silence des ténèbres. Mais son peuple aspire à panser la plaie. Pour regagner la faveur du loa, les champions doivent traverser le Feu – des épreuves les attendent. Accompagnez Zul'jarra dans l'esprit tourmenté du Loa de la Guerre blessé. Affrontez son chagrin immense. Et aidez-la à le persuader de bénir à nouveau la tribu.",
 
     "sections": [
@@ -81,7 +81,7 @@
 
                         {
                             "name": "Fournitures gâtées",
-                            "type": "AOE",
+                            "type": "SOAK",
                             "action": "SOAK",
                             "info": "Lance des champignons. Renforcé : plus de champignons.",
                             "icon": "fournitures_gatees"
@@ -222,7 +222,143 @@
                 }
 
             ]
-        }
+        },
+		        {
+            "type": "trash",
+            "name": "Le coeur de rage",
+            "info": "",
 
+            "mobs": [
+
+                {
+                    "name": "Mande-totem impitoyable",
+
+                    "abilities": [
+                        {
+                            "name": "Totem de magma",
+                            "type": "ADDS",
+                            "action": "FOCUS",
+							"info": "Invoque un totem de magma"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Mystique liée à la tempête",
+
+                    "abilities": [
+                        {
+                            "name": "Eaux revitalisantes",
+                            "type": "HEAL",
+                            "action": "KICK",
+                            "info": "Attention une de ces abilities n'est plus présente. Laquelle ?"
+                        },
+						{
+                            "name": "Arc Lightning",
+                            "type": "DEGATS",
+                            "action": "KICK",
+                            "info": "Rebondit sur 3 joueurs. Attention une de ces abilities n'est plus présente. Laquelle ?"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Matriarche territoriale",
+
+                    "info": "AOE à dodge"
+				
+                },
+				
+				{
+                    "name": "Dompteur de bêtes lié",
+
+                    "abilities": [
+                        {
+                            "name": "Courroux bestial",
+                            "type": "ENRAGE",
+                            "action": "SOOTH, KITE, RUN",
+                            "info": "ATTENTION. Enrage + FIXATE des LYNX"
+                        }
+
+                    ]
+                }
+
+            ]
+        },
+		
+		{
+            "type": "boss",
+            "name": "Nalorakk",
+			"info": "Avec Zul'Jarra"
+
+            "mobs": [
+
+                {
+                    "name": "Loa Speaker Nanae",
+
+                    "abilities": [
+
+                        {
+                            "name": "Earthquake",
+                            "type": "AOE",
+                            "action": "MOVE",
+							"info": "Zones à poser au loin"
+                            "icon": "tourment_glacial"
+                        },
+
+                        {
+                            "name": "Lightning bolt",
+                            "type": "DEGATS",
+                            "action": "KICK",
+                        },
+
+                        {
+                            "name": "volatile totem",
+                            "type": "ADDS",
+                            "action": "FOCUS",
+                            "info": "Totems à détruire rapidement",
+                        }
+
+                    ]
+                },
+				{
+                    "name": "Nalorakk",
+
+                    "abilities": [
+
+                        {
+                            "name": "Mutilation des échos",
+                            "type": "AOE",
+                            "action": "MOVE, STACK",
+							"info": "Spawn un fantôme à poser au loin groupées"
+                        },
+
+                        {
+                            "name": "Fureur du dieu de la guerre",
+                            "type": "SOAK",
+                            "action": "SOAK",
+							"info": "Fantômes rouges qui foncent vers Zul'Jarra"
+                        },
+
+                        {
+                            "name": "Offensive accablante",
+                            "type": "DEGATS",
+                            "action": "COVER",
+                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank",
+                        },
+						
+						{
+                            "name": "Heurt vigoureux",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "Tank uniquement",
+                        }
+
+                    ]
+                }
+				
+
+            ]
+        }
     ]
 }
