@@ -4,7 +4,31 @@ let contents = [];
 let currentDungeon = null;
 let currentPage = 0;
 
+let wakeLock = null;
 
+async function keepScreenAwake() {
+
+    try {
+
+        if ("wakeLock" in navigator) {
+
+            wakeLock =
+                await navigator.wakeLock.request("screen");
+
+            console.log("Screen Wake Lock activé");
+
+        }
+
+    } catch (error) {
+
+        console.error(
+            "Impossible d'empêcher la mise en veille :",
+            error
+        );
+
+    }
+
+}
 
 async function loadData() {
 
@@ -683,6 +707,20 @@ function displayCurrentPage() {
 
 }
 
+document.addEventListener(
+    "visibilitychange",
+    async () => {
 
+        if (
+            document.visibilityState === "visible"
+        ) {
+
+            await keepScreenAwake();
+
+        }
+
+    }
+);
 
 loadData();
+keepScreenAwake();
