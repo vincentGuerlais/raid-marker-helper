@@ -425,17 +425,22 @@ function displayCurrentPage() {
                                 // Action
 
                                 if (ability.action) {
-
+                                
                                     html += `
-
-                                            <div class="ability-action">
-
-                                                → ${ability.action}
-
-                                            </div>
-
+                                
+                                        <div class="ability-action">
+                                
+                                            <span
+                                                class="ability-action-badge ${ability.priority ? "priority" : ""}"
+                                            >
+                                                ${ability.priority ? "⚠ " : "→ "}
+                                                ${ability.action}
+                                            </span>
+                                
+                                        </div>
+                                
                                     `;
-
+                                
                                 }
 
 
