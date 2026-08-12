@@ -357,7 +357,7 @@
                             "name": "Offensive accablante",
                             "type": "DEGATS",
                             "action": "COVER",
-                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank",
+                            "info": "Courir dans la zone de Zul'Jarra. Bump suivi d'un SOAK Tank",
 							"icon": "offensive_accablante"
                         },
 						
