@@ -168,7 +168,7 @@
                         },
 						{
                             "name": "Mass envenom",
-                            "type": "HEAL",
+                            "type": "DOT",
                             "action": "KICK/DISPELL",
 							"info": "DoT le groupe entier !",
 							"priority": true
@@ -176,7 +176,7 @@
                         },
 						{
                             "name": "Evolve",
-                            "type": "ADD",
+                            "type": "HEAL",
                             "action": "TAUNT/ROOT",
                             "info": "SOIN + SHIELD + IMMUNE",
 							"priority": true
