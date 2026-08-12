@@ -210,7 +210,7 @@
                             "name": "Ouragans déchaînés",
                             "type": "AOE",
                             "action": "DODGE",
-                            "icon": "ouragans_dechaines"
+                            "icon": "ouragan_dechaine"
                         },
 
                         {
@@ -218,7 +218,7 @@
                             "type": "ADDS",
                             "action": "FOCUS / KICK",
                             "info": "Les adds laissent une flaque de neige à leur mort.",
-                            "icon": "pointe_givre_fracassante"
+                            "icon": "pointe_de_givre_fracassante"
                         },
 
                         {
@@ -313,8 +313,7 @@
                             "name": "Earthquake",
                             "type": "AOE",
                             "action": "MOVE",
-							"info": "Zones à poser au loin",
-                            "icon": "tourment_glacial"
+							"info": "Zones à poser au loin"
                         },
 
                         {
@@ -341,28 +340,33 @@
                             "name": "Mutilation des échos",
                             "type": "AOE",
                             "action": "MOVE, STACK",
-							"info": "Spawn un fantôme à poser au loin groupées"
+							"info": "Spawn un fantôme à poser au loin groupées",
+							"icon": "mutilation_des_echos"
                         },
 
                         {
                             "name": "Fureur du dieu de la guerre",
                             "type": "SOAK",
                             "action": "SOAK",
-							"info": "Fantômes rouges qui foncent vers Zul'Jarra"
+							"info": "Fantômes rouges qui foncent vers Zul'Jarra",
+							"icon": "fureur_du_dieu_de_la_guerre"
+							
                         },
 
                         {
                             "name": "Offensive accablante",
                             "type": "DEGATS",
                             "action": "COVER",
-                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank"
+                            "info": "Courir dans la zone de Zul'Jarra. Suivi d'un SOAK Tank",
+							"icon": "offensive_accablante"
                         },
 						
 						{
                             "name": "Heurt vigoureux",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Tank uniquement"
+                            "info": "Tank uniquement",
+							"icon": "heurt_vigoureux"
                         }
 
                     ]
