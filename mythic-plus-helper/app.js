@@ -315,17 +315,17 @@ function displayCurrentPage() {
 
                         <div class="mob-card">
 
-                            <h4>
-
-                                ${
-                                    mob.priority
-                                    ? "/!\\ "
-                                    : ""
-                                }
-
-                                ${mob.name}
-
-                            </h4>
+                        <h4 class="${mob.priority ? "mob-priority" : ""}">
+                        
+                            ${
+                                mob.priority
+                                ? '<span class="priority-warning">⚠</span>'
+                                : ""
+                            }
+                        
+                            ${mob.name}
+                        
+                        </h4>
 
                     `;
 
