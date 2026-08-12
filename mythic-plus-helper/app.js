@@ -377,21 +377,16 @@ function displayCurrentPage() {
 
                                 // Icône
 
-                                if (ability.icon) {
-
-                                    html += `
-
+                                ${ability.icon
+                                    ? `
                                         <div class="ability-icon">
-
                                             <img
-                                                src="assets/spells/${ability.icon}.jpg"
+                                                src="assets/abilities/${ability.icon}.png"
                                                 alt=""
                                             >
-
                                         </div>
-
-                                    `;
-
+                                      `
+                                    : ""
                                 }
 
 
