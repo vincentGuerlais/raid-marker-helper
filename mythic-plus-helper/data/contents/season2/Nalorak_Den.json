@@ -7,7 +7,7 @@
 
         {
             "type": "trash",
-            "name": "I. La fouille",
+            "name": "La fouille",
             "info": "Récolter les offrandes. Kick Hurleur œil-de-lynx s'il mange.",
 
             "mobs": [
@@ -68,8 +68,8 @@
 
 
         {
-            "type": "trash",
-            "name": "Ib. Le Thésauriseur",
+            "type": "boss",
+            "name": "Le Thésauriseur",
             "info": "Se renforce avec les autels.",
 
             "mobs": [
@@ -112,7 +112,7 @@
 
         {
             "type": "trash",
-            "name": "II. L'hiver rigoureux",
+            "name": "L'hiver rigoureux",
             "info": "Penser à se cacher dans les patchs marron pendant les blizzards.",
 
             "mobs": [
@@ -177,8 +177,8 @@
 
 
         {
-            "type": "trash",
-            "name": "IIb. Sentinelle de l'hiver",
+            "type": "boss",
+            "name": "Sentinelle de l'hiver",
             "info": "En patinant !",
 
             "mobs": [
