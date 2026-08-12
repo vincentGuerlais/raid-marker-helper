@@ -219,10 +219,6 @@ function displayCurrentPage() {
 
             <div class="page-header">
 
-                <h2>
-                    ${currentDungeon.name}
-                </h2>
-
                 <div class="section-navigation">
                 
                     <div class="section-title">
