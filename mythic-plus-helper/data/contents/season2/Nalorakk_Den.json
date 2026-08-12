@@ -14,6 +14,7 @@
 
                 {
                     "name": "Soigneur Murmeterre",
+					"priority": true,
 
                     "abilities": [
                         {
@@ -52,13 +53,16 @@
                             "name": "Totem Effigie de famine",
                             "type": "DEBUFF",
                             "action": "FOCUS",
-                            "info": "Réduit les points de vie."
+                            "info": "Réduit les points de vie.",
+							"priority": true
                         },
                         {
                             "name": "Festin de détresse",
                             "type": "AOE",
                             "action": "CD DEF",
-                            "info": "Dégâts + vampirisme."
+                            "info": "Dégâts + vampirisme.",
+							"priority": true
+
                         }
                     ]
                 }
@@ -153,7 +157,9 @@
                             "name": "???",
                             "type": "AOE",
                             "action": "FOCUS",
-                            "info": "Pulse de dégâts lorsqu'il possède son bouclier."
+                            "info": "Pulse de dégâts lorsqu'il possède son bouclier.",
+							"priority": true
+
                         }
                     ]
                 },
