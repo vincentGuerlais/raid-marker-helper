@@ -7,67 +7,75 @@
 
         {
             "type": "trash",
-            "name": "La fouille",
-            "info": "Récolter les offrandes. Kick Hurleur œil-de-lynx s'il mange.",
+            "name": "Sacrificial approach",
+            "info": "Détruire les totems. /!\\ AOE quand le chef lié est pull",
 
             "mobs": [
 
                 {
-                    "name": "Soigneur Murmeterre",
+                    "name": "Ritual chieftain",
 
                     "abilities": [
                         {
-                            "name": "Marée guérisseuse",
-                            "type": "HEAL",
-                            "action": "KICK"
-                        }
-                    ]
-                },
-
-                {
-                    "name": "Récolteur",
-
-                    "abilities": [
-                        {
-                            "name": "Retrait d'armure",
-                            "type": "DEBUFF",
-                            "action": "KITE / STUN",
-                            "info": "Cumulable. 2 secondes."
-                        }
-                    ]
-                },
-
-                {
-                    "name": "Matriarche territoriale",
-                    "abilities": [
-                        {
-                            "name": "Retrait d'armure",
-                            "type": "ENRAGE",
-                            "action": "FOCUS,STUN",
-                            "info": "S'enrage à la mort des oursons"
-                        }
-                    ]
-                },
-
-                {
-                    "name": "Avatar de famine",
-                    "priority": true,
-
-                    "abilities": [
-                        {
-                            "name": "Totem Effigie de famine",
-                            "type": "DEBUFF",
-                            "action": "FOCUS",
-                            "info": "Réduit les points de vie.",
-							"priority": true
+                            "name": "???pulse",
+                            "type": "DEGATS",
+                            "action": "HEAL",
+							"info": "Pulse depuis le totem lié"
                         },
-                        {
-                            "name": "Festin de détresse",
-                            "type": "AOE",
-                            "action": "CD DEF",
-                            "info": "Dégâts + vampirisme.",
-							"priority": true
+						{
+                            "name": "Blood sacrifice",
+                            "type": "DEBUFF",
+                            "action": "CD HEAL",
+							"info": "Dégats + Bouclier anti-soin"
+                        },
+						{
+                            "name": "Dismember",
+                            "type": "DEGATS",
+                            "action": "CD TANK",
+							"info": "Tank buster"
+                        }
+                    ]
+                },
 
+                {
+                    "name": "Ravenous descendant",
+
+                    "abilities": [
+                        {
+                            "name": "Ravenous claws",
+                            "type": "ENRAGE",
+                            "action": "SOOTH/KITE/STUN",
+                            "info": "A chaque mélée. Cumulable. 2 secondes."
+                        }
+                    ]
+                },	
+
+                {
+                    "name": "Twinfang harrower",
+                    "abilities": [
+                        {
+                            "name": "Paralyzing shots",
+                            "type": "DEBUFF",
+                            "action": "DISPELL/FREEDOM",
+                            "info": "Ralentis jusqu'à STUN"
+                        },
+						{
+                            "name": "Toxic breath",
+                            "type": "CONE",
+                            "action": "EVITER"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Primal serpent",
+
+                    "abilities": [
+                        {
+                            "name": "Piercing hiss",
+                            "type": "DEBUFF",
+                            "action": "KICK",
+                            "info": "DoT aussi"
                         }
                     ]
                 }
@@ -78,38 +86,46 @@
 
         {
             "type": "boss",
-            "name": "Le Thésauriseur",
-            "info": "Se renforce avec les autels.",
+            "name": "Rav'i",
+            "info": "Se renforce avec les piles de viandes",
 
             "mobs": [
 
                 {
-                    "name": "Le Thésauriseur",
+                    "name": "Rav'i",
 
                     "abilities": [
 
                         {
-                            "name": "Fournitures gâtées",
+                            "name": "Ravenous stomp",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "STUN + Renforce 2 piles de viandes (saignement)",
+                            "icon": "ravenous_stomp"
+                        },
+
+                        {
+                            "name": "Ssscavenging",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Renforcé : plus de champignons.",
-                            "icon": "fournitures_gatees"
+                            "info": "La pile de viande la plus proche. éviter les piles renforcée",
+                            "icon": "ssscavenging"
                         },
 
                         {
-                            "name": "Heurt de brise-terre",
+                            "name": "Regurgitate",
                             "type": "CONE",
-                            "action": "ÉVITER",
-                            "info": "Renforcé : ajoute des pointes dans la zone.",
-                            "icon": "heurt_de_brise-terre"
+                            "action": "EVITER",
+                            "info": "DOT + SLOW + DEBUFF. A dispell si touché",
+                            "icon": "regurgitate"
                         },
-
-                        {
-                            "name": "Rugissement dévorant",
+						
+						{
+                            "name": "Hydra strike",
                             "type": "DEGATS",
-                            "action": "CD DEF / CD HEAL",
-                            "info": "Renforcé : ajoute un bump.",
-                            "icon": "rugissement_devorant"
+                            "action": "CD Tank",
+                            "info": "Tank buster",
+                            "icon": "hydra_strike"
                         }
 
                     ]
@@ -121,48 +137,48 @@
 
         {
             "type": "trash",
-            "name": "L'hiver rigoureux",
-            "info": "Penser à se cacher dans les patchs marron pendant les blizzards.",
+            "name": "Mutation chambers",
+            "info": "Attention aux oeufs. Marcher dessus les fera éclore",
 
             "mobs": [
 
                 {
-                    "name": "Ours marteleur algide",
+                    "name": "Blood letter",
 
                     "abilities": [
                         {
-                            "name": "Courroux glacial",
-                            "type": "DEBUFF",
-                            "action": "KICK",
-                            "info": "Perte de hâte et de vitesse de déplacement."
+                            "name": "Blood letting",
+                            "type": "AOE",
+                            "action": "EVITER/KITE",
+                            "info": "Lâche une flaque à chaque mélée"
                         }
                     ]
                 },
 
                 {
-                    "name": "Avatar de détermination",
+                    "name": "High Evolutionist",
                     "priority": true,
 
                     "abilities": [
                         {
-                            "name": "???",
-                            "type": "AOE",
-                            "action": "SPREAD / CD DEF",
-                            "info": "AOE ciblée + root/stun."
-                        }
-                    ]
-                },
+                            "name": "Incubate",
+                            "type": "ADD",
+                            "action": "TAUNT/ROOT",
+                            "info": "Fait éclore les oeufs"
+                        },
+						{
+                            "name": "Mass envenom",
+                            "type": "HEAL",
+                            "action": "KICK/DISPELL",
+							"info": "DoT le groupe entier !",
+							"priority": true
 
-                {
-                    "name": "Grondeur de Terra",
-                    "priority": true,
-
-                    "abilities": [
-                        {
-                            "name": "???",
-                            "type": "AOE",
-                            "action": "FOCUS",
-                            "info": "Pulse de dégâts lorsqu'il possède son bouclier.",
+                        },
+						{
+                            "name": "Evolve",
+                            "type": "ADD",
+                            "action": "TAUNT/ROOT",
+                            "info": "SOIN + SHIELD + IMMUNE",
 							"priority": true
 
                         }
@@ -170,204 +186,214 @@
                 },
 
                 {
-                    "name": "Revenant glaciaire",
+                    "name": "Rattling writhe",
 
                     "abilities": [
                         {
-                            "name": "???",
+                            "name": "Corrosive fangs",
+                            "type": "DEGATS",
+                            "action": "CD Tank/DISPELL",
+                            "info": "Tank buster + DoT + Vulnérabilité",
+							"priority": true
+                        },
+						{
+                            "name": "Rattle",
+                            "type": "DEGATS",
+                            "action": "CD Heal"
+                        }
+                    ]
+                }      
+
+            ]
+
+        },
+
+
+        {
+            "type": "boss",
+            "name": "The Writhing Coil",
+            "info": "Enchaines les 3 attaques",
+
+            "mobs": [
+
+                {
+                    "name": "The Writhing Coil",
+
+                    "abilities": [
+
+                        {
+                            "name": "Synchronized venom",
+                            "type": "DOT",
+                            "action": "DÉBUFF/HEAL",
+                            "icon": "synchronized_venom"
+                        },
+
+                        {
+                            "name": "Tail scythe",
+                            "type": "DEGATS",
+                            "action": "CD tank",
+							"info": "Tank buster",
+                            "icon": "tail_scythe"
+                        },
+
+                        {
+                            "name": "Toxic barrage",
+                            "type": "DEBUFF",
+                            "action": "KICK",
+                            "info": "3 KICKS ! SLOW + -DEGATS",
+                            "icon": "toxic_barrage"
+                        },
+
+                        {
+                            "name": "Vindictive onslaught",
+                            "type": "CONE",
+                            "action": "EVITER",
+                            "info": "Il s'enterre avant",
+                            "icon": "vindictive_onslaught"
+                        },
+						
+						{
+                            "name": "Death rattle",
+                            "type": "DEGATS",
+                            "action": "CASSER LE LIEN",
+                            "info": "Puis se sépare",
+                            "icon": "death_rattle"
+                        },
+						
+						{
+                            "name": "Uncoil",
+                            "type": "ADD",
+                            "action": "CC/STUN/ROOT/BURST",
+                            "info": "Fixent un joueur. AoE à la mort",
+                            "icon": "uncoil"
+                        }
+						
+
+                    ]
+                }
+
+            ]
+        },
+		{
+            "type": "trash",
+            "name": "Altar of fangs",
+            "info": "Nettoyer la salle et casser les 4 totems",
+
+            "mobs": [
+
+                {
+                    "name": "Blade of the Altar",
+
+                    "abilities": [
+                        {
+                            "name": "Laced edge",
+                            "type": "DOT",
+                            "action": "DISPELL",
+							"info": "TP + DEGATS + DOT. Ne pas descendre en pv"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Ascendant serpent",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Infest",
                             "type": "AOE",
-                            "action": "SPREAD"
+                            "action": "VENN",
+                            "info": "AOE ciblée + ADD. Rester groupé sans entrer dans les zones"
+                        },
+						{
+                            "name": "Virulent whirl",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Tornades"
+                        },
+						{
+                            "name": "Noxious spray",
+                            "type": "AOE",
+                            "action": "CD Tank/HORS GROUPE",
+                            "info": "Tank buster + AOE en ligne"
+                        }
+                    ]
+                },
+				{
+                    "name": "Ulatek's chosen",
+
+                    "abilities": [
+                        {
+                            "name": "Venom burst",
+                            "type": "DOT",
+                            "action": "DEBUFF/CD",
+                            "info": "DEGATS + DoT à la mort. Tuer ensemble"
+                        },
+						{
+                            "name": "Toxic surge",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "3 fois. En lignes"
+                        },
+						{
+                            "name": "Mass envenom",
+                            "type": "HEAL",
+                            "action": "KICK/DISPELL",
+							"info": "DoT le groupe entier !",
+							"priority": true
+
                         }
                     ]
                 }
 
             ],
-
-            "note": "Entrer dans la bulle pour continuer. /!\\ Dégâts importants → CD DEF / CD HEAL."
-        },
-
-
-        {
-            "type": "boss",
-            "name": "Sentinelle de l'hiver",
-            "info": "En patinant !",
-
-            "mobs": [
-
-                {
-                    "name": "Sentinelle de l'hiver",
-
-                    "abilities": [
-
-                        {
-                            "name": "Tourment glacial",
-                            "type": "DOT",
-                            "action": "DÉBUFF / HEAL",
-                            "icon": "tourment_glacial"
-                        },
-
-                        {
-                            "name": "Ouragans déchaînés",
-                            "type": "AOE",
-                            "action": "DODGE",
-                            "icon": "ouragan_dechaine"
-                        },
-
-                        {
-                            "name": "Pointe de givre fracassante",
-                            "type": "ADDS",
-                            "action": "FOCUS / KICK",
-                            "info": "Les adds laissent une flaque de neige à leur mort.",
-                            "icon": "pointe_de_givre_fracassante"
-                        },
-
-                        {
-                            "name": "Tempête gelée",
-                            "type": "AOE",
-                            "action": "CD MOBILITÉ",
-                            "info": "Grosse AOE + push. Rester dans les flaques de neige.",
-                            "icon": "tempete_gelee"
-                        }
-
-                    ]
-                }
-
-            ]
-        },
-		        {
-            "type": "trash",
-            "name": "Le coeur de rage",
-            "info": "",
-
-            "mobs": [
-
-                {
-                    "name": "Mande-totem impitoyable",
-
-                    "abilities": [
-                        {
-                            "name": "Totem de magma",
-                            "type": "ADDS",
-                            "action": "FOCUS",
-							"info": "Invoque un totem de magma"
-                        }
-                    ]
-                },
-
-                {
-                    "name": "Mystique liée à la tempête",
-
-                    "abilities": [
-                        {
-                            "name": "Eaux revitalisantes",
-                            "type": "HEAL",
-                            "action": "KICK",
-                            "info": "Attention une de ces abilities n'est plus présente. Laquelle ?"
-                        },
-						{
-                            "name": "Arc Lightning",
-                            "type": "DEGATS",
-                            "action": "KICK",
-                            "info": "Rebondit sur 3 joueurs. Attention une de ces abilities n'est plus présente. Laquelle ?"
-                        }
-                    ]
-                },
-
-                {
-                    "name": "Matriarche territoriale",
-					"type": "AOE",
-					"action": "EVITER"
-				
-                },
-				
-				{
-                    "name": "Dompteur de bêtes lié",
-
-                    "abilities": [
-                        {
-                            "name": "Courroux bestial",
-                            "type": "ENRAGE",
-                            "action": "SOOTH, KITE, RUN",
-                            "info": "ATTENTION. Enrage + FIXATE des LYNX"
-                        }
-
-                    ]
-                }
-
-            ]
+			"note": "Unfinished mixture : BUFF 3% ?"
         },
 		
 		{
             "type": "boss",
-            "name": "Nalorakk",
-			"info": "Avec Zul'Jarra",
+            "name": "Zul'Jan",
+			"info": "Se faire toucher par les attaques pour retirer le DoT",
 
             "mobs": [
 
-                {
-                    "name": "Loa Speaker Nanae",
-
-                    "abilities": [
-
-                        {
-                            "name": "Earthquake",
-                            "type": "AOE",
-                            "action": "MOVE",
-							"info": "Zones à poser au loin"
-                        },
-
-                        {
-                            "name": "Lightning bolt",
-                            "type": "DEGATS",
-                            "action": "KICK"
-                        },
-
-                        {
-                            "name": "volatile totem",
-                            "type": "ADDS",
-                            "action": "FOCUS",
-                            "info": "Totems à détruire rapidement"
-                        }
-
-                    ]
-                },
 				{
-                    "name": "Nalorakk",
+                    "name": "Zul'Jan",
 
                     "abilities": [
 
                         {
-                            "name": "Mutilation des échos",
-                            "type": "AOE",
-                            "action": "MOVE, STACK",
-							"info": "Spawn un fantôme. Poser au loin, groupés",
-							"icon": "mutilation_des_echos"
+                            "name": "Ritual of the Fang",
+                            "type": "DOT",
+                            "action": "INTERCEPTER",
+							"info": "4 rayons depuis chaque tête de serpent. A intercepter. TUE à expiration",
+							"icon": "ritual_of_the_fang",
+							"priority": true
                         },
 
                         {
-                            "name": "Fureur du dieu de la guerre",
-                            "type": "SOAK",
-                            "action": "SOAK",
-							"info": "Fantômes rouges qui foncent vers Zul'Jarra",
-							"icon": "fureur_du_dieu_de_la_guerre"
+                            "name": "Bloodletting",
+                            "type": "AOE",
+                            "action": "EVITER",
+							"info": "Posé à la perte du DoT"
 							
                         },
 
                         {
-                            "name": "Offensive accablante",
-                            "type": "DEGATS",
-                            "action": "COVER",
-                            "info": "Courir dans la zone de Zul'Jarra. Bump suivi d'un SOAK Tank",
-							"icon": "offensive_accablante"
+                            "name": "Boneslicer",
+                            "type": "SOAK",
+                            "action": "SOAK",
+							"info": "Dégats partagés. Se répartir",
+							"icon": "boneslicer"
+							
                         },
 						
 						{
-                            "name": "Heurt vigoureux",
-                            "type": "SOAK",
-                            "action": "SOAK",
-                            "info": "Tank uniquement",
-							"icon": "heurt_vigoureux",
-							"priority": true
+                            "name": "Axegrinder",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Peut être utilisé pour retirer le DoT",
+							"icon": "axegrinder"
                         }
 
                     ]
