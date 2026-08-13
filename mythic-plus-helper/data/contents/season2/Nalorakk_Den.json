@@ -287,7 +287,7 @@
                         {
                             "name": "Courroux bestial",
                             "type": "ENRAGE",
-                            "action": "SOOTH, KITE, RUN",
+                            "action": "SOOTH/KITE/COURIR",
                             "info": "ATTENTION. Enrage + FIXATE des LYNX"
                         }
 
@@ -312,7 +312,7 @@
                         {
                             "name": "Earthquake",
                             "type": "AOE",
-                            "action": "MOVE",
+                            "action": "EVITER",
 							"info": "Zones à poser au loin"
                         },
 
@@ -339,7 +339,7 @@
                         {
                             "name": "Mutilation des échos",
                             "type": "AOE",
-                            "action": "MOVE, STACK",
+                            "action": "EVITER/STACK",
 							"info": "Spawn un fantôme. Poser au loin, groupés",
 							"icon": "mutilation_des_echos"
                         },
@@ -356,7 +356,7 @@
                         {
                             "name": "Offensive accablante",
                             "type": "DEGATS",
-                            "action": "COVER",
+                            "action": "SE CACHER",
                             "info": "Courir dans la zone de Zul'Jarra. Bump suivi d'un SOAK Tank",
 							"icon": "offensive_accablante"
                         },
