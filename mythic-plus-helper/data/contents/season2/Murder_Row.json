@@ -1,0 +1,508 @@
+{
+    "id": "murder_row",
+    "name": "Allée du Meurtre",
+    "lore": "Depuis l'apparition de la tempête du Vide, un trafic secret de gangrène se nourissant des craintes des citoyennes et citoyens de Lune-d'Argent sévit dans les ruelles de l'Allée du meurtre",
+
+    "sections": [
+
+        {
+            "type": "trash",
+            "name": "Allée du Meurtre",
+            "info": "Parler aux 4 espions. Penser à ramasser la Contrebande Fel pour échanger contre un capacité",
+
+            "mobs": [
+
+                {
+                    "name": "Capitaine soudoyé",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Corruption profonde",
+                            "type": "BUFF",
+                            "action": "FOCUS",
+							"info": "AURA : +Dégats infligés ; -Dégats subis aux ennemis"
+                        },
+						{
+                            "name": "Glaive cramoisi",
+                            "type": "DOT",
+                            "action": "RESTER PROCHE",
+							"info": "Visé sur le tank, DoT tous les joueurs sur le passage"
+                        },
+						{
+                            "name": "Coup de bouclier",
+                            "type": "DEGATS",
+                            "action": "CD TANK/KITE",
+							"info": "Tank buster, +Dégats pendant 20s"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Garde soudoyé",
+                    "abilities": [
+						{
+                            "name": "Glaive cramoisi",
+                            "type": "DOT",
+                            "action": "RESTER PROCHE",
+							"info": "Visé sur le tank, DoT tous les joueurs sur le passage"
+                        },
+						{
+                            "name": "Coup de bouclier",
+                            "type": "DEGATS",
+                            "action": "CD TANK/KITE",
+							"info": "Tank buster, +Dégats pendant 20s"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Mage Félon",
+
+                    "abilities": [
+                        {
+                            "name": "Projectiles gangrenés",
+                            "type": "DEGATS",
+                            "action": "KICK"
+                        }
+                    ]
+                },	
+				
+                {
+                    "name": "Voyou de l'allée",
+
+                    "abilities": [
+                        {
+                            "name": "Vide-gousset",
+                            "type": "DOT",
+                            "action": "STUN",
+                            "info": "Saute sur un joueur + Degats + saignement"
+                        }
+                    ]
+                },
+				
+				{
+                    "name": "Wyrm gangréné",
+					"info": "Explose à sa mort"
+
+                    
+                    
+                },
+
+				{
+                    "name": "Sayaad séductrice/séducteur",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Séduction",
+                            "type": "DEBUFF",
+                            "action": "KICK/CC",
+                            "info": "Désioriente 6s"
+                        }
+                    ]
+                },
+				
+				{
+                    "name": "Enorme wyrm gangrené",
+					"priority": true,
+					"info": "Explose à sa mort",
+                    "abilities": [
+                        {
+                            "name": "Surimprégnation",
+                            "type": "DOT",
+                            "action": "CD DEF/CD HEAL",
+                            "info": "DOT continu cumulable"
+                        },
+						{
+                            "name": "Crachat corrosif",
+                            "type": "DOT",
+                            "action": "DEBUFF"
+                        },
+						{
+                            "name": "Invocation de wyrms",
+                            "type": "ADD",
+                            "action": "CC"
+                        }
+                    ]
+                }
+
+            ]
+        },
+
+
+        {
+            "type": "boss",
+            "name": "Kystia Coeur-de-Mana",
+            "info": "Descendre Mordicus à 20% Puis Kystia. /!\\ DEGATS",
+
+            "mobs": [
+
+                {
+                    "name": "Kystia Coeur-de-Mana",
+
+                    "abilities": [
+
+                        {
+                            "name": "Gangrebouclier",
+                            "type": "BUFF",
+                            "action": "IGNORER",
+                            "info": "80% de réduction de dégats tant que Mordicus est hostile",
+                            "icon": "gangrebouclier"
+                        },
+
+                        {
+                            "name": "Déstabilisation",
+                            "type": "DEGATS",
+                            "action": "CD DEF/CD HEAL/BURST",
+                            "info": "Vulnérable mais inflige de gros dégats",
+                            "icon": "destabilisation"
+                        },
+
+                        {
+                            "name": "Images miroirs",
+                            "type": "ADD",
+                            "action": "KICK/CC/BUMP",
+                            "icon": "images_miroirs"
+                        },
+						
+						{
+                            "name": "Gangrenova",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "TP sur un joueur puis AOE",
+                            "icon": "gangrenova"
+                        },
+						
+						{
+                            "name": "Barrage du chaos",
+                            "type": "DEGATS",
+                            "action": "CD TANK",
+                            "icon": "barrage_du_chaos"
+                        }
+
+                    ]
+                },
+				{
+                    "name": "Mordicus",
+
+                    "abilities": [
+
+                        {
+                            "name": "Vaporisation gangrenée",
+                            "type": "CONE",
+                            "action": "EVITER",
+                            "icon": "vaporisation_gangrenee"
+                        },
+
+                        {
+                            "name": "Crachat corrosif",
+                            "type": "DOT",
+                            "action": "DEBUFF",
+                            "icon": "crachat_corrosif"
+                        }
+
+                    ]
+                }
+
+            ]
+        },
+
+
+        {
+            "type": "trash",
+            "name": "La Pluie clandestine",
+            "info": "Tenir l'auberge !",
+
+            "mobs": [
+
+                {
+                    "name": "Sous-chef enthousiaste",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Retour au travail !",
+                            "type": "BUFF",
+                            "action": "FOCUS",
+                            "info": "+200% vitesse d'attaque pour les ouvriers alentours"
+                        }
+                    ]
+                }    
+
+            ]
+
+        },
+
+
+        {
+            "type": "boss",
+            "name": "Zaen Tristelame",
+            "info": "Surveiller les tonneaux. Ne pas tous les détruire",
+
+            "mobs": [
+
+                {
+                    "name": "Zaen Tristelame",
+
+                    "abilities": [
+
+                        {
+                            "name": "Bombe incendiaire",
+                            "type": "AOE",
+                            "action": "",
+                            "info": "Poser cette AoE sur le tonneau vert pour le détruire. Ne pas détruire les autre",
+							"icon": "bombe_incendiaire"
+                        },
+
+                        {
+                            "name": "Meurtres à l’allée",
+                            "type": "DEGATS",
+                            "action": "SE CACHER",
+							"info": "Se cacher derriere un tonneau. 1 par personne",
+                            "icon": "meurtre_a_lallee"
+                        },
+
+                        {
+                            "name": "Série meurtrière=",
+                            "type": "DEGATS",
+                            "action": "CD HEAL",
+                            "icon": "serie_meurtriere"
+                        },
+
+                        {
+                            "name": "Poison arrête-cœur",
+                            "type": "DOT",
+                            "action": "DISPELL",
+                            "info": "Poison et -30% HP max",
+                            "icon": "poison_arrete_coeur"
+                        }
+						
+
+                    ]
+                }
+
+            ]
+        },
+		{
+            "type": "trash",
+            "name": "Terasse des Augures",
+            "info": "",
+
+            "mobs": [
+
+                {
+                    "name": "Punisseuse Shivane",
+					"priority": true,
+					"info": "Enrage a 50% HP",
+
+                    "abilities": [
+                        {
+                            "name": "Puissance éprouvante",
+                            "type": "BUFF",
+                            "action": "NE PAS ESQUIVER",
+							"info": "Gagne 30% de dégats quand elle manque une attaque. Cumulable"
+                        },
+						{
+                            "name": "Frénésie démoniaque",
+                            "type": "AOE",
+                            "action": "EVITER",
+							"info": "Tourbilol"
+                        }
+                    ]
+                },
+
+                {
+                    "name": "Ecorcheur garde-courroux",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Frénésie démoniaque",
+                            "type": "ENRAGE",
+                            "action": "SOOTH"
+                        },
+						{
+                            "name": "Gangrerage",
+                            "type": "ENRAGE",
+                            "action": "SOOTH",
+                            "info": "Immune CC + -60% degats subis"
+                        }
+                    ]
+                },
+				{
+                    "name": "Invocatrice",
+
+                    "abilities": [
+                        {
+                            "name": "Bombardement de gangrefeu",
+                            "type": "AOE",
+                            "action": "EVITER"
+                        },
+						{
+                            "name": "Captation de vie",
+                            "type": "HEAL",
+                            "action": "KICK/STUN"
+                        }
+                    ]
+                },
+				{
+                    "name": "Démoniste corrompu",
+
+                    "abilities": [
+                        {
+                            "name": "Malédiction funeste",
+                            "type": "AOE",
+                            "action": "STACK",
+							"info": "Si pas de débuff malé; se stack dans le cercle violet pour partager les dégats"
+                        }
+                    ]
+                },
+				{
+                    "name": "DH ?",
+					"priority": true,
+
+                    "abilities": [
+                        {
+                            "name": "Rayon accablant",
+                            "type": "CONE",
+                            "action": "EVITER"
+                        },
+						{
+                            "name": "Danse des lames",
+                            "type": "DOT",
+                            "action": "CD HEAL",
+							"info": "Tous le groupe"
+                        }
+                    ]
+                },
+				{
+                    "name": "Golem profané",
+					"priority": true,
+					"info": "DANGEUREUX",
+
+                    "abilities": [
+                        {
+                            "name": "Heurt souillé",
+                            "type": "DEGATS",
+                            "action": "CD HEAL"
+                        },
+						{
+                            "name": "Gangrerayon",
+                            "type": "AOE",
+                            "action": "EVITER",
+							"info": "Des rayons qui suivent tous les joueurs"
+                        }
+                    ]
+                }
+
+            ]
+        },
+		
+		{
+            "type": "boss",
+            "name": "Xathuux l’Annihilateur",
+			"info": "",
+
+            "mobs": [
+
+				{
+                    "name": "Xathuux l’Annihilateur",
+
+                    "abilities": [
+
+                        {
+                            "name": "Frappe de la Légion",
+                            "type": "CONE",
+                            "action": "EVITER/CD TANK",
+							"info": "+ Saignement",
+							"icon": "frappe_de_la_legion"
+                        },
+
+                        {
+                            "name": "Lancer de hache",
+                            "type": "ADD",
+                            "action": "FOCUS",
+							"info": "GROS DoT tant qu'elle est en vie",
+							"icon": "lancer_de_hache"
+							
+                        },
+
+                        {
+                            "name": "Écrasement infernal",
+                            "type": "AOE",
+                            "action": "S'ECARTER",
+							"info": "Zones autours de chaque joueur",
+							"icon": "ecrasement_infernal"
+							
+                        },
+						
+						{
+                            "name": "Rage démoniaque",
+                            "type": "ENRAGE",
+                            "action": "CD TANK",
+                            "info": "Déclenche aussi Pas ardents",
+							"icon": "rage_demoniaque"
+                        },
+						
+						{
+                            "name": "Pas ardents",
+                            "type": "AOE",
+                            "action": "KITE",
+                            "info": "Génère une flaque à chaque pas. Le Kiter sur le bord",
+							"icon": "pas_ardents"
+                        }
+
+                    ]
+                }
+				
+            ]
+        },
+		
+		{
+            "type": "boss",
+            "name": "Lithiel Fureur-de-Cendre",
+			"info": "L'infernal est intuable. Simplement l'éviter",
+
+            "mobs": [
+
+				{
+                    "name": "Zul'Jan",
+
+                    "abilities": [
+
+                        {
+                            "name": "Trait du chaos",
+                            "type": "DEGATS",
+                            "action": "KICK",
+							"info": "Gros dégats ciblés",
+							"icon": "trait_du_chaos",
+							"priority": true
+                        },
+
+                        {
+                            "name": "Doigts de Gul’dan",
+                            "type": "ADD",
+                            "action": "PACK/CC/FOCUS",
+							"info": "D'abord une AOE, à poser proche puis adds. CC. éviter de kick.",
+							"icon": "doigts_de_guldan"
+							
+                        },
+
+                        {
+                            "name": "Vague maléfique",
+                            "type": "AOE",
+                            "action": "TP",
+							"info": "Utiliser la porte des démons. S'assurer que tous les adds sont morts !",
+							"icon": "vague_malefique"
+							
+                        }
+
+                    ]
+                }
+				
+
+            ]
+        }
+    ]
+}
