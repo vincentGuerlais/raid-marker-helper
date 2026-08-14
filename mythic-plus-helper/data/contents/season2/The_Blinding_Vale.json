@@ -18,7 +18,7 @@
                             "name": "Heurtoir de roche mère",
                             "type": "DEGATS",
                             "action": "CD Tank/HEAL",
-                            "info": "Créé 2 AoE à éviter",
+                            "info": "Créé 3 AoE à éviter",
                             "icon": ""
                         }
                     ]
@@ -31,7 +31,7 @@
                             "name": "Célérité de sème-lumière",
                             "type": "AOE",
                             "action": "EVITER",
-                            "info": "Entre les AoE. Ne pas rester entre. Créé 2 adds",
+                            "info": "Entre les AoE. Ne pas rester entre. Créé 3 adds",
                             "icon": ""
                         },
                         {
@@ -43,9 +43,9 @@
                         },
                         {
                             "name": "Lame-épine",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Grosse zone. Sortir du groupe",
                             "icon": ""
                         },
                         {
@@ -91,16 +91,16 @@
                     "abilities": [
                         {
                             "name": "Piétinement verdoyant",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "type": "DEBUFF",
+                            "action": "FOCUS/FREEDOM",
+                            "info": "Enracine. Se regrouper au cac avant pour cleave les racines ou libé.",
                             "icon": ""
                         },
                         {
                             "name": "Rugissement de mande-épines",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Eviter les racines au sol",
                             "icon": ""
                         },
                         {
@@ -124,7 +124,7 @@
         {
             "type": "boss",
             "name": "Gardelumière Ruia",
-            "info": "Change de forme et de compétences à 50%",
+            "info": "Change de forme et de compétences à 70%. Puis tout ensemble à 30%",
 
             "mobs": [
                 {
@@ -148,8 +148,8 @@
                         {
                             "name": "Allume-feu",
                             "type": "DEGATS",
-                            "action": "",
-                            "info": "Génère aussi 4 tornades à éviter",
+                            "action": "S'ECARTER",
+                            "info": "Tous le groupe. Génère aussi 4 tornades qui silence",
                             "icon": ""
                         }
                     ]
@@ -161,15 +161,15 @@
                         {
                             "name": "Rossée atroce",
                             "type": "DOT",
-                            "action": "HEAL",
+                            "action": "CD HEAL",
                             "info": "Saignement sur tous les joueurs. Disparaît si totalement soigné",
                             "icon": ""
                         },
                         {
                             "name": "Frappes pulvérisantes",
                             "type": "CONE",
-                            "action": "",
-                            "info": "",
+                            "action": "S'ECARTER",
+                            "info": "3 fois. Non évitable + Vulnérabilité aux dégats. Bien se répartir",
                             "icon": ""
                         }
                     ]
@@ -189,29 +189,36 @@
                         {
                             "name": "Éveil du luméclat",
                             "type": "ADD",
-                            "action": "",
-                            "info": "",
+                            "action": "CC/BURST",
+                            "info": "Tuer groupé. Retirer les cadavres avec le rayon de lumière",
                             "icon": ""
                         },
                         {
                             "name": "Rayon de Lumière concentrée",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Diriger sur les cadavre des adds. Laisse ensuite des flaques",
                             "icon": ""
                         },
                         {
                             "name": "Fleur d'épines",
                             "type": "DEGATS",
-                            "action": "",
+                            "action": "CD Tank",
                             "info": "Tank buster + DoT",
                             "icon": ""
                         },
                         {
                             "name": "Xylem suintant",
                             "type": "DOT",
-                            "action": "",
+                            "action": "HEAL",
                             "info": "Tous les joueurs",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Essence ?",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "Orbes à soak. Donne un BUFF. Attention DoT",
                             "icon": ""
                         }
                     ]
