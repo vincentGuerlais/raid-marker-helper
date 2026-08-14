@@ -288,6 +288,11 @@ body {
     color: #c0392b;
 }
 
+.type-fixate {
+    border-color: #c0392b;
+    color: #c0392b;
+}
+
 .type-adds {
     border-color: #fafafa;
     color: #fafafa;
