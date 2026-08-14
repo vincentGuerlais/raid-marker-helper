@@ -1,0 +1,119 @@
+{
+    "id": "kings_rest",
+    "name": "Repos des Rois",
+    "lore": "",
+
+    "sections": [
+        {
+            "type": "boss",
+            "name": "Serpent doré",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Serpent doré",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Mchimba l'Embaumeur",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Mchimba l'Embaumeur",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Conseil des tribus",
+            "info": "Conseil de 3 boss",
+
+            "mobs": [
+                {
+                "name": "Aka'ali la Conquérante",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Kula la Bouchère",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Zanazal le Sage",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Dazar, le premier roi",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Dazar",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        }
+ 
+    ]
+}
