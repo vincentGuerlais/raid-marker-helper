@@ -1,0 +1,85 @@
+{
+    "id": "ruby_life_pools",
+    "name": "Bassins de l'Essence rubis",
+    "lore": "",
+
+    "sections": [
+        {
+            "type": "boss",
+            "name": "Mélidrussa Manteglace",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Mélidrussa Manteglace",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Kokia Foulebraise",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Kokia Foulebraise",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Erkhart Foudreveine et Kyrakka",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Erkhart",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Kyrakka",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        }
+ 
+    ]
+}
