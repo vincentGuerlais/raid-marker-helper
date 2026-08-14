@@ -1,0 +1,223 @@
+{
+    "id": "the_blinding_vale",
+    "name": "Val aveuglant",
+    "lore": "",
+
+    "sections": [
+        {
+            "type": "boss",
+            "name": "Trinité luméclat",
+            "info": "Conseil de 3 boss. Partagent les dégâts",
+
+            "mobs": [
+                {
+                "name": "Meittik",
+
+                    "abilities": [
+                        {
+                            "name": "Heurtoir de roche mère",
+                            "type": "DEGATS",
+                            "action": "CD Tank/HEAL",
+                            "info": "Créé 2 AoE à éviter",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Lekshi",
+
+                    "abilities": [
+                        {
+                            "name": "Célérité de sème-lumière",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Entre les AoE. Ne pas rester entre. Créé 2 adds",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Lumiflore",
+                            "type": "ADD",
+                            "action": "FOCUS",
+                            "info": "Focus si jamais ils spawnent",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Lame-épine",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Éventail d’épines",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Kezkitt",
+
+                    "abilities": [
+                        {
+                            "name": "Faisceau lumiflore",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "Empêche les lumiflores de germer",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Trait de Lumière",
+                            "type": "DEGATS",
+                            "action": "KICK",
+                            "info": "Très souvent. En kick le maximum",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Chasselumière Ikuzz",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Chasselumière Ikuzz",
+
+                    "abilities": [
+                        {
+                            "name": "Piétinement verdoyant",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Rugissement de mande-épines",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Frénésie avide de lumière",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Regard assoiffé de sang",
+                            "type": "FIXATE",
+                            "action": "KITE",
+                            "info": "Le faire passer sur les racines pour les détruire",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Gardelumière Ruia",
+            "info": "Change de forme et de compétences à 50%",
+
+            "mobs": [
+                {
+                "name": "Forme : Sélénien",
+
+                    "abilities": [
+                        {
+                            "name": "Courroux de gardien",
+                            "type": "DEGATS",
+                            "action": "KICK",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Chutes de lumière",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Allume-feu",
+                            "type": "DEGATS",
+                            "action": "",
+                            "info": "Génère aussi 4 tornades à éviter",
+                            "icon": ""
+                        }
+                    ]
+                },
+                {
+                "name": "Forme : Ours",
+
+                    "abilities": [
+                        {
+                            "name": "Rossée atroce",
+                            "type": "DOT",
+                            "action": "HEAL",
+                            "info": "Saignement sur tous les joueurs. Disparaît si totalement soigné",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Frappes pulvérisantes",
+                            "type": "CONE",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Ziekket",
+            "name": "",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "",
+
+                    "abilities": [
+                        {
+                            "name": "Éveil du luméclat",
+                            "type": "ADD",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Rayon de Lumière concentrée",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Fleur d'épines",
+                            "type": "DEGATS",
+                            "action": "",
+                            "info": "Tank buster + DoT",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Xylem suintant",
+                            "type": "DOT",
+                            "action": "",
+                            "info": "Tous les joueurs",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        }
+ 
+    ]
+}
