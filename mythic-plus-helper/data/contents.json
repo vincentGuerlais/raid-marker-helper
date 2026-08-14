@@ -14,6 +14,31 @@
             "id": "murder_row",
             "name": "Allée du Meurtre",
             "file": "contents/season2/Murder_Row.json"
+        },
+        {
+            "id": "the_blinding_vale",
+            "name": "Val aveuglant",
+            "file": "contents/season2/The_Blinding_Vale.json"
+        },
+        {
+            "id": "voidscar_arena",
+            "name": "Arène de la Cicatrice du Vide",
+            "file": "contents/season2/Voidscar_Arena.json"
+        },
+        {
+            "id": "kings_rest",
+            "name": "Repos des Rois",
+            "file": "contents/season2/Kings_Rest.json"
+        },
+        {
+            "id": "ruby_life_pools",
+            "name": "Bassins de l'Essence rubis",
+            "file": "contents/season2/Ruby_Life_Pools.json"
+        },
+        {
+            "id": "temple_of_sethraliss",
+            "name": "Temple de Sephraliss",
+            "file": "contents/season2/Temple_of_Sethraliss.json"
         }
     ]
 }
