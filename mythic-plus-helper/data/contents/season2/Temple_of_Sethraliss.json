@@ -1,0 +1,93 @@
+{
+    "id": "temple_of_sethraliss",
+    "name": "Temple de Sephraliss",
+    "lore": "",
+
+    "sections": [
+        {
+            "type": "boss",
+            "name": "Viperis",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Viperis",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Merkpha",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Merkpha",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Galvazzt",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Galvazzt",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Avatar de Sephraliss",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Avatar de Sephraliss",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        }
+ 
+    ]
+}
