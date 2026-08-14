@@ -1,0 +1,72 @@
+{
+    "id": "voidscar_arena",
+    "name": "Arène de la Cicatrice du Vide",
+    "lore": "",
+
+    "sections": [
+        {
+            "type": "boss",
+            "name": "Taz'Rah",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Taz'Rah",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Atroxus",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Atroxus",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "boss",
+            "name": "Charonus",
+            "info": "",
+
+            "mobs": [
+                {
+                "name": "Charonus",
+
+                    "abilities": [
+                        {
+                            "name": "",
+                            "type": "",
+                            "action": "",
+                            "info": "",
+                            "icon": ""
+                        }
+                    ]
+                }
+            ]
+        }
+ 
+    ]
+}
