@@ -204,7 +204,7 @@
                         },
                         {
                             "name": "Fleur d'épines",
-                            "type": "TANK_BUSTER",
+                            "type": "TANK",
                             "action": "CD Tank",
                             "info": "Tank buster + DoT",
                             "icon": "inv_misc_herb_goldthorn_bramble"
