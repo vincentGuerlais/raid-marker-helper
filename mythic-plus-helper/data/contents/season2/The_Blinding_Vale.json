@@ -143,7 +143,7 @@
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "",
-                            "icon": "inv_ability_holyfire_missile.png"
+                            "icon": "inv_ability_holyfire_missile"
                         },
                         {
                             "name": "Allume-feu",
