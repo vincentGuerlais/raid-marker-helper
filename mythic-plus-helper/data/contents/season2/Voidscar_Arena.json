@@ -31,7 +31,7 @@
                         },
                         {
                             "name": "Trait de Vide",
-                            "type": "TANK BUSTER",
+                            "type": "TANK_BUSTER",
                             "action": "Cd Tank",
                             "info": "Tank buster",
                             "icon": "inv_cosmicvoid_orb"
@@ -66,7 +66,7 @@
                         },
                         {
                             "name": "Griffe massive",
-                            "type": "TANK BUSTER",
+                            "type": "TANK_BUSTER",
                             "action": "DISPELL/CD Tank",
                             "info": "Tank buster + DoT",
                             "icon": "ability_creature_poison_03"
@@ -124,7 +124,7 @@
                         },
                         {
                             "name": "Sombres vagues",
-                            "type": "TANK BUSTER",
+                            "type": "TANK_BUSTER",
                             "action": "CD Tank",
                             "info": "En cône. Orienter hors du groupe",
                             "icon": "inv_cosmicvoid_wave"
