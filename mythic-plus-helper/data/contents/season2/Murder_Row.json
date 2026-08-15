@@ -31,7 +31,7 @@
                         },
 						{
                             "name": "Coup de bouclier",
-                            "type": "TANK_BUSTER",
+                            "type": "TANK",
                             "action": "CD TANK/KITE",
 							"info": "Tank buster, +Dégats pendant 20s"
                         }
