@@ -43,16 +43,16 @@
                         },
                         {
                             "name": "Lame-épine",
-                            "type": "AOE",
-                            "action": "EVITER",
-                            "info": "Grosse zone. Sortir du groupe",
+                            "type": "DOT",
+                            "action": "HEAL",
+                            "info": "Saute sur un joueur + DEGATS + DoT",
                             "icon": "spell_nature_thorns"
                         },
                         {
                             "name": "Éventail d’épines",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Grosse zone. Sur le joueur ciblé par Lame-épine",
                             "icon": "inv_misc_herb_04"
                         }
                     ]
