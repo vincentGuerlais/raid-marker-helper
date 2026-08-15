@@ -545,15 +545,17 @@ function displayPlayer() {
     container.innerHTML = html;
 
 
+    // =========================
+    // CHECKBOX LOOT
+    // =========================
+
     document
     .querySelectorAll(".loot-check")
     .forEach(check => {
 
-
         check.addEventListener(
             "change",
             event => {
-
 
                 const characterId =
                     event.target.dataset.character;
@@ -563,7 +565,6 @@ function displayPlayer() {
                     event.target.dataset.item;
 
 
-
                 if (!hiddenItems[characterId]) {
 
                     hiddenItems[characterId] = [];
@@ -571,50 +572,79 @@ function displayPlayer() {
                 }
 
 
-                hiddenItems[characterId].push(itemName);
+                // =========================
+                // OBTENU
+                // =========================
+
+                if (event.target.checked) {
+
+                    if (
+                        !hiddenItems[characterId]
+                        .includes(itemName)
+                    ) {
+
+                        hiddenItems[characterId].push(
+                            itemName
+                        );
+
+                    }
+
+                }
+
+
+                // =========================
+                // À OBTENIR
+                // =========================
+
+                else {
+
+                    hiddenItems[characterId] =
+                        hiddenItems[characterId].filter(
+                            name =>
+                                name !== itemName
+                        );
+
+                }
 
 
                 saveHiddenItems();
 
-
                 displayPlayer();
-
 
             }
         );
 
+    });
+
+
+    // =========================
+    // RESET JOUEUR
+    // =========================
+
+    document
+    .querySelectorAll(".reset-player-loot")
+    .forEach(button => {
+
+        button.addEventListener(
+            "click",
+            event => {
+
+                const characterId =
+                    event.target.dataset.character;
+
+
+                hiddenItems[characterId] = [];
+
+
+                saveHiddenItems();
+
+                displayPlayer();
+
+            }
+        );
 
     });
 
-    document
-.querySelectorAll(".reset-player-loot")
-.forEach(button => {
-
-
-    button.addEventListener(
-        "click",
-        event => {
-
-
-            const characterId =
-                event.target.dataset.character;
-
-
-            hiddenItems[characterId] = [];
-
-
-            saveHiddenItems();
-
-
-            displayPlayer();
-
-
-        }
-    );
-
-
-});
-    
 }
 
 function displayPlayerLoot(character) {
@@ -628,14 +658,15 @@ function displayPlayerLoot(character) {
                 ${character.name}
                 - ${character.class}
             </h3>
-            
-        <button
-            class="reset-player-loot"
-            data-character="${character.id}"
-        >
-            ↺ Réinitialiser
-        </button>
-        
+
+
+            <button
+                class="reset-player-loot"
+                data-character="${character.id}"
+            >
+                ↺ Réinitialiser
+            </button>
+
     `;
 
 
@@ -645,27 +676,51 @@ function displayPlayerLoot(character) {
         );
 
 
-    if (possible.length === 0) {
+    const hidden =
+        hiddenItems[character.id] || [];
+
+
+    const toGet =
+        possible.filter(
+            item => !hidden.includes(item.name)
+        );
+
+
+    const obtained =
+        possible.filter(
+            item => hidden.includes(item.name)
+        );
+
+
+    // =========================
+    // À OBTENIR
+    // =========================
+
+    html += `
+
+        <div class="player-loot-section">
+
+            <h4>
+                À obtenir
+            </h4>
+
+    `;
+
+
+    if (toGet.length === 0) {
 
         html += `
-            Aucun objet trouvé
+
+            <div class="empty-loot">
+                Aucun objet restant
+            </div>
+
         `;
 
     }
 
 
-    possible.forEach(item => {
-    
-    
-        const hidden =
-            hiddenItems[character.id]?.includes(item.name);
-    
-    
-        if (hidden) {
-    
-            return;
-    
-        }
+    toGet.forEach(item => {
 
         html += `
 
@@ -673,29 +728,34 @@ function displayPlayerLoot(character) {
 
                 <label>
 
-                <input
-                    type="checkbox"
-                    class="loot-check"
-                    data-character="${character.id}"
-                    data-item="${item.name}"
-                >
-                
-                ${item.name}
-                
+                    <input
+                        type="checkbox"
+                        class="loot-check"
+                        data-character="${character.id}"
+                        data-item="${item.name}"
+                    >
+
+                    ${item.name}
+
                 </label>
+
+
                 <div class="slot">
                     🛡 ${item.slot}
                 </div>
-                <br>
+
+
                 ${
                     item.note
-                        ? `
-                            <div class="note">
-                                💡 ${item.note}
-                            </div>
-                        `
-                        : ""
+                    ? `
+                        <div class="note">
+                            💡 ${item.note}
+                        </div>
+                    `
+                    : ""
                 }
+
+
                 <small>
 
                     📍 ${item.source}
@@ -712,6 +772,92 @@ function displayPlayerLoot(character) {
 
         `;
 
+    });
+
+
+    html += `
+
+        </div>
+
+
+        <div class="player-loot-section obtained">
+
+            <h4>
+                Obtenu
+            </h4>
+
+    `;
+
+
+    // =========================
+    // OBTENU
+    // =========================
+
+    if (obtained.length === 0) {
+
+        html += `
+
+            <div class="empty-loot">
+                Aucun objet obtenu
+            </div>
+
+        `;
+
+    }
+
+
+    obtained.forEach(item => {
+
+        html += `
+
+            <div class="item">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="loot-check"
+                        data-character="${character.id}"
+                        data-item="${item.name}"
+                        checked
+                    >
+
+                    ${item.name}
+
+                </label>
+
+
+                <div class="slot">
+                    🛡 ${item.slot}
+                </div>
+
+
+                ${
+                    item.note
+                    ? `
+                        <div class="note">
+                            💡 ${item.note}
+                        </div>
+                    `
+                    : ""
+                }
+
+
+                <small>
+
+                    📍 ${item.source}
+
+                    ${
+                        item.boss
+                        ? " - " + item.boss
+                        : ""
+                    }
+
+                </small>
+
+            </div>
+
+        `;
 
     });
 
@@ -719,6 +865,8 @@ function displayPlayerLoot(character) {
     html += `
 
         </div>
+
+    </div>
 
     `;
 
