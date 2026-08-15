@@ -108,7 +108,7 @@
                             "type": "DOT",
                             "action": "",
                             "info": "+20% vitesse déplacement",
-                            "icon": "ability_monk_explodingjadeblossom.png"
+                            "icon": "ability_monk_explodingjadeblossom"
                         },
                         {
                             "name": "Regard assoiffé de sang",
