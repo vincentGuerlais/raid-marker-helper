@@ -19,7 +19,7 @@
                             "type": "DEGATS",
                             "action": "CD Tank/HEAL",
                             "info": "Créé 3 AoE à éviter",
-                            "icon": ""
+                            "icon": "spell_nature_earthquake"
                         }
                     ]
                 },
@@ -32,28 +32,28 @@
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Entre les AoE. Ne pas rester entre. Créé 3 adds",
-                            "icon": ""
+                            "icon": "rogue_burstofspeed"
                         },
                         {
                             "name": "Lumiflore",
                             "type": "ADD",
                             "action": "FOCUS",
                             "info": "Focus si jamais ils spawnent",
-                            "icon": ""
+                            "icon": "inv_10_herb_seed_magiccolor2"
                         },
                         {
                             "name": "Lame-épine",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Grosse zone. Sortir du groupe",
-                            "icon": ""
+                            "icon": "spell_nature_thorns"
                         },
                         {
                             "name": "Éventail d’épines",
                             "type": "",
                             "action": "",
                             "info": "",
-                            "icon": ""
+                            "icon": "inv_misc_herb_04"
                         }
                     ]
                 },
@@ -66,14 +66,14 @@
                             "type": "SOAK",
                             "action": "SOAK",
                             "info": "Empêche les lumiflores de germer",
-                            "icon": ""
+                            "icon": "ability_paladin_infusionoflight"
                         },
                         {
                             "name": "Trait de Lumière",
                             "type": "DEGATS",
                             "action": "KICK",
                             "info": "Très souvent. En kick le maximum",
-                            "icon": ""
+                            "icon": "spell_holy_holybolt"
                         }
                     ]
                 }
@@ -94,28 +94,28 @@
                             "type": "DEBUFF",
                             "action": "FOCUS/FREEDOM",
                             "info": "Enracine. Se regrouper au cac avant pour cleave les racines ou libé.",
-                            "icon": ""
+                            "icon": "inv_raptortravelform"
                         },
                         {
                             "name": "Rugissement de mande-épines",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Eviter les racines au sol",
-                            "icon": ""
+                            "icon": "inv_misc_herb_nightmarevine"
                         },
                         {
                             "name": "Frénésie avide de lumière",
                             "type": "",
                             "action": "",
                             "info": "",
-                            "icon": ""
+                            "icon": "ability_monk_explodingjadeblossom.png"
                         },
                         {
                             "name": "Regard assoiffé de sang",
                             "type": "FIXATE",
                             "action": "KITE",
                             "info": "Le faire passer sur les racines pour les détruire",
-                            "icon": ""
+                            "icon": "ability_fixated_state_red"
                         }
                     ]
                 }
@@ -136,20 +136,20 @@
                             "type": "DEGATS",
                             "action": "KICK",
                             "info": "",
-                            "icon": ""
+                            "icon": "spell_nature_wispsplodegreen"
                         },
                         {
                             "name": "Chutes de lumière",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "",
-                            "icon": ""
+                            "icon": "inv_ability_holyfire_missile.png"
                         },
                         {
                             "name": "Allume-feu",
                             "type": "DEGATS",
                             "action": "S'ECARTER",
-                            "info": "Tous le groupe. Génère aussi 4 tornades qui silence",
+                            "info": "Tous le groupe. Génère aussi 4 tornades qui silence. VRAIMENT ?",
                             "icon": ""
                         }
                     ]
@@ -163,14 +163,14 @@
                             "type": "DOT",
                             "action": "CD HEAL",
                             "info": "Saignement sur tous les joueurs. Disparaît si totalement soigné",
-                            "icon": ""
+                            "icon": "spell_druid_bloodythrash"
                         },
                         {
                             "name": "Frappes pulvérisantes",
                             "type": "CONE",
                             "action": "S'ECARTER",
                             "info": "3 fois. Non évitable + Vulnérabilité aux dégats. Bien se répartir",
-                            "icon": ""
+                            "icon": "ability_druid_swipe"
                         }
                     ]
                 }
@@ -191,34 +191,34 @@
                             "type": "ADD",
                             "action": "CC/BURST",
                             "info": "Tuer groupé. Retirer les cadavres avec le rayon de lumière",
-                            "icon": ""
+                            "icon": "inv_desertlasherorchid_yellow"
                         },
                         {
                             "name": "Rayon de Lumière concentrée",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Diriger sur les cadavre des adds. Laisse ensuite des flaques",
-                            "icon": ""
+                            "icon": "ability_priest_flashoflight"
                         },
                         {
                             "name": "Fleur d'épines",
                             "type": "DEGATS",
                             "action": "CD Tank",
                             "info": "Tank buster + DoT",
-                            "icon": ""
+                            "icon": "inv_misc_herb_goldthorn_bramble"
                         },
                         {
                             "name": "Xylem suintant",
                             "type": "DOT",
                             "action": "HEAL",
                             "info": "Tous les joueurs",
-                            "icon": ""
+                            "icon": "inv_ability_holyfire_nova"
                         },
                         {
                             "name": "Essence ?",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Orbes à soak. Donne un BUFF. Attention DoT",
+                            "info": "Orbes à soak. Donne un BUFF. Attention DoT. ???",
                             "icon": ""
                         }
                     ]
