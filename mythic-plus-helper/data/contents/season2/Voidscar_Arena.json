@@ -1,7 +1,7 @@
 {
     "id": "voidscar_arena",
     "name": "Arène de la Cicatrice du Vide",
-    "lore": "",
+    "lore": "L'arène de la Cicatrice du Vide attend des candidatures dignes de ce nom ! Le suiveillant Charonus a réuni dans l'arène des adversaires venant des quatres coins d'Azeroth et les contraint à participer à ses jeux.",
 
     "sections": [
         {
@@ -15,11 +15,26 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
+                            "name": "Célérité du Néant",
+                            "type": "AOE",
+                            "action": "EVITER/VISER",
+                            "info": "Des fantômes foncent le long des lignes puis laissent des flaques. Essayer de grouper l'arrivée des zones",
+                            "priority":true,
+                            "icon": "ability_mount_voidelfstridermount"
+                        },
+                        {
+                            "name": "Sombre floraison",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Des orbes partent des fantômes",
+                            "icon": "inv_ability_voidweaverpriest_entropicrift"
+                        },
+                        {
+                            "name": "Trait de Vide",
+                            "type": "TANK BUSTER",
+                            "action": "Cd Tank",
+                            "info": "Tank buster",
+                            "icon": "inv_cosmicvoid_orb"
                         }
                     ]
                 }
@@ -28,7 +43,7 @@
         {
             "type": "boss",
             "name": "Atroxus",
-            "info": "",
+            "info": "Bien focus l'add",
 
             "mobs": [
                 {
@@ -36,11 +51,33 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
+                            "name": "Éclaboussure de poison",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "-30% Hâte si on marche dans une zone",
+                            "icon": "spell_nature_corrosivebreath"
+                        },
+                        {
+                            "name": "Souffle nauséabond",
+                            "type": "CONE",
+                            "action": "EVITER",
+                            "info": "Distant : se rapprocher",
+                            "icon": "ability_creature_poison_05"
+                        },
+                        {
+                            "name": "Griffe massive",
+                            "type": "TANK BUSTER",
+                            "action": "DISPELL/CD Tank",
+                            "info": "Tank buster + DoT",
+                            "icon": "ability_creature_poison_03"
+                        },
+                        {
+                            "name": "Rugissement monstrueux",
+                            "type": "ADD",
+                            "action": "FOCUS/KITE",
+                            "info": "Depuis le bassin le plus proche. Pulse sur le groupe tant qu'il est en vie et laisse des flaques. Fixate le tank -> le kite",
+                            "priority":true,
+                            "icon": "ability_racial_darkflight"
                         }
                     ]
                 }
@@ -57,11 +94,40 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
+                            "name": "Singularité instable",
+                            "type": "AOE",
+                            "action": "SE DEPLACER",
+                            "info": "3 trous noirs. Se placer au milieu si peu de mobilité. Rester un peu éloignés",
+                            "icon": "inv_ability_voidweaverpriest_entropicrift"
+                        },
+                        {
+                            "name": "Impact cosmique",
+                            "type": "AOE",
+                            "action": "S'ESPACER",
+                            "info": "Autour de chaque joueurs",
+                            "icon": "inv_cosmicvoid_groundsate"
+                        },
+                        {
+                            "name": "Orbes gravitationnels",
+                            "type": "FIXATE",
+                            "action": "SE DEPLACER",
+                            "info": "Sur les DPS. Amener son orbe à travers un puit de gravité",
+                            "priority": true,
+                            "icon": "inv_enchant_voidsphere"
+                        },
+                        {
+                            "name": "Cascade du Vide",
+                            "type": "AOE",
+                            "action": "SE DEPLACER",
+                            "info": "Vise un DPS puis lance plusieurs orbes. Courir",
+                            "icon": "inv_cosmicvoid_missile"
+                        },
+                        {
+                            "name": "Sombres vagues",
+                            "type": "TANK BUSTER",
+                            "action": "CD Tank",
+                            "info": "En cône. Orienter hors du groupe",
+                            "icon": "inv_cosmicvoid_wave"
                         }
                     ]
                 }
