@@ -30,7 +30,7 @@
                         },
 						{
                             "name": "Dismember",
-                            "type": "TANK_BUSTER",
+                            "type": "TANK",
                             "action": "CD TANK",
 							"info": "Tank buster"
                         }
@@ -122,8 +122,8 @@
 						
 						{
                             "name": "Hydra strike",
-                            "type": "DEGATS",
-                            "action": "CD Tank",
+                            "type": "TANK",
+                            "action": "CD ",
                             "info": "Tank buster",
                             "icon": "hydra_strike"
                         }
@@ -191,7 +191,7 @@
                     "abilities": [
                         {
                             "name": "Corrosive fangs",
-                            "type": "DEGATS",
+                            "type": "TANK",
                             "action": "CD Tank/DISPELL",
                             "info": "Tank buster + DoT + Vulnérabilité",
 							"priority": true
@@ -230,7 +230,7 @@
 
                         {
                             "name": "Tail scythe",
-                            "type": "DEGATS",
+                            "type": "TANK",
                             "action": "CD tank",
 							"info": "Tank buster",
                             "icon": "tail_scythe"
@@ -313,7 +313,7 @@
                         },
 						{
                             "name": "Noxious spray",
-                            "type": "AOE",
+                            "type": "TANK",
                             "action": "CD Tank/HORS GROUPE",
                             "info": "Tank buster + AOE en ligne"
                         }
