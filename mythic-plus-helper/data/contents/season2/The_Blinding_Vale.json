@@ -105,9 +105,9 @@
                         },
                         {
                             "name": "Frénésie avide de lumière",
-                            "type": "",
+                            "type": "DOT",
                             "action": "",
-                            "info": "",
+                            "info": "+20% vitesse déplacement",
                             "icon": "ability_monk_explodingjadeblossom.png"
                         },
                         {
@@ -115,6 +115,7 @@
                             "type": "FIXATE",
                             "action": "KITE",
                             "info": "Le faire passer sur les racines pour les détruire",
+                            "priority":true,
                             "icon": "ability_fixated_state_red"
                         }
                     ]
@@ -132,7 +133,7 @@
 
                     "abilities": [
                         {
-                            "name": "Courroux de gardien",
+                            "name": "Courroux de garde",
                             "type": "DEGATS",
                             "action": "KICK",
                             "info": "",
@@ -146,11 +147,11 @@
                             "icon": "inv_ability_holyfire_missile"
                         },
                         {
-                            "name": "Allume-feu",
+                            "name": "Lumignée",
                             "type": "DEGATS",
                             "action": "S'ECARTER",
-                            "info": "Tous le groupe. Génère aussi 4 tornades qui silence. VRAIMENT ?",
-                            "icon": ""
+                            "info": "Tous le groupe. Génère aussi 4 tornades qui silence",
+                            "icon": "inv_ability_holyfire_buff"
                         }
                     ]
                 },
@@ -198,6 +199,7 @@
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Diriger sur les cadavre des adds. Laisse ensuite des flaques",
+                            "priority":true,
                             "icon": "ability_priest_flashoflight"
                         },
                         {
@@ -215,11 +217,12 @@
                             "icon": "inv_ability_holyfire_nova"
                         },
                         {
-                            "name": "Essence ?",
+                            "name": "Essence du luméclat",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "Orbes à soak. Donne un BUFF. Attention DoT. ???",
-                            "icon": ""
+                            "info": "Orbes à soak. Donne un BUFF. Attention DoT",
+                            "priority":true,
+                            "icon": "inv_ability_holyfire_orb"
                         }
                     ]
                 }
