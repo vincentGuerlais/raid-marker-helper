@@ -30,7 +30,7 @@
                         },
 						{
                             "name": "Dismember",
-                            "type": "DEGATS",
+                            "type": "TANK_BUSTER",
                             "action": "CD TANK",
 							"info": "Tank buster"
                         }
