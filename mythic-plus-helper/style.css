@@ -264,6 +264,11 @@ body {
     color: #f1c40f;
 }
 
+.type-tank_buster {
+    border-color: #c9a520;
+    color: #c9a520;
+}
+
 .type-heal {
     border-color: #27ae60;
     color: #27ae60;
