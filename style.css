@@ -23,27 +23,31 @@ body {
 
 }
 
-
 .tool {
-
-    width:80%;
-    max-width:400px;
-
-    padding:25px;
-
-    border-radius:15px;
-
-    background:#222;
-
-    color:white;
-    text-decoration:none;
-
-    text-align:center;
-
-    font-size:1.5em;
-
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
+.tool img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.tool-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.tool-text strong {
+    font-size: 1.2rem;
+}
+
+.tool-text span {
+    font-size: 0.9rem;
+}
 
 .tool span {
 
