@@ -1,35 +1,35 @@
 {
     "id": "altar_of_fangs",
-    "name": "Autel des Crocs",
-    "lore": "Upon the Altar of Fangs, the ancient Amani sealed the Vaults of Atal'Utek with the Fang of Ula'tek. Only that cursed dagger has the power to unseal the prison of the great weapon of the Amani. Aid Orweyna and Liadrin in their pursuit of Zul'jan, who has entered this accursed place in a misbegotten attempt to bring lost glory back to the Amani.",
+    "name": "Autel des Crochets",
+    "lore": "Sur l'Autel des crochets, les antiques Amani ont scellé les caveaux d'Atal'Utek avec le crochet d'Ula'tek. Seule cette dague maudite possède la puissance nécessaire pour ouvrir la prison de la grande arme des Amani. Aidez Orweyna et Liadrin à poursuivre Zul'Jan, qui a pénétré dans ce lieu maudit avec l'intention malavisée de rendre sa gloire passée à la tribu Amani",
 
     "sections": [
 
         {
             "type": "trash",
-            "name": "Sacrificial approach",
+            "name": "Approche sacrificielle",
             "info": "Détruire les totems. /!\\ AOE quand le chef lié est pull",
 
             "mobs": [
 
                 {
-                    "name": "Ritual chieftain",
+                    "name": "Chef du rituel",
 
                     "abilities": [
                         {
-                            "name": "???pulse",
+                            "name": "Totem instable",
                             "type": "DEGATS",
                             "action": "HEAL",
 							"info": "Pulse depuis le totem lié"
                         },
 						{
-                            "name": "Blood sacrifice",
+                            "name": "Sacrifice de sang",
                             "type": "DEBUFF",
                             "action": "CD HEAL",
 							"info": "Dégats + Bouclier anti-soin"
                         },
 						{
-                            "name": "Dismember",
+                            "name": "Démembrer",
                             "type": "TANK",
                             "action": "CD TANK",
 							"info": "Tank buster"
@@ -38,37 +38,38 @@
                 },
 
                 {
-                    "name": "Ravenous descendant",
+                    "name": "Descendant vorace",
 
                     "abilities": [
                         {
-                            "name": "Ravenous claws",
+                            "name": "Griffes voraces",
                             "type": "ENRAGE",
                             "action": "SOOTH/KITE/STUN",
-                            "info": "A chaque mélée. Cumulable. 2 secondes."
+                            "info": "A chaque mélée. Cumulable. 2 secondes. Ne pas laisser cumuler"
                         }
                     ]
                 },	
 
                 {
-                    "name": "Twinfang harrower",
+                    "name": "Persécuteur crochet-double",
                     "abilities": [
                         {
-                            "name": "Paralyzing shots",
+                            "name": "Tirs paralysants",
                             "type": "DEBUFF",
                             "action": "DISPELL/FREEDOM",
                             "info": "Ralentis jusqu'à STUN"
                         },
 						{
-                            "name": "Toxic breath",
+                            "name": "Souffle toxique",
                             "type": "CONE",
-                            "action": "EVITER"
+                            "action": "EVITER",
+							"info":"Tourne"
                         }
                     ]
                 },
 
                 {
-                    "name": "Primal serpent",
+                    "name": "Sifflement perçant",
 
                     "abilities": [
                         {
@@ -97,7 +98,7 @@
                     "abilities": [
 
                         {
-                            "name": "Ravenous stomp",
+                            "name": "Piétinement vorace",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "STUN + Renforce 2 piles de viandes (saignement)",
@@ -105,15 +106,15 @@
                         },
 
                         {
-                            "name": "Ssscavenging",
+                            "name": "Vorasssité charognarde",
                             "type": "SOAK",
                             "action": "SOAK",
-                            "info": "La pile de viande la plus proche. éviter les piles renforcée",
+                            "info": "Fonce vers la pile de viande la plus proche. éviter les piles renforcée. Attraper les morceaux de viande",
                             "icon": "ssscavenging"
                         },
 
                         {
-                            "name": "Regurgitate",
+                            "name": "Regurgitation",
                             "type": "CONE",
                             "action": "EVITER",
                             "info": "DOT + SLOW + DEBUFF. A dispell si touché",
@@ -121,7 +122,7 @@
                         },
 						
 						{
-                            "name": "Hydra strike",
+                            "name": "Frappe de l'hydre",
                             "type": "TANK",
                             "action": "CD ",
                             "info": "Tank buster",
@@ -137,17 +138,17 @@
 
         {
             "type": "trash",
-            "name": "Mutation chambers",
+            "name": "Chambre des mutations",
             "info": "Attention aux oeufs. Marcher dessus les fera éclore",
 
             "mobs": [
 
                 {
-                    "name": "Blood letter",
+                    "name": "Sangsue venimeuse",
 
                     "abilities": [
                         {
-                            "name": "Blood letting",
+                            "name": "Eclaboussure septique",
                             "type": "AOE",
                             "action": "EVITER/KITE",
                             "info": "Lâche une flaque à chaque mélée"
@@ -156,7 +157,7 @@
                 },
 
                 {
-                    "name": "High Evolutionist",
+                    "name": "Grand évolutionniste",
                     "priority": true,
 
                     "abilities": [
@@ -167,7 +168,7 @@
                             "info": "Fait éclore les oeufs"
                         },
 						{
-                            "name": "Mass envenom",
+                            "name": "Envenimement de masse",
                             "type": "DOT",
                             "action": "KICK/DISPELL",
 							"info": "DoT le groupe entier !",
@@ -175,7 +176,7 @@
 
                         },
 						{
-                            "name": "Evolve",
+                            "name": "Evolution",
                             "type": "HEAL",
                             "action": "TAUNT/ROOT",
                             "info": "SOIN + SHIELD + IMMUNE",
@@ -186,20 +187,21 @@
                 },
 
                 {
-                    "name": "Rattling writhe",
+                    "name": "Tortilleur cliquetant",
 
                     "abilities": [
                         {
-                            "name": "Corrosive fangs",
+                            "name": "Crochets corrosifs",
                             "type": "TANK",
                             "action": "CD Tank/DISPELL",
                             "info": "Tank buster + DoT + Vulnérabilité",
 							"priority": true
                         },
 						{
-                            "name": "Rattle",
+                            "name": "Cliquetis",
                             "type": "DEGATS",
-                            "action": "CD Heal"
+                            "action": "CD Heal",
+							"info": "Tous le groupe"
                         }
                     ]
                 }      
@@ -211,25 +213,25 @@
 
         {
             "type": "boss",
-            "name": "The Writhing Coil",
+            "name": "L'Ophidien ondulant",
             "info": "Enchaines les 3 attaques",
 
             "mobs": [
 
                 {
-                    "name": "The Writhing Coil",
+                    "name": "L'Ophidien ondulant",
 
                     "abilities": [
 
                         {
-                            "name": "Synchronized venom",
+                            "name": "Venin synchrone",
                             "type": "DOT",
                             "action": "DÉBUFF/HEAL",
                             "icon": "synchronized_venom"
                         },
 
                         {
-                            "name": "Tail scythe",
+                            "name": "Faucheuse caudale",
                             "type": "TANK",
                             "action": "CD tank",
 							"info": "Tank buster",
@@ -237,7 +239,7 @@
                         },
 
                         {
-                            "name": "Toxic barrage",
+                            "name": "Barrage toxique",
                             "type": "DEBUFF",
                             "action": "KICK",
                             "info": "3 KICKS ! SLOW + -DEGATS",
@@ -245,7 +247,7 @@
                         },
 
                         {
-                            "name": "Vindictive onslaught",
+                            "name": "Assaut vindicatif",
                             "type": "CONE",
                             "action": "EVITER",
                             "info": "Il s'enterre avant",
@@ -253,7 +255,7 @@
                         },
 						
 						{
-                            "name": "Death rattle",
+                            "name": "Cliquetis mortel",
                             "type": "DEGATS",
                             "action": "CASSER LE LIEN",
                             "info": "Puis se sépare",
@@ -261,7 +263,7 @@
                         },
 						
 						{
-                            "name": "Uncoil",
+                            "name": "Désentortillement",
                             "type": "ADD",
                             "action": "CC/STUN/ROOT/BURST",
                             "info": "Fixent un joueur. AoE à la mort",
@@ -276,13 +278,13 @@
         },
 		{
             "type": "trash",
-            "name": "Altar of fangs",
+            "name": "Autel des crochets",
             "info": "Nettoyer la salle et casser les 4 totems",
 
             "mobs": [
 
                 {
-                    "name": "Blade of the Altar",
+                    "name": "Blade of the Altar??",
 
                     "abilities": [
                         {
@@ -295,24 +297,24 @@
                 },
 
                 {
-                    "name": "Ascendant serpent",
+                    "name": "Serpent ascendant",
 					"priority": true,
 
                     "abilities": [
                         {
-                            "name": "Infest",
+                            "name": "Infestation",
                             "type": "AOE",
                             "action": "VENN",
                             "info": "AOE ciblée + ADD. Rester groupé sans entrer dans les zones"
                         },
 						{
-                            "name": "Virulent whirl",
+                            "name": "Tourbillon virulent",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Tornades"
                         },
 						{
-                            "name": "Noxious spray",
+                            "name": "Vaporisation nocive",
                             "type": "TANK",
                             "action": "CD Tank/HORS GROUPE",
                             "info": "Tank buster + AOE en ligne"
@@ -320,23 +322,23 @@
                     ]
                 },
 				{
-                    "name": "Ulatek's chosen",
+                    "name": "Elu d'Ula'tek",
 
                     "abilities": [
                         {
-                            "name": "Venom burst",
+                            "name": "Afflux toxique",
                             "type": "DOT",
                             "action": "DEBUFF/CD",
                             "info": "DEGATS + DoT à la mort. Tuer ensemble"
                         },
 						{
-                            "name": "Toxic surge",
+                            "name": "Rayon toxique",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "3 fois. En lignes"
                         },
 						{
-                            "name": "Mass envenom",
+                            "name": "Envenimement de masse",
                             "type": "HEAL",
                             "action": "KICK/DISPELL",
 							"info": "DoT le groupe entier !",
@@ -353,7 +355,7 @@
 		{
             "type": "boss",
             "name": "Zul'Jan",
-			"info": "Se faire toucher par les attaques pour retirer le DoT",
+			"info": "Se pré-placer sur les 4 lignes. Se faire toucher par les attaques pour retirer le DoT",
 
             "mobs": [
 
@@ -363,7 +365,7 @@
                     "abilities": [
 
                         {
-                            "name": "Ritual of the Fang",
+                            "name": "Rituel du crochet",
                             "type": "DOT",
                             "action": "INTERCEPTER",
 							"info": "4 rayons depuis chaque tête de serpent. A intercepter. TUE à expiration",
@@ -372,25 +374,26 @@
                         },
 
                         {
-                            "name": "Bloodletting",
+                            "name": "Saignée",
                             "type": "AOE",
                             "action": "EVITER",
-							"info": "Posé à la perte du DoT",
+							"info": "Retire 1 charge du DoT mais pose une flaque",
 							"icon": "bloodletting"
 							
                         },
 
                         {
-                            "name": "Boneslicer",
+                            "name": "Guillotine sinistre",
                             "type": "SOAK",
                             "action": "SOAK",
-							"info": "Dégats partagés. Se répartir",
+							"info": "Dégats partagés. Se répartir. TOUS LES JOUEURS DOIVENT SOAK, sinon dégats de groupe",
+							"priority": true,
 							"icon": "boneslicer"
 							
                         },
 						
 						{
-                            "name": "Axegrinder",
+                            "name": "Guillotine sinistre",
                             "type": "AOE",
                             "action": "EVITER",
                             "info": "Peut être utilisé pour retirer le DoT",
