@@ -15,6 +15,14 @@
                     "classes": [
                         "Monk MW"
                     ]
+                },
+                {
+                    "name": "Jambards d’exploration arctique",
+                    "slot": "Pieds",
+                    "note": "(M+)",
+                    "classes": [
+                        "Monk MW"
+                    ]
                 }
             ]
         }
