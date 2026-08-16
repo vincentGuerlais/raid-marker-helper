@@ -1,0 +1,22 @@
+{
+    "id": "den_of_nalorakk",
+    "name": "Antre de Nalorakk",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Antre de Nalorakk",
+
+            "loot": [
+                {
+                    "name": "Spallières de pillage",
+                    "slot": "Epaules",
+                    "note": "à catalyser en [Pampilles du roi-singe]",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
