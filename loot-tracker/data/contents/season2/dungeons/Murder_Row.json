@@ -1,0 +1,30 @@
+{
+    "id": "murder_row",
+    "name": "Allée du Meurtre",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Allée du Meurtre",
+
+            "loot": [
+                {
+                    "name": "Bracelets empennés de fureur",
+                    "slot": "Poignets",
+                    "note": "(RAID)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Gantelets de défense éffrénée",
+                    "slot": "Mains",
+                    "note": "(RAID) à catalyser en [Poings de combat du roi-singe]",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
