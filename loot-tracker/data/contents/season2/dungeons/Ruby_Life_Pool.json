@@ -1,0 +1,22 @@
+{
+    "id": "ruby_life_pool",
+    "name": "Bassins de l'Essence Ruby",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Bassins de l'Essence Ruby",
+
+            "loot": [
+                {
+                    "name": "Drapé ignifuge",
+                    "slot": "Cape",
+                    "note": "",
+                    "classes": [
+                        "Monk MW",
+                    ]
+                }
+            ]
+        }
+    ]
+}
