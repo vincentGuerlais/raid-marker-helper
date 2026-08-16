@@ -87,9 +87,9 @@
 
             "loot": [
                 {
-                    "name": "Crochets suintants de la vipère en maraude",
+                    "name": "Effigie coulée dans le venin",
                     "slot": "Tête",
-                    "note" : "",
+                    "note" : "à catalyser en [Crochets suintants de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
                     ]
@@ -134,17 +134,17 @@
                     ]
                 },
                 {
-                    "name": "Mâchoires de la vipère en maraude",
+                    "name": "Spallières ondulâmes",
                     "slot": "Epaules",
-                    "note" : "",
+                    "note" : "à catalyser en [Mâchoires de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
                     ]
                 },
                 {
-                    "name": "Jambards annelés de la vipère en maraude",
+                    "name": "Cuissières de l’union dénouée",
                     "slot": "Jambes",
-                    "note" : "",
+                    "note" : "à catalyser en [Jambards annelés de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
                     ]
@@ -189,9 +189,9 @@
                     ]
                 },
                 {
-                    "name": "Scutelle en plaques de la vipère en maraude",
+                    "name": "Cuirasse croc-d’effroi éveillée",
                     "slot": "Torse",
-                    "note" : "",
+                    "note" : "à catalyser en [Scutelle en plaques de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
                     ]
