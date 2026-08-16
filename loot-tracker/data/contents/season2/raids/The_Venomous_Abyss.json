@@ -1,0 +1,71 @@
+{
+    "id": "the_venomous_abyss",
+    "name": "L'Abîme Venimeux",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Nek’zali l’Entortillâme",
+
+            "loot": [
+                {
+                    "name": "Bague d’espoir sin’dorei",
+                    "slot": "Anneau",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Sentinelles inhumées",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "L’expédition perdue",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "Vashnik le Malveillant",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "Sszorak",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "Les crochets jumeaux",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "L’Autel annelé",
+
+            "loot": [
+                
+            ]
+        },
+        {
+            "name": "Ula’tek",
+
+            "loot": [
+                
+            ]
+        }
+    ]
+}
