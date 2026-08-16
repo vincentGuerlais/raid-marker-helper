@@ -1,0 +1,30 @@
+{
+    "id": "craft",
+    "name": "Craft",
+    "type": "other",
+
+    "bosses": [
+        {
+            "name": "Travail du cuir",
+
+            "loot": [
+                {
+                    "name": "Brassards cuirassés de pérégrin",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Ceinture à trophées de pérégrin",
+                    "slot": "Taille",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
+            ]
+        }        
+    ]
+}
