@@ -1,0 +1,22 @@
+{
+    "id": "blinding_vale",
+    "name": "Val Aveuglant",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Val Aveuglant",
+
+            "loot": [
+                {
+                    "name": "Ceinture d’arpente-racine",
+                    "slot": "Taille",
+                    "note": "(RAID)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
