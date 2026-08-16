@@ -31,6 +31,14 @@
                     "classes": [
                         "Monk MW"
                     ]
+                },
+                {
+                    "name": "Perce-cuir de la vipère en maraude",
+                    "slot": "Mains",
+                    "note": "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
                 }
             ]
         }
