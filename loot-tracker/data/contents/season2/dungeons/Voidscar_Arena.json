@@ -1,0 +1,22 @@
+{
+    "id": "voidscar_arena",
+    "name": "Arène de la Cicatrice du Vide",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Arène de la Cicatrice du Vide",
+
+            "loot": [
+                {
+                    "name": "Peau de pestilence",
+                    "slot": "Torse",
+                    "note": "à catalyser en [Gi de combat du roi-singe]",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
