@@ -11,7 +11,7 @@
                 {
                     "name": "Bracelets empennés de fureur",
                     "slot": "Poignets",
-                    "note": "(RAID)",
+                    "note": "(RAID)(M+)",
                     "classes": [
                         "Monk MW"
                     ]
@@ -19,7 +19,7 @@
                 {
                     "name": "Gantelets de défense éffrénée",
                     "slot": "Mains",
-                    "note": "(RAID) à catalyser en [Poings de combat du roi-singe]",
+                    "note": "(RAID)(M+) à catalyser en [Poings de combat du roi-singe]",
                     "classes": [
                         "Monk MW"
                     ]
