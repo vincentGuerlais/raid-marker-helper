@@ -9,11 +9,19 @@
 
             "loot": [
                 {
-                    "name": "Bague d’espoir sin’dorei",
-                    "slot": "Anneau",
+                    "name": "Réceptacle rituel de l’Entortillâme",
+                    "slot": "Bijou",
                     "note" : "",
                     "classes": [
-                        "Mage Fr"
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Habit de l'éveil",
+                    "slot": "Torse",
+                    "note" : "(M+) à catalyser en [Gi de combat du roi-singe]",
+                    "classes": [
+                        "Monk MW"
                     ]
                 }
             ]
@@ -22,49 +30,180 @@
             "name": "Sentinelles inhumées",
 
             "loot": [
-                
+                {
+                    "name": "Échine de l’abysse sssifflante",
+                    "slot": "Main gauche",
+                    "note" : "(M+)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
             ]
         },
         {
             "name": "L’expédition perdue",
 
             "loot": [
-                
+                {
+                    "name": "Pampilles du roi-singe",
+                    "slot": "Epaules",
+                    "note" : "(M+)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
             ]
         },
         {
             "name": "Vashnik le Malveillant",
 
             "loot": [
-                
+                {
+                    "name": "Bague d’alchimiste vil",
+                    "slot": "Doigt",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         },
         {
             "name": "Sszorak",
 
             "loot": [
-                
+                {
+                    "name": "Bottes à écailles féroces",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         },
         {
             "name": "Les crochets jumeaux",
 
             "loot": [
-                
+                {
+                    "name": "Crochets suintants de la vipère en maraude",
+                    "slot": "Tête",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         },
         {
             "name": "L’Autel annelé",
 
             "loot": [
-                
+                {
+                    "name": "Laméfice sinistre",
+                    "slot": "1 main",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Drapé vaudou en soie",
+                    "slot": "Dos",
+                    "note" : "(M+)",
+                    "classes": [
+                        "Monk MW",
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Écharpe du réceptacle lugubre",
+                    "slot": "Taille",
+                    "note" : "(M+)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Gardes-jambes maléficieux torsadés",
+                    "slot": "Jambes",
+                    "note" : "(M+) à catalyser en [Culotte du roi-singe]",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Mâchoires de la vipère en maraude",
+                    "slot": "Epaules",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Jambards annelés de la vipère en maraude",
+                    "slot": "Jambes",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Coup de la guillotine de Zul’jin",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         },
         {
             "name": "Ula’tek",
 
             "loot": [
-                
+                {
+                    "name": "Regard du guetteur lové",
+                    "slot": "Casque",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Reliquaire fléau-des-Aqir",
+                    "slot": "Cou",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW",
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Grand arc de repos caustique",
+                    "slot": "2 mains",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Scutelle en plaques de la vipère en maraude",
+                    "slot": "Torse",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Cœur avide d’Ula’tek",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Hunter BM"
+                    ]
+                }
             ]
         }
     ]
