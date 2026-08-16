@@ -1,0 +1,49 @@
+{
+    "contents": [
+        {
+            "id": "blinding_vale",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Blinding_Vale.json"
+        },
+        {
+            "id": "den_of_nalorakk",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Den_of_Nalorakk.json"
+        },
+        {
+            "id": "kings_rest",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Kings_Rest.json"
+        },
+        {
+            "id": "murder_row",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Murder_Row.json"
+        },
+        {
+            "id": "ruby_life_pool",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Ruby_Life_Pool.json"
+        },
+        {
+            "id": "voidscar_arena",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Voidscar_Arena.json"
+        },
+        {
+            "id": "the_venomous_abyss",
+            "type": "raid",
+            "file": "contents/season2/raids/The_Venomous_Abyss.json"
+        },
+        {
+            "id": "world_boss",
+            "type": "raid",
+            "file": "contents/season2/raids/World_Boss.json"
+        },
+        {
+            "id": "craft",
+            "type": "other",
+            "file": "contents/season2/other/Craft.json"
+        }
+    ]
+}
