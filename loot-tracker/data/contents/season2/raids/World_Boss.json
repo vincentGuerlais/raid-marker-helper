@@ -1,0 +1,38 @@
+{
+    "id": "world_boss",
+    "name": "World Boss",
+    "type": "raid",
+
+    "bosses": [
+        {
+            "name": "Nymrissa Mande-vagues",
+
+            "loot": [
+                {
+                    "name": "Bottes des brisants",
+                    "slot": "Pieds",
+                    "note" : "(RAID)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Bague à bulles attrayante",
+                    "slot": "Doigt",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Pierre marine de Mande-vagues",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
