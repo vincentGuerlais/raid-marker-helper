@@ -1,0 +1,38 @@
+{
+    "id": "kings_rest",
+    "name": "Repos des Rois",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Repos des Rois",
+
+            "loot": [
+                {
+                    "name": "Braies de la salle sacrée",
+                    "slot": "Jambes",
+                    "note": "(RAID) à catalyser en [Culotte du roi-singe]",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Anneau de lieur de rituel",
+                    "slot": "Doigt",
+                    "note": "(RAID)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                },
+                {
+                    "name": "Calice des derniers sacrements",
+                    "slot": "Main gauche",
+                    "note": "(RAID)",
+                    "classes": [
+                        "Monk MW"
+                    ]
+                }
+            ]
+        }
+    ]
+}
