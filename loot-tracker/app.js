@@ -756,10 +756,16 @@ function displayPlayerLoot(character) {
                 }
 
                 ${
-                    item.upgrade
+                    item.upgrade && item.upgrade.length > 0
                         ? `
                             <div class="upgrade">
-                                ⭐ ${item.upgrade}
+                
+                                ${item.upgrade.map(upgrade => `
+                                    <div class="upgrade-${upgrade.type}">
+                                        ⭐ ${upgrade.text}
+                                    </div>
+                                `).join("")}
+                
                             </div>
                         `
                         : ""
