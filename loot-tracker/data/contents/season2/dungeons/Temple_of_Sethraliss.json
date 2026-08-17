@@ -1,0 +1,30 @@
+{
+    "id": "temple_of_sethraliss",
+    "name": "Temple de Sephraliss",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Temple de Sephraliss",
+
+            "loot": [
+                {
+                    "name": "Bague en grès chargée",
+                    "slot": "Doigt",
+                    "note": "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Amict du purificateur de couvées",
+                    "slot": "Epaules",
+                    "note": "à catalyser en [Flux-de-mana de garde tellurique primordiale]",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }
+            ]
+        }
+    ]
+}
