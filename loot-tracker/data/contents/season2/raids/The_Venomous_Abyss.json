@@ -19,9 +19,18 @@
                 {
                     "name": "Habit de l'éveil",
                     "slot": "Torse",
-                    "note" : "(M+) à catalyser en [Gi de combat du roi-singe]",
+                    "note" : "(M+) à catalyser en [Gi de combat du roi-singe](Monk) ou [Grande tenue lunaire de garde-rêve énigmatique](Druid)",
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Entraves d’esprit fébrile",
+                    "slot": "Poignets",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
                     ]
                 }
             ]
@@ -51,6 +60,15 @@
                     "classes": [
                         "Monk MW"
                     ]
+                },
+                {
+                    "name": "Sac sans fond de Gebbo",
+                    "slot": "Bijou",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu",
+                        "Mage Fr"
+                    ]
                 }
             ]
         },
@@ -63,7 +81,9 @@
                     "slot": "Doigt",
                     "note" : "",
                     "classes": [
-                        "Hunter BM"
+                        "Hunter BM",
+                        "Druid Gu",
+                        "Mage Fr"
                     ]
                 }
             ]
@@ -79,6 +99,14 @@
                     "classes": [
                         "Hunter BM"
                     ]
+                },
+                {
+                    "name": "Bague griffe de la brute dominante",
+                    "slot": "Doigt",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
                 }
             ]
         },
@@ -92,6 +120,14 @@
                     "note" : "à catalyser en [Crochets suintants de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Mules serpentines couvertes de salive",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
                     ]
                 }
             ]
@@ -114,7 +150,9 @@
                     "note" : "(M+)",
                     "classes": [
                         "Monk MW",
-                        "Hunter BM"
+                        "Hunter BM",
+                        "Druid Gu",
+                        "Mage Fr"
                     ]
                 },
                 {
@@ -122,7 +160,8 @@
                     "slot": "Taille",
                     "note" : "(M+)",
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Druid Gu"
                     ]
                 },
                 {
@@ -154,7 +193,24 @@
                     "slot": "Bijou",
                     "note" : "",
                     "classes": [
-                        "Hunter BM"
+                        "Hunter BM",
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Poignées de l’ombre éternelle",
+                    "slot": "Mains",
+                    "note" : "à catalyser en [Sculpte-mana de garde tellurique primordiale]",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Bottines d’âmes ricanantes",
+                    "slot": "Pieds",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
                     ]
                 }
             ]
@@ -166,9 +222,10 @@
                 {
                     "name": "Regard du guetteur lové",
                     "slot": "Casque",
-                    "note" : "",
+                    "note" : "à catalyser en [Visage inflexible du roi-singe ](Monk) ou [Regard somnolent de garde-rêve énigmatique](Druid)",
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Druid Gu"
                     ]
                 },
                 {
@@ -177,7 +234,9 @@
                     "note" : "",
                     "classes": [
                         "Monk MW",
-                        "Hunter BM"
+                        "Hunter BM",
+                        "Druid Gu",
+                        "Mage Fr"
                     ]
                 },
                 {
@@ -202,6 +261,30 @@
                     "note" : "",
                     "classes": [
                         "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Bardiche de démon des couvées abyssal",
+                    "slot": "2 Mains",
+                    "note" : "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
+                },
+                {
+                    "name": "Jan’thrazet, le Crochâme",
+                    "slot": "1 Main",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Capuche horrifique du gardien de venin",
+                    "slot": "Tête",
+                    "note" : "à catalyser en [Couronne de garde tellurique primordiale]",
+                    "classes": [
+                        "Mage Fr"
                     ]
                 }
             ]
