@@ -14,33 +14,26 @@
                     "note": "(RAID)",
                     "upgrade": [
                         {
-                            "type": "enchant",
-                            "text": "Fil ensorcelé de soie du feu solaire",
-                            "class": [
-                                "Monk MW"
-                            ]
-                        },
-                        {
-                            "type": "renfort",
-                            "text": "Renfort d’armure de chasse en forêt",
-                            "class": [
-                                "Druid Gu"
-                            ]
-                        },
-                        {
                             "type": "catalyst",
                             "text": "Culotte du roi-singe",
-                            "class": [
-                                "Monk MW"
-                            ]
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Fil ensorcelé de soie du feu solaire",
+                            "class": "Monk MW"
                         },
                         {
                             "type": "catalyst",
                             "text": "Jambières de garde-rêve énigmatique",
-                            "class": [
-                                "Druid Gu"
-                            ]
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "renfort",
+                            "text": "Renfort d’armure de chasse en forêt",
+                            "class": "Druid Gu"
                         }
+
                     ],
                     "class": [
                         "Monk MW",
@@ -52,6 +45,10 @@
                     "slot": "Doigt",
                     "note": "(RAID)",
                     "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – empressement de Lune-d’Argent"
+                        },
                         {
                             "type": "gem",
                             "text": "Olivine polyvalente sans défaut"
