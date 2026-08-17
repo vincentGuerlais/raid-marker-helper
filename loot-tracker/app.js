@@ -712,141 +712,110 @@ function displayPlayerLoot(character) {
     // Fonction d'affichage d'un objet
     // =========================
 
-    function renderItem(item) {
+function renderItem(item) {
 
-        // -------------------------
-        // Upgrades applicables
-        // -------------------------
+    // -------------------------
+    // Upgrades applicables
+    // -------------------------
 
-        const applicableUpgrades =
-            (item.upgrade || []).filter(
-                upgrade =>
-                    !upgrade.class ||
-                    upgrade.class === character.class
-            );
-
-
-        // -------------------------
-        // Vérifie s'il existe
-        // plusieurs variantes
-        // -------------------------
-
-        const classSpecificUpgrades =
-            (item.upgrade || []).filter(
-                upgrade =>
-                    upgrade.class &&
-                    upgrade.class.length > 0
-            );
+    const applicableUpgrades =
+        (item.upgrade || []).filter(
+            upgrade =>
+                !upgrade.class ||
+                upgrade.class === character.class
+        );
 
 
-        const upgradeTypes =
-            new Set(
-                classSpecificUpgrades.map(
-                    upgrade => upgrade.type
-                )
-            );
+    // -------------------------
+    // Objet
+    // -------------------------
+
+    let itemHtml = `
+
+        <div class="item">
+
+            <label>
+
+                <input
+                    type="checkbox"
+                    class="loot-check"
+                    data-character="${character.id}"
+                    data-item="${item.name}"
+                >
+
+                <strong>
+                    ${item.name}
+                </strong>
+
+            </label>
 
 
-        const hasMultipleUpgradeVariants =
-            classSpecificUpgrades.length > 1;
+            <div class="item-details">
+
+                <div class="slot">
+                    🛡 ${item.slot}
+                </div>
 
 
-        // -------------------------
-        // Objet
-        // -------------------------
-
-        itemHtml += `
-
-    <div class="item">
-
-        <label>
-
-            <input
-                type="checkbox"
-                class="loot-check"
-                data-character="${character.id}"
-                data-item="${item.name}"
                 ${
-                    hidden.includes(item.name)
-                    ? "checked"
+                    item.note
+                    ? `
+                        <div class="note">
+                            💡 ${item.note}
+                        </div>
+                      `
                     : ""
                 }
-            >
-
-            <strong>
-                ${item.name}
-            </strong>
-
-        </label>
 
 
-        <div class="item-details">
+                ${
+                    applicableUpgrades.length > 0
+                    ? `
+                        <div class="upgrades">
 
-            <div class="slot">
-                🛡 ${item.slot}
+                            ${applicableUpgrades.map(
+                                upgrade => `
+
+                                    <div
+                                        class="upgrade upgrade-${upgrade.type}"
+                                    >
+
+                                        ⭐ ${upgrade.text}
+
+                                    </div>
+
+                                `
+                            ).join("")}
+
+                        </div>
+                      `
+                    : ""
+                }
+
+
+                <small class="item-source">
+
+                    📍 ${item.source}
+
+                    ${
+                        item.boss &&
+                        item.boss !== item.source
+                        ? " - " + item.boss
+                        : ""
+                    }
+
+                </small>
+
             </div>
-
-
-            ${
-                item.note
-                ? `
-                    <div class="note">
-                        💡 ${item.note}
-                    </div>
-                  `
-                : ""
-            }
-
-
-            ${
-                applicableUpgrades.length > 0
-                ? `
-                    <div class="upgrades">
-
-                        ${applicableUpgrades.map(
-                            upgrade => `
-
-                                <div
-                                    class="upgrade upgrade-${upgrade.type}"
-                                >
-
-                                    ⭐
-                                    ${upgrade.text}
-
-                                </div>
-
-                            `
-                        ).join("")}
-
-                    </div>
-                  `
-                : ""
-            }
-
-
-            <small class="item-source">
-
-                📍 ${item.source}
-
-                ${
-                    item.boss &&
-                    item.boss !== item.source
-                    ? " - " + item.boss
-                    : ""
-                }
-
-            </small>
 
         </div>
 
-    </div>
-
-`;
+    `;
 
 
-        return itemHtml;
+    return itemHtml;
 
-    }
+}
 
 
     // =========================
