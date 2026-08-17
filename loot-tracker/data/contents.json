@@ -36,6 +36,11 @@
             "file": "contents/season2/dungeons/Temple_of_Sethraliss.json"
         },
         {
+            "id": "temple_of_sethraliss",
+            "type": "dungeon",
+            "file": "contents/season2/dungeons/Temple_of_Sethraliss.json"
+        },
+        {
             "id": "the_venomous_abyss",
             "type": "raid",
             "file": "contents/season2/raids/The_Venomous_Abyss.json"
