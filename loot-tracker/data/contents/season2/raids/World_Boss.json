@@ -29,7 +29,16 @@
                     "slot": "Bijou",
                     "note" : "",
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Mage Fr"
+                    ]
+                },
+                {
+                    "name": "Fronde mystique d’écaille-de-givre",
+                    "slot": "Main gauche",
+                    "note" : "",
+                    "classes": [
+                        "Mage Fr"
                     ]
                 }
             ]
