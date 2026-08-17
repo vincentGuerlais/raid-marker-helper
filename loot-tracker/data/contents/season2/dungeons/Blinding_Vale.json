@@ -12,6 +12,12 @@
                     "name": "Ceinture d’arpente-racine",
                     "slot": "Taille",
                     "note": "(RAID)",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Olivine mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
