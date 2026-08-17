@@ -571,6 +571,51 @@ function displayPlayer() {
 
     `;
 
+    html += `
+
+    <div
+        class="upgrade-legend"
+        id="upgradeLegend"
+    >
+
+        <div
+            class="upgrade-legend-header"
+            id="upgradeLegendToggle"
+        >
+
+            <strong>
+                ⭐ Améliorations
+            </strong>
+
+            <span id="upgradeLegendArrow">
+                ▲
+            </span>
+
+        </div>
+
+
+        <div
+            class="upgrade-legend-content"
+            id="upgradeLegendContent"
+        >
+
+            <span class="legend-item upgrade-catalyst">
+                🟨 Catalyseur
+            </span>
+
+            <span class="legend-item upgrade-enchant">
+                🟪 Enchantement
+            </span>
+
+            <span class="legend-item upgrade-gem">
+                🟩 Gemme
+            </span>
+
+        </div>
+
+    </div>
+
+`;
 
     const activeCharacters =
         characters.filter(
@@ -596,6 +641,43 @@ function displayPlayer() {
 
     container.innerHTML = html;
 
+    const upgradeLegendToggle =
+    document.getElementById(
+        "upgradeLegendToggle"
+    );
+
+const upgradeLegendContent =
+    document.getElementById(
+        "upgradeLegendContent"
+    );
+
+const upgradeLegendArrow =
+    document.getElementById(
+        "upgradeLegendArrow"
+    );
+
+
+if (upgradeLegendToggle) {
+
+    upgradeLegendToggle.addEventListener(
+        "click",
+        () => {
+
+            const hidden =
+                upgradeLegendContent
+                    .classList
+                    .toggle("hidden");
+
+
+            upgradeLegendArrow.textContent =
+                hidden
+                ? "▼"
+                : "▲";
+
+        }
+    );
+
+}
 
     // =========================
     // CHECKBOX LOOT
