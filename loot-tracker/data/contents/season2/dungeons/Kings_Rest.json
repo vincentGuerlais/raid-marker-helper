@@ -35,7 +35,7 @@
                         }
 
                     ],
-                    "class": [
+                    "classes": [
                         "Monk MW",
                         "Druid, Gu"
                     ]
@@ -62,7 +62,7 @@
                     "name": "Calice des derniers sacrements",
                     "slot": "Main gauche",
                     "note": "(RAID)",
-                    "class": [
+                    "classes": [
                         "Monk MW"
                     ]
                 },
@@ -76,7 +76,7 @@
                             "text": "Perce-cuir de la vipère en maraude"
                         }
                     ],
-                    "class": [
+                    "classes": [
                         "Hunter BM"
                     ]
                 },
@@ -90,7 +90,7 @@
                             "text": "Jambards ajustés de garde tellurique primordiale"
                         }
                     ],
-                    "class": [
+                    "classes": [
                         "Mage Fr"
                     ]
                 }
