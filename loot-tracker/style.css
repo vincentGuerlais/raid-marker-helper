@@ -278,7 +278,79 @@ select {
     margin:15px 0;
 
 }
+.item-details {
 
+    margin-left: 24px;
+    margin-top: 5px;
+    padding: 6px 10px;
+
+    background: rgba(255,255,255,0.025);
+
+    border-left: 2px solid rgba(255,255,255,0.08);
+
+    border-radius: 0 6px 6px 0;
+
+}
+
+
+.item-details .slot {
+
+    margin-top: 0;
+
+}
+
+
+.item-details .note {
+
+    margin: 3px 0 6px 0;
+
+}
+
+
+.upgrades {
+
+    margin: 5px 0 7px 0;
+
+}
+
+
+.upgrade {
+
+    font-size: 0.78rem;
+
+    line-height: 1.35;
+
+    margin: 2px 0;
+
+}
+
+
+.item-source {
+
+    display:block;
+
+    margin-top: 5px;
+
+    color:#888;
+
+    font-size:0.72rem;
+
+}
+
+.item > label {
+
+    display:block;
+
+    font-size:1rem;
+
+}
+
+
+.item > label strong {
+
+    font-weight:600;
+
+}
 
 #mode button {
 
