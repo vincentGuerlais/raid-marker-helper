@@ -31,9 +31,9 @@
             "file": "contents/season2/dungeons/Voidscar_Arena.json"
         },
         {
-            "id": "temple_of_sethraliss",
+            "id": "altar_of_fangs",
             "type": "dungeon",
-            "file": "contents/season2/dungeons/Temple_of_Sethraliss.json"
+            "file": "contents/season2/dungeons/Altar_of_Fangs.json"
         },
         {
             "id": "temple_of_sethraliss",
