@@ -12,6 +12,7 @@
                     "name": "Bottes des brisants",
                     "slot": "Pieds",
                     "note" : "(RAID)",
+                    "upgrade": "(Enchantement) Enchantement de bottes – racines de Shaladrassil",
                     "classes": [
                         "Monk MW"
                     ]
@@ -20,6 +21,7 @@
                     "name": "Bague à bulles attrayante",
                     "slot": "Doigt",
                     "note" : "",
+                    "upgrade": "(Enchantement) Enchantement d’anneau – empressement de Lune-d’Argent, (Gemme) Olivine polyvalente sans défaut"
                     "classes": [
                         "Monk MW"
                     ]
