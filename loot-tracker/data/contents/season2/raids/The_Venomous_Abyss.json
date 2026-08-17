@@ -20,6 +20,28 @@
                     "name": "Habit de l'éveil",
                     "slot": "Torse",
                     "note" : "(M+) à catalyser en [Gi de combat du roi-singe](Monk) ou [Grande tenue lunaire de garde-rêve énigmatique](Druid)",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Gi de combat du roi-singe",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de plastron – marque de l’Âme-monde",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "catalyst",
+                            "text": "Grande tenue lunaire de garde-rêve énigmatique",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de plastron – marque de l’Âme-monde",
+                            "class": "Druid Gu"
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Druid Gu"
@@ -29,6 +51,12 @@
                     "name": "Entraves d’esprit fébrile",
                     "slot": "Poignets",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Druid Gu"
                     ]
@@ -57,6 +85,12 @@
                     "name": "Pampilles du roi-singe",
                     "slot": "Epaules",
                     "note" : "(M+)",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’épaulières – Rapidité d’Akil’zon"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -80,6 +114,38 @@
                     "name": "Bague d’alchimiste vil",
                     "slot": "Doigt",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – yeux de l’aigle",
+                            "class": "Hunter BM"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Lapis magistral sans défaut",
+                            "class": "Hunter BM"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – empressement de Lune-d’Argent",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – yeux de l’aigle",
+                            "class": "Mage Fr"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Grenat magistral sans défaut",
+                            "class": "Mage Fr"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM",
                         "Druid Gu",
@@ -96,6 +162,12 @@
                     "name": "Bottes à écailles féroces",
                     "slot": "Pieds",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de bottes – dextérité du lynx"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -104,6 +176,16 @@
                     "name": "Bague griffe de la brute dominante",
                     "slot": "Doigt",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – empressement de Lune-d’Argent"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Druid Gu"
                     ]
@@ -117,7 +199,21 @@
                 {
                     "name": "Effigie coulée dans le venin",
                     "slot": "Tête",
-                    "note" : "à catalyser en [Crochets suintants de la vipère en maraude]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Crochets suintants de la vipère en maraude"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de casque – rune d’évitement renforcée"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Améthyste mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -126,6 +222,12 @@
                     "name": "Mules serpentines couvertes de salive",
                     "slot": "Pieds",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de bottes – chasse de pérégrin"
+                        }
+                    ],
                     "classes": [
                         "Druid Gu"
                     ]
@@ -140,6 +242,12 @@
                     "name": "Laméfice sinistre",
                     "slot": "1 main",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’arme – acuité des Ren’dorei"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -159,6 +267,18 @@
                     "name": "Écharpe du réceptacle lugubre",
                     "slot": "Taille",
                     "note" : "(M+)",
+                    "upgrade": [
+                        {
+                            "type": "gem",
+                            "text": "Olivine mortelle sans défaut",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut",
+                            "class": "Druid Gu"
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Druid Gu"
@@ -167,7 +287,17 @@
                 {
                     "name": "Gardes-jambes maléficieux torsadés",
                     "slot": "Jambes",
-                    "note" : "(M+) à catalyser en [Culotte du roi-singe]",
+                    "note" : "(M+)",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Culotte du roi-singe"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Olivine mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -175,7 +305,17 @@
                 {
                     "name": "Spallières ondulâmes",
                     "slot": "Epaules",
-                    "note" : "à catalyser en [Mâchoires de la vipère en maraude]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Mâchoires de la vipère en maraude"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’épaulières – Grâce d’Amirdrassil"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -183,7 +323,17 @@
                 {
                     "name": "Cuissières de l’union dénouée",
                     "slot": "Jambes",
-                    "note" : "à catalyser en [Jambards annelés de la vipère en maraude]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Jambards annelés de la vipère en maraude"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Renfort d’armure de chasse en forêt"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -200,7 +350,13 @@
                 {
                     "name": "Poignées de l’ombre éternelle",
                     "slot": "Mains",
-                    "note" : "à catalyser en [Sculpte-mana de garde tellurique primordiale]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Sculpte-mana de garde tellurique primordiale"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
@@ -209,6 +365,12 @@
                     "name": "Bottines d’âmes ricanantes",
                     "slot": "Pieds",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de bottes – dextérité du lynx"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
@@ -222,7 +384,39 @@
                 {
                     "name": "Regard du guetteur lové",
                     "slot": "Casque",
-                    "note" : "à catalyser en [Visage inflexible du roi-singe ](Monk) ou [Regard somnolent de garde-rêve énigmatique](Druid)",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Visage inflexible du roi-singe",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de casque – maléfice de sangsue renforcé",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Améthyste mortelle sans défaut",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "catalyst",
+                            "text": "Regard somnolent de garde-rêve énigmatique",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de casque – bénédiction de vitesse renforcée",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut",
+                            "class": "Druid Gu"
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Druid Gu"
@@ -232,6 +426,28 @@
                     "name": "Reliquaire fléau-des-Aqir",
                     "slot": "Cou",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "gem",
+                            "text": "Diamant des Chants éternels indéchiffrable",
+                            "class": "Monk MW"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Diamant des Chants éternels indéchiffrable",
+                            "class": "Druid Gu"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Diamant des Chants éternels de puissance",
+                            "class": "Mage Fr"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Diamant des Chants éternels de puissance",
+                            "class": "Hunter BM"
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Hunter BM",
@@ -243,6 +459,12 @@
                     "name": "Grand arc de repos caustique",
                     "slot": "2 mains",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’arme – maîtrise des arcanes"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -250,7 +472,17 @@
                 {
                     "name": "Cuirasse croc-d’effroi éveillée",
                     "slot": "Torse",
-                    "note" : "à catalyser en [Scutelle en plaques de la vipère en maraude]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Scutelle en plaques de la vipère en maraude"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de plastron – marque de l’Âme-monde"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -267,6 +499,12 @@
                     "name": "Bardiche de démon des couvées abyssal",
                     "slot": "2 Mains",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’arme – rage du berserker"
+                        }
+                    ],
                     "classes": [
                         "Druid Gu"
                     ]
@@ -275,6 +513,12 @@
                     "name": "Jan’thrazet, le Crochâme",
                     "slot": "1 Main",
                     "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’arme – acuité des Ren’dorei"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
@@ -282,7 +526,21 @@
                 {
                     "name": "Capuche horrifique du gardien de venin",
                     "slot": "Tête",
-                    "note" : "à catalyser en [Couronne de garde tellurique primordiale]",
+                    "note" : "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Couronne de garde tellurique primordiale"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de casque – rune d’évitement renforcée"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Améthyste mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
