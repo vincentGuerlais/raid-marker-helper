@@ -147,58 +147,149 @@ function isLootHidden(character, item) {
 
 function displayCharacters() {
 
-    const container = document.getElementById("characters");
-
-    container.innerHTML = "<h2>Personnages suivis</h2>";
-
-
-    characters.forEach(character => {
+    const container =
+        document.getElementById("characters");
 
 
-        const div = document.createElement("div");
+    const activeCharacters =
+        characters.filter(
+            character => character.active
+        );
 
 
-        div.className = "character";
+    const activeNames =
+        activeCharacters
+        .map(character => character.name)
+        .join(", ");
 
 
-        div.innerHTML = `
+    container.innerHTML = `
 
-            <label>
+        <div class="characters-selector">
 
-                <input
-                    type="checkbox"
-                    ${character.active ? "checked" : ""}
-                    data-id="${character.id}"
+            <div
+                class="characters-selector-header"
+                id="charactersSelectorToggle"
+            >
+
+                <strong>
+                    👥 Joueurs suivis
+                </strong>
+
+                ${
+                    activeNames
+                    ? `
+                        <span class="characters-selected">
+                            ${activeNames}
+                        </span>
+                    `
+                    : ""
+                }
+
+                <span
+                    class="characters-selector-arrow"
+                    id="charactersSelectorArrow"
                 >
+                    ▼
+                </span>
 
-                ${character.name}
-                -
-                ${character.class}
-
-            </label>
-
-        `;
+            </div>
 
 
-        container.appendChild(div);
+            <div
+                class="characters-selector-content hidden"
+                id="charactersSelectorContent"
+            >
+
+                ${characters.map(character => `
+
+                    <div class="character">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                ${character.active ? "checked" : ""}
+                                data-id="${character.id}"
+                            >
+
+                            ${character.name}
+                            -
+                            ${character.class}
+
+                        </label>
+
+                    </div>
+
+                `).join("")}
+
+            </div>
+
+        </div>
+
+    `;
 
 
-    });
+    // =========================
+    // Ouvrir / fermer
+    // =========================
 
+    const toggle =
+        document.getElementById(
+            "charactersSelectorToggle"
+        );
+
+
+    const content =
+        document.getElementById(
+            "charactersSelectorContent"
+        );
+
+
+    const arrow =
+        document.getElementById(
+            "charactersSelectorArrow"
+        );
+
+
+    toggle.addEventListener(
+        "click",
+        () => {
+
+            const hidden =
+                content.classList.toggle(
+                    "hidden"
+                );
+
+
+            arrow.textContent =
+                hidden
+                ? "▼"
+                : "▲";
+
+        }
+    );
+
+
+    // =========================
+    // Sélection des personnages
+    // =========================
 
     document
-    .querySelectorAll("#characters input")
+    .querySelectorAll(
+        "#characters input"
+    )
     .forEach(input => {
-
 
         input.addEventListener(
             "change",
             event => {
 
-
                 const character =
                     characters.find(
-                        c => c.id === event.target.dataset.id
+                        c =>
+                            c.id ===
+                            event.target.dataset.id
                     );
 
 
@@ -207,20 +298,20 @@ function displayCharacters() {
 
 
                 if (currentPage === "tracking") {
-                
+
                     displayTracking();
-                
+
                 }
-                
+
+
                 if (currentPage === "stats") {
-                
+
                     displayStats();
-                
+
                 }
 
             }
         );
-
 
     });
 
@@ -567,7 +658,7 @@ function displayPlayer() {
 
     let html = `
 
-        <h2>Joueurs</h2>
+        <hr></hr>
 
     `;
 
@@ -613,7 +704,8 @@ html += `
         </div>
 
     </div>
-
+    
+    <h2>Joueurs</h2>
 `;
     const activeCharacters =
         characters.filter(
