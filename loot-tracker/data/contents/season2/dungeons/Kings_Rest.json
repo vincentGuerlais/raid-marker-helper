@@ -16,33 +16,33 @@
                         {
                             "type": "enchant",
                             "text": "Fil ensorcelé de soie du feu solaire",
-                            "classes": [
+                            "class": [
                                 "Monk MW"
                             ]
                         },
                         {
                             "type": "renfort",
                             "text": "Renfort d’armure de chasse en forêt",
-                            "classes": [
+                            "class": [
                                 "Druid Gu"
                             ]
                         },
                         {
                             "type": "catalyst",
                             "text": "Culotte du roi-singe",
-                            "classes": [
+                            "class": [
                                 "Monk MW"
                             ]
                         },
                         {
                             "type": "catalyst",
                             "text": "Jambières de garde-rêve énigmatique",
-                            "classes": [
+                            "class": [
                                 "Druid Gu"
                             ]
                         }
                     ],
-                    "classes": [
+                    "class": [
                         "Monk MW",
                         "Druid, Gu"
                     ]
@@ -65,7 +65,7 @@
                     "name": "Calice des derniers sacrements",
                     "slot": "Main gauche",
                     "note": "(RAID)",
-                    "classes": [
+                    "class": [
                         "Monk MW"
                     ]
                 },
@@ -79,7 +79,7 @@
                             "text": "Perce-cuir de la vipère en maraude"
                         }
                     ],
-                    "classes": [
+                    "class": [
                         "Hunter BM"
                     ]
                 },
@@ -93,7 +93,7 @@
                             "text": "Jambards ajustés de garde tellurique primordiale"
                         }
                     ],
-                    "classes": [
+                    "class": [
                         "Mage Fr"
                     ]
                 }
