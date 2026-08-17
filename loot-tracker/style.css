@@ -10,7 +10,12 @@ body {
 
 }
 
-
+#mainMode {
+    padding:5px;
+}
+#trackingMode {
+    padding:5px;
+}
 
 .app {
 
