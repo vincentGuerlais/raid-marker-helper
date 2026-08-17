@@ -236,7 +236,17 @@ select {
 
 }
 
+.upgrade-enchant {
+    color: #b46cff;
+}
 
+.upgrade-gem {
+    color: #4fd17b;
+}
+
+.upgrade-catalyst {
+    color: #f0d66d;
+}
 
 select {
 
