@@ -16,6 +16,10 @@
                         {
                             "type": "catalyst",
                             "text": "Gi de combat du roi-singe"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de plastron – marque de l’Âme-monde"
                         }
                     ],
                     "classes": [
@@ -30,30 +34,22 @@
                         {
                             "type": "enchant",
                             "text": "Enchantement d’anneau – empressement de Lune-d’Argent",
-                            "class": [
-                                "Monk MW"
-                            ]
+                            "class": "Monk MW"
                         },
                         {
                             "type": "gem",
                             "text": "Olivine mortelle sans défaut",
-                            "class": [
-                                "Monk MW"
-                            ]
+                            "class": "Monk MW"
                         },
                         {
                             "type": "enchant",
                             "text": "Enchantement d’anneau – yeux de l’aigle",
-                            "class": [
-                                "Hunt BM"
-                            ]
+                            "class": "Hunt BM"
                         },
                         {
                             "type": "gem",
                             "text": "Améthyste mortelle sans défaut",
-                            "class": [
-                                "Hunt BM"
-                            ]
+                            "class": "Hunt BM"
                         }
                     ],
                     "classes": [
@@ -66,6 +62,10 @@
                     "slot": "Epaules",
                     "note": "",
                     "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Plumage de garde-rêve énigmatique"
+                        },
                         {
                             "type": "enchant",
                             "text": "Enchantement d’épaulières – Rapidité d’Akil’zon"
