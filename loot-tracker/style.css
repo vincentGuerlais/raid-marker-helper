@@ -110,20 +110,99 @@ body {
 
 }
 
-#characters {
+.characters-selector {
 
-    margin:10px 0;
+    margin: 10px 0;
+
+    background: #1b1b1b;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.characters-selector-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 12px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+}
+
+
+.characters-selector-header:hover {
+
+    background: #242424;
+
+}
+
+
+.characters-selected {
+
+    flex: 1;
+
+    color: #999;
+
+    font-size: 0.8rem;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+
+}
+
+
+.characters-selector-arrow {
+
+    margin-left: auto;
+
+    font-size: 0.8rem;
+
+    color: #aaa;
+
+}
+
+
+.characters-selector-content {
+
+    padding: 10px 12px;
+
+    border-top: 1px solid #333;
+
+}
+
+
+.characters-selector-content.hidden {
+
+    display: none;
 
 }
 
 
 .character {
 
-    display:inline-block;
+    display: inline-block;
 
-    margin-right:15px;
+    margin-right: 15px;
+
+    margin-bottom: 8px;
 
 }
+
 .slot {
 
     font-size: 0.85rem;
