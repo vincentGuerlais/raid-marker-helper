@@ -882,15 +882,13 @@ function displayPlayerLoot(character) {
         itemHtml += `
 
                 <small>
-
                     📍 ${item.source}
-
                     ${
-                        item.boss
-                        ? " - " + item.boss
-                        : ""
+                        item.boss &&
+                        item.boss !== item.source
+                            ? " - " + item.boss
+                            : ""
                     }
-
                 </small>
 
             </div>
