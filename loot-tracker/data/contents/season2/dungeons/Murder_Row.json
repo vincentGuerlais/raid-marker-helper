@@ -30,16 +30,12 @@
                         {
                             "type": "catalyst",
                             "text": "Poings de combat du roi-singe",
-                            "class":[
-                                "Monk MW"
-                            ]
+                            "class": "Monk MW"
                         },
                         {
                             "type": "catalyst",
                             "text": "Gantelets de garde-rêve énigmatique",
-                            "class":[
-                                "Druid Gu"
-                            ]
+                            "class": "Druid Gu"
                         }
                     ],
                     "classes": [
