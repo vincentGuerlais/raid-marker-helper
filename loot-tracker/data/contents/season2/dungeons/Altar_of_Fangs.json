@@ -1,0 +1,22 @@
+{
+    "id": "altar_of_fangs",
+    "name": "Autel des Crochets",
+    "type": "dungeon",
+
+    "bosses": [
+        {
+            "name": "Autel des Crochets",
+
+            "loot": [
+                {
+                    "name": "Braies rembourrées de duvet",
+                    "slot": "Jambes",
+                    "note": "à catalyser en [Jambards ajustés de garde tellurique primordiale] - (enchantement) : Fil ensorcelé de soie du feu solaire",
+                    "classes": [
+                        "Mage Fr"
+                    ]
+                }
+            ]
+        }
+    ]
+}
