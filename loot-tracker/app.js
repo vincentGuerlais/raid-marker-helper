@@ -649,7 +649,6 @@ function displayPlayer() {
 
 function displayPlayerLoot(character) {
 
-
     let html = `
 
         <div class="player-card">
@@ -670,10 +669,27 @@ function displayPlayerLoot(character) {
     `;
 
 
+    // =========================
+    // Objets correspondant à la classe
+    // =========================
+
     const possible =
         allLoot.filter(item =>
             item.classes.includes(character.class)
         );
+
+
+    if (possible.length === 0) {
+
+        html += `
+
+            <div class="empty-loot">
+                Aucun objet trouvé
+            </div>
+
+        `;
+
+    }
 
 
     const hidden =
@@ -690,6 +706,201 @@ function displayPlayerLoot(character) {
         possible.filter(
             item => hidden.includes(item.name)
         );
+
+
+    // =========================
+    // Fonction d'affichage d'un objet
+    // =========================
+
+    function renderItem(item) {
+
+        // -------------------------
+        // Upgrades applicables
+        // -------------------------
+
+        const applicableUpgrades =
+            (item.upgrade || []).filter(
+                upgrade =>
+                    !upgrade.classes ||
+                    upgrade.classes.includes(
+                        character.class
+                    )
+            );
+
+
+        // -------------------------
+        // Vérifie s'il existe
+        // plusieurs variantes
+        // -------------------------
+
+        const classSpecificUpgrades =
+            (item.upgrade || []).filter(
+                upgrade =>
+                    upgrade.classes &&
+                    upgrade.classes.length > 0
+            );
+
+
+        const upgradeTypes =
+            new Set(
+                classSpecificUpgrades.map(
+                    upgrade => upgrade.type
+                )
+            );
+
+
+        const hasMultipleUpgradeVariants =
+            classSpecificUpgrades.length > 1;
+
+
+        // -------------------------
+        // Objet
+        // -------------------------
+
+        let itemHtml = `
+
+            <div class="item">
+
+                <label>
+
+                    <input
+                        type="checkbox"
+                        class="loot-check"
+                        data-character="${character.id}"
+                        data-item="${item.name}"
+                        ${
+                            hidden.includes(item.name)
+                            ? "checked"
+                            : ""
+                        }
+                    >
+
+                    ${item.name}
+
+                </label>
+
+
+                <div class="slot">
+                    🛡 ${item.slot}
+                </div>
+
+        `;
+
+
+        // -------------------------
+        // Note
+        // -------------------------
+
+        if (item.note) {
+
+            itemHtml += `
+
+                <div class="note">
+                    💡 ${item.note}
+                </div>
+
+            `;
+
+        }
+
+
+        // -------------------------
+        // Upgrades
+        // -------------------------
+
+        if (
+            applicableUpgrades.length > 0
+        ) {
+
+            itemHtml += `
+
+                <div class="upgrade">
+
+            `;
+
+
+            applicableUpgrades.forEach(
+                upgrade => {
+
+                    itemHtml += `
+
+                        <div
+                            class="upgrade-${upgrade.type}"
+                        >
+
+                            ⭐
+
+                    `;
+
+
+                    // Affiche la classe uniquement
+                    // lorsqu'il y a plusieurs variantes
+
+                    if (
+                        hasMultipleUpgradeVariants &&
+                        upgrade.classes
+                    ) {
+
+                        itemHtml += `
+
+                            <span class="upgrade-class">
+
+                                [${upgrade.classes.join(", ")}]
+
+                            </span>
+
+                        `;
+
+                    }
+
+
+                    itemHtml += `
+
+                            ${upgrade.text}
+
+                        </div>
+
+                    `;
+
+                }
+            );
+
+
+            itemHtml += `
+
+                </div>
+
+            `;
+
+        }
+
+
+        // -------------------------
+        // Source
+        // -------------------------
+
+        itemHtml += `
+
+                <small>
+
+                    📍 ${item.source}
+
+                    ${
+                        item.boss
+                        ? " - " + item.boss
+                        : ""
+                    }
+
+                </small>
+
+            </div>
+
+        `;
+
+
+        return itemHtml;
+
+    }
 
 
     // =========================
@@ -722,70 +933,7 @@ function displayPlayerLoot(character) {
 
     toGet.forEach(item => {
 
-        html += `
-
-            <div class="item">
-
-                <label>
-
-                    <input
-                        type="checkbox"
-                        class="loot-check"
-                        data-character="${character.id}"
-                        data-item="${item.name}"
-                    >
-
-                    ${item.name}
-
-                </label>
-
-
-                <div class="slot">
-                    🛡 ${item.slot}
-                </div>
-
-
-                ${
-                    item.note
-                    ? `
-                        <div class="note">
-                            💡 ${item.note}
-                        </div>
-                    `
-                    : ""
-                }
-
-                ${
-                    item.upgrade && item.upgrade.length > 0
-                        ? `
-                            <div class="upgrade">
-                
-                                ${item.upgrade.map(upgrade => `
-                                    <div class="upgrade-${upgrade.type}">
-                                        ⭐ ${upgrade.text}
-                                    </div>
-                                `).join("")}
-                
-                            </div>
-                        `
-                        : ""
-                }
-
-                <small>
-
-                    📍 ${item.source}
-
-                    ${
-                        item.boss
-                        ? " - " + item.boss
-                        : ""
-                    }
-
-                </small>
-
-            </div>
-
-        `;
+        html += renderItem(item);
 
     });
 
@@ -794,6 +942,14 @@ function displayPlayerLoot(character) {
 
         </div>
 
+    `;
+
+
+    // =========================
+    // OBTENU
+    // =========================
+
+    html += `
 
         <div class="player-loot-section obtained">
 
@@ -803,10 +959,6 @@ function displayPlayerLoot(character) {
 
     `;
 
-
-    // =========================
-    // OBTENU
-    // =========================
 
     if (obtained.length === 0) {
 
@@ -823,65 +975,7 @@ function displayPlayerLoot(character) {
 
     obtained.forEach(item => {
 
-        html += `
-
-            <div class="item">
-
-                <label>
-
-                    <input
-                        type="checkbox"
-                        class="loot-check"
-                        data-character="${character.id}"
-                        data-item="${item.name}"
-                        checked
-                    >
-
-                    ${item.name}
-
-                </label>
-
-
-                <div class="slot">
-                    🛡 ${item.slot}
-                </div>
-
-
-                ${
-                    item.note
-                    ? `
-                        <div class="note">
-                            💡 ${item.note}
-                        </div>
-                    `
-                    : ""
-                }
-
-                ${
-                    item.upgrade
-                        ? `
-                            <div class="upgrade">
-                                ⭐ ${item.upgrade}
-                            </div>
-                        `
-                        : ""
-                }
-
-                <small>
-
-                    📍 ${item.source}
-
-                    ${
-                        item.boss
-                        ? " - " + item.boss
-                        : ""
-                    }
-
-                </small>
-
-            </div>
-
-        `;
+        html += renderItem(item);
 
     });
 
