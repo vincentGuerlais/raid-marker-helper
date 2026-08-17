@@ -11,15 +11,52 @@
                 {
                     "name": "Braies de la salle sacrée",
                     "slot": "Jambes",
-                    "note": "(RAID) à catalyser en [Culotte du roi-singe](Monk) ou [Jambières de garde-rêve énigmatique](Druid)",
+                    "note": "(RAID)",
+                    "upgrade": [
+                        {
+                            "type": "enchant",
+                            "text": "Fil ensorcelé de soie du feu solaire",
+                            "classes": [
+                                "Monk MW"
+                            ]
+                        },
+                        {
+                            "type": "renfort",
+                            "text": "Renfort d’armure de chasse en forêt",
+                            "classes": [
+                                "Druid Gu"
+                            ]
+                        },
+                        {
+                            "type": "catalyst",
+                            "text": "Culotte du roi-singe",
+                            "classes": [
+                                "Monk MW"
+                            ]
+                        },
+                        {
+                            "type": "catalyst",
+                            "text": "Jambières de garde-rêve énigmatique",
+                            "classes": [
+                                "Druid Gu"
+                            ]
+                        }
+                    ],
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Druid, Gu"
                     ]
                 },
                 {
                     "name": "Anneau de lieur de rituel",
                     "slot": "Doigt",
                     "note": "(RAID)",
+                    "upgrade": [
+                        {
+                            "type": "gem",
+                            "text": "Olivine polyvalente sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -35,7 +72,13 @@
                 {
                     "name": "Gants d’assemblage sépulcral",
                     "slot": "Mains",
-                    "note": "à catalyser en [Perce-cuir de la vipère en maraude]",
+                    "note": "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Perce-cuir de la vipère en maraude"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -43,7 +86,13 @@
                 {
                     "name": "Braies rembourrées de duvet",
                     "slot": "Jambes",
-                    "note": "à catalyser en [Jambards ajustés de garde tellurique primordiale]",
+                    "note": "",
+                    "upgrade": [
+                        {
+                            "type": "catalyst",
+                            "text": "Jambards ajustés de garde tellurique primordiale"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
