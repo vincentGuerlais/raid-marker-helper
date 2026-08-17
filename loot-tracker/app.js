@@ -755,7 +755,7 @@ function displayPlayerLoot(character) {
         // Objet
         // -------------------------
 
-        let itemHtml += `
+        itemHtml += `
 
     <div class="item">
 
