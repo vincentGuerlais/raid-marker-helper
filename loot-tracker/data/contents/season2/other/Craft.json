@@ -12,6 +12,12 @@
                     "name": "Brassards cuirassés de pérégrin",
                     "slot": "Poignets",
                     "note" : "",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Grenat magistral sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Hunter BM"
                     ]
@@ -19,6 +25,12 @@
                 {
                     "name": "Ceinture à trophées de pérégrin",
                     "slot": "Taille",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Olivine magistrale sans défaut"
+                        }
+                    ],
                     "note" : "",
                     "classes": [
                         "Hunter BM"
@@ -34,6 +46,12 @@
                     "name": "Manchettes de martyre",
                     "slot": "Poignets",
                     "note" : "",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Grenat magistral sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
@@ -42,6 +60,12 @@
                     "name": "Baudrier de martyre",
                     "slot": "Taille",
                     "note" : "",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Olivine magistrale sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
