@@ -359,4 +359,86 @@ select {
     padding:10px;
 
 }
+.upgrade-legend {
 
+    margin: 10px 0 15px 0;
+
+    background: #1b1b1b;
+
+    border: 1px solid #333;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.upgrade-legend-header {
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:9px 12px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+
+.upgrade-legend-header:hover {
+
+    background:#242424;
+
+}
+
+
+.upgrade-legend-content {
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    padding:0 12px 10px 12px;
+
+}
+
+
+.upgrade-legend-content.hidden {
+
+    display:none;
+
+}
+
+
+.legend-item {
+
+    font-size:0.78rem;
+
+    font-weight:bold;
+
+}
+
+
+/* Couleurs de la légende */
+
+.legend-item.upgrade-catalyst {
+    color:#f0d66d;
+}
+
+
+.legend-item.upgrade-enchant {
+    color:#b46cff;
+}
+
+
+.legend-item.upgrade-gem {
+    color:#4fd17b;
+}
