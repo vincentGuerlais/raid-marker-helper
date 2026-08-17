@@ -145,6 +145,76 @@ function isLootHidden(character, item) {
 
 }
 
+function updateSelectedCharacters() {
+
+    const header =
+        document.getElementById(
+            "charactersSelectorToggle"
+        );
+
+
+    const arrow =
+        document.getElementById(
+            "charactersSelectorArrow"
+        );
+
+
+    if (!header || !arrow) {
+        return;
+    }
+
+
+    const activeNames =
+        characters
+        .filter(character => character.active)
+        .map(character => character.name)
+        .join(", ");
+
+
+    let selectedDisplay =
+        header.querySelector(
+            ".characters-selected"
+        );
+
+
+    if (activeNames) {
+
+        if (!selectedDisplay) {
+
+            selectedDisplay =
+                document.createElement(
+                    "span"
+                );
+
+            selectedDisplay.className =
+                "characters-selected";
+
+
+            header.insertBefore(
+                selectedDisplay,
+                arrow
+            );
+
+        }
+
+
+        selectedDisplay.textContent =
+            activeNames;
+
+    }
+
+    else {
+
+        if (selectedDisplay) {
+
+            selectedDisplay.remove();
+
+        }
+
+    }
+
+}
+
 function displayCharacters() {
 
     const container =
@@ -295,7 +365,8 @@ function displayCharacters() {
 
                 character.active =
                     event.target.checked;
-
+                
+                updateSelectedCharacters();
 
                 if (currentPage === "tracking") {
 
