@@ -755,143 +755,93 @@ function displayPlayerLoot(character) {
         // Objet
         // -------------------------
 
-        let itemHtml = `
+        let itemHtml += `
 
-            <div class="item">
+    <div class="item">
 
-                <label>
+        <label>
 
-                    <input
-                        type="checkbox"
-                        class="loot-check"
-                        data-character="${character.id}"
-                        data-item="${item.name}"
-                        ${
-                            hidden.includes(item.name)
-                            ? "checked"
-                            : ""
-                        }
-                    >
-
-                    ${item.name}
-
-                </label>
-
-
-                <div class="slot">
-                    🛡 ${item.slot}
-                </div>
-
-        `;
-
-
-        // -------------------------
-        // Note
-        // -------------------------
-
-        if (item.note) {
-
-            itemHtml += `
-
-                <div class="note">
-                    💡 ${item.note}
-                </div>
-
-            `;
-
-        }
-
-
-        // -------------------------
-        // Upgrades
-        // -------------------------
-
-        if (
-            applicableUpgrades.length > 0
-        ) {
-
-            itemHtml += `
-
-                <div class="upgrade">
-
-            `;
-
-
-            applicableUpgrades.forEach(
-                upgrade => {
-
-                    itemHtml += `
-
-                        <div
-                            class="upgrade-${upgrade.type}"
-                        >
-
-                            ⭐
-
-                    `;
-
-
-                    // Affiche la classe uniquement
-                    // lorsqu'il y a plusieurs variantes
-
-                    if (
-                        hasMultipleUpgradeVariants &&
-                        upgrade.classes
-                    ) {
-
-                        itemHtml += `
-
-                            <span class="upgrade-class">
-
-                                [${upgrade.classes.join(", ")}]
-
-                            </span>
-
-                        `;
-
-                    }
-
-
-                    itemHtml += `
-
-                            ${upgrade.text}
-
-                        </div>
-
-                    `;
-
+            <input
+                type="checkbox"
+                class="loot-check"
+                data-character="${character.id}"
+                data-item="${item.name}"
+                ${
+                    hidden.includes(item.name)
+                    ? "checked"
+                    : ""
                 }
-            );
+            >
+
+            <strong>
+                ${item.name}
+            </strong>
+
+        </label>
 
 
-            itemHtml += `
+        <div class="item-details">
 
-                </div>
-
-            `;
-
-        }
-
-
-        // -------------------------
-        // Source
-        // -------------------------
-
-        itemHtml += `
-
-                <small>
-                    📍 ${item.source}
-                    ${
-                        item.boss &&
-                        item.boss !== item.source
-                            ? " - " + item.boss
-                            : ""
-                    }
-                </small>
-
+            <div class="slot">
+                🛡 ${item.slot}
             </div>
 
-        `;
+
+            ${
+                item.note
+                ? `
+                    <div class="note">
+                        💡 ${item.note}
+                    </div>
+                  `
+                : ""
+            }
+
+
+            ${
+                applicableUpgrades.length > 0
+                ? `
+                    <div class="upgrades">
+
+                        ${applicableUpgrades.map(
+                            upgrade => `
+
+                                <div
+                                    class="upgrade upgrade-${upgrade.type}"
+                                >
+
+                                    ⭐
+                                    ${upgrade.text}
+
+                                </div>
+
+                            `
+                        ).join("")}
+
+                    </div>
+                  `
+                : ""
+            }
+
+
+            <small class="item-source">
+
+                📍 ${item.source}
+
+                ${
+                    item.boss &&
+                    item.boss !== item.source
+                    ? " - " + item.boss
+                    : ""
+                }
+
+            </small>
+
+        </div>
+
+    </div>
+
+`;
 
 
         return itemHtml;
