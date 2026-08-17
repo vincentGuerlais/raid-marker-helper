@@ -11,8 +11,17 @@
                 {
                     "name": "Braies rembourrées de duvet",
                     "slot": "Jambes",
-                    "note": "à catalyser en [Jambards ajustés de garde tellurique primordiale]",
-                    "upgrade": "(Enchantement) Fil ensorcelé de soie du feu solaire",
+                    "note": "",
+                    "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Jambards ajustés de garde tellurique primordiale"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Fil ensorcelé de soie du feu solaire"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
