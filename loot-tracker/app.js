@@ -721,8 +721,8 @@ function displayPlayerLoot(character) {
         const applicableUpgrades =
             (item.upgrade || []).filter(
                 upgrade =>
-                    !upgrade.classes ||
-                    upgrade.classes.includes(
+                    !upgrade.class ||
+                    upgrade.class.includes(
                         character.class
                     )
             );
@@ -736,8 +736,8 @@ function displayPlayerLoot(character) {
         const classSpecificUpgrades =
             (item.upgrade || []).filter(
                 upgrade =>
-                    upgrade.classes &&
-                    upgrade.classes.length > 0
+                    upgrade.class &&
+                    upgrade.class.length > 0
             );
 
 
