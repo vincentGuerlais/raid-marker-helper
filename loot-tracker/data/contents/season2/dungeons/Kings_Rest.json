@@ -11,7 +11,7 @@
                 {
                     "name": "Braies de la salle sacrée",
                     "slot": "Jambes",
-                    "note": "(RAID) à catalyser en [Culotte du roi-singe]",
+                    "note": "(RAID) à catalyser en [Culotte du roi-singe](Monk) ou [Jambières de garde-rêve énigmatique](Druid)",
                     "classes": [
                         "Monk MW"
                     ]
@@ -38,6 +38,14 @@
                     "note": "à catalyser en [Perce-cuir de la vipère en maraude]",
                     "classes": [
                         "Hunter BM"
+                    ]
+                },
+                {
+                    "name": "Braies rembourrées de duvet",
+                    "slot": "Jambes",
+                    "note": "à catalyser en [Jambards ajustés de garde tellurique primordiale]",
+                    "classes": [
+                        "Mage Fr"
                     ]
                 }
             ]
