@@ -3,6 +3,9 @@ console.log("APP VERSION 2026-08-07");
 let currentPage = "tracking";
 let trackingMode = "content";
 
+let currentContentType = "dungeon";
+let currentContentIndex = null;
+
 let characters = [];
 let contents = [];
 let allLoot = [];
@@ -223,8 +226,6 @@ function displayCharacters() {
 
 }
 
-
-
 function displayContent() {
 
     const container =
@@ -269,7 +270,18 @@ function displayContent() {
         );
 
 
+    // -------------------------
+    // Restaure le type courant
+    // -------------------------
+
+    typeSelect.value =
+        currentContentType;
+
+
     function updateContents() {
+
+        currentContentType =
+            typeSelect.value;
 
 
         contentSelect.innerHTML = "";
@@ -277,12 +289,12 @@ function displayContent() {
 
         const filtered =
             contents.filter(content =>
-                content.type === typeSelect.value
+                content.type ===
+                currentContentType
             );
 
 
         filtered.forEach(content => {
-
 
             const option =
                 document.createElement(
@@ -302,18 +314,49 @@ function displayContent() {
                 option
             );
 
-
         });
 
 
         if (filtered.length > 0) {
 
+            // -------------------------
+            // Restaure le contenu
+            // précédemment sélectionné
+            // -------------------------
+
+            const previousContent =
+                filtered.some(
+                    content =>
+                        contents.indexOf(content) ===
+                        currentContentIndex
+                );
+
+
+            if (previousContent) {
+
+                contentSelect.value =
+                    currentContentIndex;
+
+            }
+            else {
+
+                currentContentIndex =
+                    Number(
+                        contentSelect.value
+                    );
+
+            }
+
+
             displayLoot(
-                contentSelect.value
+                currentContentIndex
             );
 
         }
         else {
+
+            currentContentIndex = null;
+
 
             document
             .getElementById("loot")
@@ -333,10 +376,19 @@ function displayContent() {
 
     contentSelect.addEventListener(
         "change",
-        () =>
+        () => {
+
+            currentContentIndex =
+                Number(
+                    contentSelect.value
+                );
+
+
             displayLoot(
-                contentSelect.value
-            )
+                currentContentIndex
+            );
+
+        }
     );
 
 
