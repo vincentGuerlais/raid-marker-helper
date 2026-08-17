@@ -755,6 +755,15 @@ function displayPlayerLoot(character) {
                     : ""
                 }
 
+                ${
+                    item.upgrade
+                        ? `
+                            <div class="upgrade">
+                                ⭐ ${item.upgrade}
+                            </div>
+                        `
+                        : ""
+                }
 
                 <small>
 
@@ -842,6 +851,15 @@ function displayPlayerLoot(character) {
                     : ""
                 }
 
+                ${
+                    item.upgrade
+                        ? `
+                            <div class="upgrade">
+                                ⭐ ${item.upgrade}
+                            </div>
+                        `
+                        : ""
+                }
 
                 <small>
 
