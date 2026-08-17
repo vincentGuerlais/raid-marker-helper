@@ -12,6 +12,16 @@
                     "name": "Bague en grès chargée",
                     "slot": "Doigt",
                     "note": "",
+                    "upgrade":[
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – yeux de l’aigle"
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Améthyste mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
@@ -19,7 +29,17 @@
                 {
                     "name": "Amict du purificateur de couvées",
                     "slot": "Epaules",
-                    "note": "à catalyser en [Flux-de-mana de garde tellurique primordiale]",
+                    "note": "",
+                    "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Flux-de-mana de garde tellurique primordiale"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’épaulières – Grâce d’Amirdrassil"
+                        }
+                    ],
                     "classes": [
                         "Mage Fr"
                     ]
