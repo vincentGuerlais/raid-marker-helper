@@ -24,6 +24,14 @@
                         "Monk MW",
                         "Hunter BM"
                     ]
+                },
+                {
+                    "name": "Spallières sombres",
+                    "slot": "Epaules",
+                    "note": "",
+                    "classes": [
+                        "Druid Gu"
+                    ]
                 }
             ]
         }
