@@ -86,9 +86,3 @@ body {
     object-fit: contain;
     flex-shrink: 0;
 }
-
-.upgrade-class {
-    font-size: 0.85em;
-    font-weight: bold;
-    margin-right: 4px;
-}
