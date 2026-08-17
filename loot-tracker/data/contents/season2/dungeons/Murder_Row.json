@@ -12,6 +12,12 @@
                     "name": "Bracelets empennés de fureur",
                     "slot": "Poignets",
                     "note": "",
+                    "upgrade":[
+                        {
+                            "type": "gem",
+                            "text": "Olivine mortelle sans défaut"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -19,7 +25,23 @@
                 {
                     "name": "Gantelets de défense éffrénée",
                     "slot": "Mains",
-                    "note": "à catalyser en [Poings de combat du roi-singe](Monk) ou [Gantelets de garde-rêve énigmatique](Druid)",
+                    "note": "",
+                    "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Poings de combat du roi-singe",
+                            "class":[
+                                "Monk MW"
+                            ]
+                        },
+                        {
+                            "type": "catalyst",
+                            "text": "Gantelets de garde-rêve énigmatique",
+                            "class":[
+                                "Druid Gu"
+                            ]
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Druid Gu"
