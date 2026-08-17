@@ -722,9 +722,7 @@ function displayPlayerLoot(character) {
             (item.upgrade || []).filter(
                 upgrade =>
                     !upgrade.class ||
-                    upgrade.class.includes(
-                        character.class
-                    )
+                    upgrade.class === character.class
             );
 
 
