@@ -11,7 +11,17 @@
                 {
                     "name": "Spallières de pillage",
                     "slot": "Epaules",
-                    "note": "(RAID) à catalyser en [Pampilles du roi-singe]",
+                    "note": "(RAID)",
+                    "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Pampilles du roi-singe"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’épaulières – Guérison de Lune-d’Argent"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -20,6 +30,12 @@
                     "name": "Jambards d’exploration arctique",
                     "slot": "Pieds",
                     "note": "(M+)",
+                    "upgrade":[
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement de bottes – racines de Shaladrassil"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
