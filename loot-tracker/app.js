@@ -571,7 +571,7 @@ function displayPlayer() {
 
     `;
 
-    html += `
+html += `
 
     <div
         class="upgrade-legend"
@@ -596,7 +596,6 @@ function displayPlayer() {
 
         <div
             class="upgrade-legend-content"
-            id="upgradeLegendContent"
         >
 
             <span class="legend-item upgrade-catalyst">
@@ -616,7 +615,6 @@ function displayPlayer() {
     </div>
 
 `;
-
     const activeCharacters =
         characters.filter(
             character => character.active
@@ -641,14 +639,9 @@ function displayPlayer() {
 
     container.innerHTML = html;
 
-    const upgradeLegendToggle =
+const upgradeLegendToggle =
     document.getElementById(
         "upgradeLegendToggle"
-    );
-
-const upgradeLegendContent =
-    document.getElementById(
-        "upgradeLegendContent"
     );
 
 const upgradeLegendArrow =
@@ -663,14 +656,33 @@ if (upgradeLegendToggle) {
         "click",
         () => {
 
-            const hidden =
-                upgradeLegendContent
+            const upgrades =
+                document.querySelectorAll(
+                    ".upgrades"
+                );
+
+
+            const currentlyVisible =
+                upgrades.length > 0 &&
+                !upgrades[0]
                     .classList
-                    .toggle("hidden");
+                    .contains("hidden");
+
+
+            upgrades.forEach(
+                upgrade => {
+
+                    upgrade.classList.toggle(
+                        "hidden",
+                        currentlyVisible
+                    );
+
+                }
+            );
 
 
             upgradeLegendArrow.textContent =
-                hidden
+                currentlyVisible
                 ? "▼"
                 : "▲";
 
