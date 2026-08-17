@@ -11,7 +11,13 @@
                 {
                     "name": "Peau de pestilence",
                     "slot": "Torse",
-                    "note": "(RAID) à catalyser en [Gi de combat du roi-singe]",
+                    "note": "(RAID)",
+                    "upgrade":[
+                        {
+                            "type": "catalyst",
+                            "text": "Gi de combat du roi-singe"
+                        }
+                    ],
                     "classes": [
                         "Monk MW"
                     ]
@@ -20,6 +26,36 @@
                     "name": "Effroyable chevalière d’Atroxus",
                     "slot": "Doigt",
                     "note": "(M+)",
+                    "upgrade":[
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – empressement de Lune-d’Argent",
+                            "class": [
+                                "Monk MW"
+                            ]
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Olivine mortelle sans défaut",
+                            "class": [
+                                "Monk MW"
+                            ]
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’anneau – yeux de l’aigle",
+                            "class": [
+                                "Hunt BM"
+                            ]
+                        },
+                        {
+                            "type": "gem",
+                            "text": "Améthyste mortelle sans défaut",
+                            "class": [
+                                "Hunt BM"
+                            ]
+                        }
+                    ],
                     "classes": [
                         "Monk MW",
                         "Hunter BM"
@@ -29,6 +65,12 @@
                     "name": "Spallières sombres",
                     "slot": "Epaules",
                     "note": "",
+                    "upgrade":[
+                        {
+                            "type": "enchant",
+                            "text": "Enchantement d’épaulières – Rapidité d’Akil’zon"
+                        }
+                    ],
                     "classes": [
                         "Druid Gu"
                     ]
