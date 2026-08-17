@@ -19,9 +19,10 @@
                 {
                     "name": "Gantelets de défense éffrénée",
                     "slot": "Mains",
-                    "note": "à catalyser en [Poings de combat du roi-singe]",
+                    "note": "à catalyser en [Poings de combat du roi-singe](Monk MW) ou [Gantelets de garde-rêve énigmatique](Druid Gu)",
                     "classes": [
-                        "Monk MW"
+                        "Monk MW",
+                        "Druid Gu"
                     ]
                 }
             ]
