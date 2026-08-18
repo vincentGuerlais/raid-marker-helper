@@ -88,6 +88,10 @@
                         {
                             "type": "catalyst",
                             "text": "Jambards ajustés de garde tellurique primordiale"
+                        },
+                        {
+                            "type": "enchant",
+                            "text": "Fil ensorcelé de soie du feu solaire"
                         }
                     ],
                     "classes": [
