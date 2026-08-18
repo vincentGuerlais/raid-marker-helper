@@ -44,12 +44,12 @@
                         {
                             "type": "enchant",
                             "text": "Enchantement d’anneau – yeux de l’aigle",
-                            "class": "Hunt BM"
+                            "class": "Hunter BM"
                         },
                         {
                             "type": "gem",
                             "text": "Améthyste mortelle sans défaut",
-                            "class": "Hunt BM"
+                            "class": "Hunter BM"
                         }
                     ],
                     "classes": [
