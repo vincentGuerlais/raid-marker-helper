@@ -9,17 +9,17 @@
 
             "loot": [
                 {
-                    "name": "Braies rembourrées de duvet",
+                    "name": "Robe primordiale des rites",
                     "slot": "Jambes",
                     "note": "",
                     "upgrade":[
                         {
                             "type": "catalyst",
-                            "text": "Jambards ajustés de garde tellurique primordiale"
+                            "text": "Cimier de garde tellurique primordiale"
                         },
                         {
                             "type": "enchant",
-                            "text": "Fil ensorcelé de soie du feu solaire"
+                            "text": "Enchantement de plastron – marque de l’Âme-monde"
                         }
                     ],
                     "classes": [
