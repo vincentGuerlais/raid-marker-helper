@@ -19,7 +19,7 @@
                 {
                     "name": "Habit de l'éveil",
                     "slot": "Torse",
-                    "note" : "(M+) à catalyser en [Gi de combat du roi-singe](Monk) ou [Grande tenue lunaire de garde-rêve énigmatique](Druid)",
+                    "note" : "(M+)",
                     "upgrade": [
                         {
                             "type": "catalyst",
