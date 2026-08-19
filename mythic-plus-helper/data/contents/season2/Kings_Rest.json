@@ -15,11 +15,32 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
+                            "name": "Bourrasque Serpentine",
+                            "type": "AOE",
+                            "action": "EVITER",
                             "info": "",
-                            "icon": ""
+                            "icon": "ability_skyreach_four_wind"
+                        },
+                        {
+                            "name": "Crachat d'Or",
+                            "type": "AOE",
+                            "action": "EVITER/REGROUPER",
+                            "info": "DOT + Les Adds vont spawn ici. A poser à distance mais regroupé. Superposable",
+                            "icon": "ability_creature_amber_01"
+                        },
+                        {
+                            "name": "Appel du Lucre",
+                            "type": "ADD",
+                            "action": "FOCUS",
+                            "info": "Ne pas les laisser toucher le boss",
+                            "icon": "spell_holy_purifyingpower.jpg"
+                        },
+                        {
+                            "name": "Battement de queue",
+                            "type": "TANK",
+                            "action": "CD Tank",
+                            "info": "",
+                            "icon": "ability_hunter_pet_windserpent.jpg"
                         }
                     ]
                 }
@@ -28,7 +49,7 @@
         {
             "type": "boss",
             "name": "Mchimba l'Embaumeur",
-            "info": "",
+            "info": "Se placer de façon à pouvoir atteindre tous les sarcophages",
 
             "mobs": [
                 {
@@ -36,11 +57,26 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
+                            "name": "Enfermer",
+                            "type": "DOT",
+                            "action": "LIBERER LE JOUEUR",
+                            "info": "Gros DOT jusqu'à libération du joueur",
+                            "priority": true,
+                            "icon": "achievement_bg_xkills_avgraveyard.jpg"
+                        },
+                        {
+                            "name": "Drain des fluides",
+                            "type": "DOT",
+                            "action": "HEAL",
+                            "info": "Bien remonter >90% pour retirer le DEBUFF",
+                            "icon": "inv_misc_volatilewater"
+                        },
+                        {
+                            "name": "Brûlure de la corruption",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Ne pas placer devant les sarcophages",
+                            "icon": "ability_siege_engineer_purification_beam"
                         }
                     ]
                 }
@@ -53,28 +89,42 @@
 
             "mobs": [
                 {
-                "name": "Aka'ali la Conquérante",
-
-                    "abilities": [
-                        {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
-                        }
-                    ]
-                },
-                {
                 "name": "Kula la Bouchère",
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
+                            "name": "Hache tranchante",
+                            "type": "DOT",
+                            "action": "HEAL",
+                            "info": "20s. Bien toper la personne",
+                            "icon": "ability_hunter_swiftstrike"
+                        },
+                        {
+                            "name": "Haches tourbillonnantes",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "D'abord zone autours d'elle, puis 2 haches qui spiralent autour",
+                            "icon": "ability_butcher_whirl"
+                        }
+                    ]
+                },
+                {
+                "name": "Aka'ali la Conquérante",
+
+                    "abilities": [
+                        {
+                            "name": "Revers débilitant",
+                            "type": "TANK",
+                            "action": "Kite/Cd Tank",
+                            "info": "Tank buster + Bump + Vulnérabilité 10s",
+                            "icon": "inv_relics_totemofrage"
+                        },
+                        {
+                            "name": "Débarouler",
+                            "type": "SOAK",
+                            "action": "SOAK",
                             "info": "",
-                            "icon": ""
+                            "icon": "ability_monk_clashingoxcharge"
                         }
                     ]
                 },
@@ -83,11 +133,19 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
-                            "icon": ""
+                            "name": "Éclair",
+                            "type": "DEGAT",
+                            "action": "KICK",
+                            "info": "Chaîne -> s'écarter et kick autant que possible",
+                            "icon": "spell_lightning_lightningbolt01"
+                        },
+                        {
+                            "name": "Appel des éléments",
+                            "type": "ADD",
+                            "action": "FOCUS",
+                            "info": "Ordre : Explosif -> Fulgurant -> Torrent -> Terre",
+                            "priority": true,
+                            "icon": "ability_shaman_echooftheelements"
                         }
                     ]
                 }
@@ -96,7 +154,7 @@
         {
             "type": "boss",
             "name": "Dazar, le premier roi",
-            "info": "",
+            "info": "Focus Reban en priorité",
 
             "mobs": [
                 {
@@ -104,11 +162,33 @@
 
                     "abilities": [
                         {
-                            "name": "",
+                            "name": "Combo de lames",
+                            "type": "TANK",
+                            "action": "CD Tank/Heal",
+                            "info": "Tank buster, cône ?",
+                            "icon": "ability_ironmaidens_bladerush"
+                        },
+                        {
+                            "name": "Choc aérien",
+                            "type": "AOE",
+                            "action": "S'ECARTER",
+                            "info": "Reban : 2 sauts",
+                            "icon": "ability_heroicleap"
+                        },
+                        {
+                            "name": "Bond sismique",
+                            "type": "AOE",
+                            "action": "S'ECARTER",
+                            "info": "T'zala : 4 sauts",
+                            "icon": "inv_raptortravelform"
+                        },
+                        {
+                            "name": "Destruction dorée",
                             "type": "",
                             "action": "",
                             "info": "",
-                            "icon": ""
+                            "priority":true,
+                            "icon": "inv_sword_2h_zandalarquest_b_01"
                         }
                     ]
                 }
