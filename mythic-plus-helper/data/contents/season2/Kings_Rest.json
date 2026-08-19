@@ -33,14 +33,14 @@
                             "type": "ADD",
                             "action": "FOCUS",
                             "info": "Ne pas les laisser toucher le boss",
-                            "icon": "spell_holy_purifyingpower.jpg"
+                            "icon": "spell_holy_purifyingpower"
                         },
                         {
                             "name": "Battement de queue",
                             "type": "TANK",
                             "action": "CD Tank",
                             "info": "",
-                            "icon": "ability_hunter_pet_windserpent.jpg"
+                            "icon": "ability_hunter_pet_windserpent"
                         }
                     ]
                 }
@@ -62,7 +62,7 @@
                             "action": "LIBERER LE JOUEUR",
                             "info": "Gros DOT jusqu'à libération du joueur",
                             "priority": true,
-                            "icon": "achievement_bg_xkills_avgraveyard.jpg"
+                            "icon": "achievement_bg_xkills_avgraveyard"
                         },
                         {
                             "name": "Drain des fluides",
