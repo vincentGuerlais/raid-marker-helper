@@ -6,8 +6,8 @@
     "sections": [
         {
             "type": "boss",
-            "name": "Viperis",
-            "info": "",
+            "name": "Viperis et Aspis",
+            "info": "Taper celui sans le bouclier de foudre",
 
             "mobs": [
                 {
@@ -15,9 +15,30 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
+                            "name": "Frappe du cyclone",
+                            "type": "AOE",
+                            "action": "S'ECARTER",
+                            "info": "",
+                            "icon": "creatureportrait_cyclone_nodebris"
+                        },
+                        {
+                            "name": "Conduction",
+                            "type": "SOAK",
+                            "action": "SOAK",
+                            "info": "",
+                            "icon": "spell_nature_lightningoverload"
+                        },
+                        {
+                            "name": "Tempest winds",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Pose une flaque. Superposable",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Tourbillon de vent",
+                            "type": "DOT",
+                            "action": "HEAL",
                             "info": "",
                             "icon": ""
                         }
@@ -36,11 +57,33 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
-                            "info": "",
+                            "name": "Knot of snakes",
+                            "type": "DEBUFF",
+                            "action": "CC/STUN/FREEDOM",
+                            "info": "ROOT, peut être retiré par des CC",
                             "icon": ""
+                        },
+                        {
+                            "name": "Crachat de tonnerre",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "Flaque. Placer sur le bord",
+                            "icon": "ability_thunderking_thunderstruck"
+                        },
+                        {
+                            "name": "Serpent-tempête",
+                            "type": "DOT",
+                            "action": "SE PLACER/CD DEF/HEAL",
+                            "info": "Bump + Gros dégâts. Attention à ne pas finir dehors",
+                            "priority": true,
+                            "icon": "spell_nature_lightningoverload"
+                        },
+                        {
+                            "name": "Éclosion",
+                            "type": "ADD",
+                            "action": "FOCUS/CC/EVITER",
+                            "info": "Intermission. Spawn des ADD + DOT + AOE à éviter",
+                            "icon": "inv_egg_03"
                         }
                     ]
                 }
@@ -57,9 +100,16 @@
 
                     "abilities": [
                         {
-                            "name": "",
-                            "type": "",
-                            "action": "",
+                            "name": "Induction",
+                            "type": "AOE",
+                            "action": "EVITER",
+                            "info": "DEGATS groupe + flaque. Déplacer le boss un peu",
+                            "icon": ""
+                        },
+                        {
+                            "name": "Flèches de foudre",
+                            "type": "SOAK",
+                            "action": "SOAK",
                             "info": "",
                             "icon": ""
                         }
@@ -70,7 +120,7 @@
         {
             "type": "boss",
             "name": "Avatar de Sephraliss",
-            "info": "",
+            "info": "Soigner le boss",
 
             "mobs": [
                 {
